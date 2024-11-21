@@ -33,7 +33,7 @@
         "custom_liquid_KtcVKq": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": ""
+            "custom_liquid": "{% if product.metafields.custom['key_features_list'] %}\n  <div class=\"features-list\">\n    {{ product.metafields.custom['key_features_list'].value }}\n  </div>\n{% endif %}"
           }
         },
         "price": {
