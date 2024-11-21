@@ -23,13 +23,6 @@
           "type": "title",
           "settings": {}
         },
-        "caption": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
-          }
-        },
         "custom_liquid_KtcVKq": {
           "type": "custom_liquid",
           "settings": {
@@ -91,7 +84,6 @@
       "block_order": [
         "vendor",
         "title",
-        "caption",
         "custom_liquid_KtcVKq",
         "price",
         "variant_picker",
