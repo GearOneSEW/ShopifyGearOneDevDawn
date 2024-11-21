@@ -30,6 +30,13 @@
             "text_style": "subtitle"
           }
         },
+        "text_KHcmgU": {
+          "type": "text",
+          "settings": {
+            "text": "Text block",
+            "text_style": "body"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {}
@@ -86,6 +93,7 @@
         "vendor",
         "title",
         "caption",
+        "text_KHcmgU",
         "price",
         "variant_picker",
         "order_limits_minmaxify_product_limits_display_xTJdcr",
