@@ -30,11 +30,10 @@
             "text_style": "subtitle"
           }
         },
-        "text_KHcmgU": {
-          "type": "text",
+        "custom_liquid_KtcVKq": {
+          "type": "custom_liquid",
           "settings": {
-            "text": "Text block",
-            "text_style": "body"
+            "custom_liquid": ""
           }
         },
         "price": {
@@ -93,7 +92,7 @@
         "vendor",
         "title",
         "caption",
-        "text_KHcmgU",
+        "custom_liquid_KtcVKq",
         "price",
         "variant_picker",
         "order_limits_minmaxify_product_limits_display_xTJdcr",
@@ -125,7 +124,7 @@
         "column_bAqaHK": {
           "type": "column",
           "settings": {
-            "title": "Product Description",
+            "title": "Description",
             "text": "<p>{{ product.description }}</p>",
             "link_label": "",
             "link": ""
@@ -134,8 +133,8 @@
         "column_q9fUMw": {
           "type": "column",
           "settings": {
-            "title": "Product Features List",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "Features List",
+            "text": "<p></p>{{ product.metafields.custom.features_list | metafield_tag }}",
             "link_label": "",
             "link": ""
           }
@@ -152,8 +151,8 @@
         "image_ratio": "adapt",
         "columns_desktop": 2,
         "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
+        "background_style": "none",
+        "button_label": "",
         "button_link": "",
         "color_scheme": "",
         "columns_mobile": "1",
