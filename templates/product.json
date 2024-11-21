@@ -79,6 +79,19 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "complementary_nwncjh": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": false
+          }
         }
       },
       "block_order": [
@@ -92,7 +105,8 @@
         "inventory_tEU7LP",
         "easify_options_easify_product_options_dWgbUh",
         "buy_buttons",
-        "share"
+        "share",
+        "complementary_nwncjh"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -108,6 +122,21 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
+      }
+    },
+    "1732217783ae414b1a": {
+      "type": "apps",
+      "blocks": {
+        "discount_ninja_discountninja_app_blocks_product_banner_RVKLTk": {
+          "type": "shopify://apps/discount-ninja/blocks/discountninja-app-blocks-product-banner/b9a933ba-e276-459f-a4bf-3571d5a1e81c",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "discount_ninja_discountninja_app_blocks_product_banner_RVKLTk"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "multicolumn_aUFFgV": {
@@ -250,21 +279,6 @@
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 28
-      }
-    },
-    "1732217783ae414b1a": {
-      "type": "apps",
-      "blocks": {
-        "discount_ninja_discountninja_app_blocks_product_banner_RVKLTk": {
-          "type": "shopify://apps/discount-ninja/blocks/discountninja-app-blocks-product-banner/b9a933ba-e276-459f-a4bf-3571d5a1e81c",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "discount_ninja_discountninja_app_blocks_product_banner_RVKLTk"
-      ],
-      "settings": {
-        "include_margins": true
       }
     }
   },
