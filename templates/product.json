@@ -251,10 +251,26 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "1732217783ae414b1a": {
+      "type": "apps",
+      "blocks": {
+        "discount_ninja_discountninja_app_blocks_product_banner_RVKLTk": {
+          "type": "shopify://apps/discount-ninja/blocks/discountninja-app-blocks-product-banner/b9a933ba-e276-459f-a4bf-3571d5a1e81c",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "discount_ninja_discountninja_app_blocks_product_banner_RVKLTk"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
+    "1732217783ae414b1a",
     "multicolumn_aUFFgV",
     "image-with-text",
     "multicolumn",
