@@ -134,7 +134,7 @@
           "type": "column",
           "settings": {
             "title": "Features List",
-            "text": "<p></p>{{ product.metafields.custom.features_list | metafield_tag }}",
+            "text": "{{ product.metafields.custom.features_list | metafield_tag }}",
             "link_label": "",
             "link": ""
           }
