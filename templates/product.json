@@ -30,9 +30,23 @@
             "text_style": "subtitle"
           }
         },
+        "text_rKDbYc": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Manufacturer Retail Price (MSRP)</strong>",
+            "text_style": "body"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {}
+        },
+        "text_UxPz78": {
+          "type": "text",
+          "settings": {
+            "text": "<span style=\"text-decoration:underline\"><strong>Login</strong></span> to See Discounted Price",
+            "text_style": "body"
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -104,7 +118,9 @@
         "vendor",
         "title",
         "caption",
+        "text_rKDbYc",
         "price",
+        "text_UxPz78",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
