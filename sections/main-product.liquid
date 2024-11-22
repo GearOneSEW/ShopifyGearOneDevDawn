@@ -106,7 +106,9 @@
                   </a>
                 </div>
               {%- when 'price' -%}
-                <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+              {% comment %}Added/Modified by Limoni Apps on 22/11/24 to support Discount Ninja{% endcomment %}
+
+                <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }} class="limoniapps-discountninja-productprice">
                   {%- render 'price',
                     product: product,
                     use_variant: true,
@@ -140,6 +142,11 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
+              <div class="limoniapps-discountninja-promotioncard-productpage-wrapper" 
+     data-limoniapps-discountninja-product-handle="{{ product.handle }}" 
+     data-source="asset" 
+     version="1.0.0">
+</div>
               {%- when 'inventory' -%}
                 <p
                   class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
