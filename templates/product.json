@@ -23,10 +23,11 @@
           "type": "title",
           "settings": {}
         },
-        "custom_liquid_KtcVKq": {
-          "type": "custom_liquid",
+        "caption": {
+          "type": "text",
           "settings": {
-            "custom_liquid": "{% if product.metafields.custom.key_features_list and product.metafields.custom.key_features_list.value != '' %}\n  <div class=\"features-list\">\n    {{ product.metafields.custom.key_features_list.value }}\n  </div>\n{% endif %}"
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
           }
         },
         "price": {
@@ -36,35 +37,11 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "order_limits_minmaxify_product_limits_display_xTJdcr": {
-          "type": "shopify://apps/order-limits-minmaxify/blocks/product-limits-display/3acfba32-89f3-4377-ae20-cbb9abc48475",
-          "settings": {
-            "fontWeight": "normal",
-            "color": "",
-            "html1": "Minimum quantity allowed is <span minmaxify-limit=\"min\"></span>.",
-            "html2": "Maximum quantity allowed is <span minmaxify-limit=\"max\"></span>.",
-            "html3": "The product can be bought in quantity increments of <span minmaxify-limit=\"multiple\"></span>.",
-            "skip_min_when_multiple": false
+            "picker_type": "button"
           }
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {}
-        },
-        "inventory_tEU7LP": {
-          "type": "inventory",
-          "settings": {
-            "text_style": "subtitle",
-            "inventory_threshold": 10,
-            "show_inventory_quantity": true
-          }
-        },
-        "easify_options_easify_product_options_dWgbUh": {
-          "type": "shopify://apps/easify-options/blocks/easify-product-options/d2288b18-c1ba-42f5-b3b3-26c75c8820bf",
           "settings": {}
         },
         "buy_buttons": {
@@ -72,6 +49,46 @@
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materials",
+            "icon": "leather",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "truck",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Dimensions",
+            "icon": "ruler",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Care Instructions",
+            "icon": "heart",
+            "content": "",
+            "page": ""
           }
         },
         "share": {
@@ -84,88 +101,28 @@
       "block_order": [
         "vendor",
         "title",
-        "custom_liquid_KtcVKq",
+        "caption",
         "price",
         "variant_picker",
-        "order_limits_minmaxify_product_limits_display_xTJdcr",
         "quantity_selector",
-        "inventory_tEU7LP",
-        "easify_options_easify_product_options_dWgbUh",
         "buy_buttons",
+        "description",
+        "collapsible-row-0",
+        "collapsible-row-1",
+        "collapsible-row-2",
+        "collapsible-row-3",
         "share"
       ],
       "settings": {
         "enable_sticky_info": true,
-        "color_scheme": "",
-        "media_size": "small",
+        "media_size": "large",
         "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "gallery_layout": "thumbnail_slider",
-        "media_position": "left",
-        "image_zoom": "hover",
+        "gallery_layout": "stacked",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
-      }
-    },
-    "1732217783ae414b1a": {
-      "type": "apps",
-      "blocks": {
-        "discount_ninja_discountninja_app_blocks_product_banner_RVKLTk": {
-          "type": "shopify://apps/discount-ninja/blocks/discountninja-app-blocks-product-banner/b9a933ba-e276-459f-a4bf-3571d5a1e81c",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "discount_ninja_discountninja_app_blocks_product_banner_RVKLTk"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "multicolumn_aUFFgV": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_bAqaHK": {
-          "type": "column",
-          "settings": {
-            "title": "Description",
-            "text": "<p>{{ product.description }}</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_q9fUMw": {
-          "type": "column",
-          "settings": {
-            "title": "Features List",
-            "text": "{{ product.metafields.custom.features_list | metafield_tag }}",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_bAqaHK",
-        "column_q9fUMw"
-      ],
-      "settings": {
-        "title": "Product Details",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "image-with-text": {
@@ -174,14 +131,14 @@
         "image-with-text-0": {
           "type": "heading",
           "settings": {
-            "heading": "{{ product.metafields.custom.product_brand.value.brand_title.value }}",
+            "heading": "Image with text",
             "heading_size": "h1"
           }
         },
         "image-with-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>{{ product.metafields.custom.product_brand.value.brand_short_description | metafield_tag }}</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_style": "body"
           }
         }
@@ -191,16 +148,13 @@
         "image-with-text-1"
       ],
       "settings": {
-        "image": "{{ product.metafields.custom.product_brand.value.brand_lifestyle_image.value }}",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
-        "section_color_scheme": "",
         "color_scheme": "scheme-2",
-        "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
@@ -252,13 +206,11 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "Similar Items",
+        "heading": "You may also like",
         "heading_size": "h2",
-        "products_to_show": 4,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
         "image_ratio": "square",
-        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
@@ -270,8 +222,6 @@
   },
   "order": [
     "main",
-    "1732217783ae414b1a",
-    "multicolumn_aUFFgV",
     "image-with-text",
     "multicolumn",
     "related-products"
