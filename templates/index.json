@@ -14,13 +14,15 @@
       "blocks": {
         "heading": {
           "type": "heading",
+          "disabled": true,
           "settings": {
-            "heading": "Image banner",
+            "heading": "",
             "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Give customers details about the banner image(s) or content on the template.",
             "text_style": "body"
@@ -29,12 +31,12 @@
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/featured-merch",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": true
           }
         }
       },
@@ -44,14 +46,14 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/Holiday-2024_Hero.jpg",
-        "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image": "shopify://shop_images/BFCM_Hero.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "scheme-3",
-        "image_behavior": "none",
+        "image_behavior": "ambient",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
