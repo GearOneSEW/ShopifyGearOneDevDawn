@@ -15,9 +15,22 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "before_and_after_slider_yxUMRb": {
+      "type": "before-and-after-slider",
+      "settings": {
+        "bf_image": "shopify://shop_images/Gc943PdW4AAQN2F.webp",
+        "af_image": "shopify://shop_images/Gc943PeXQAA_KRs.webp",
+        "show_badge": true,
+        "grayscale_before": false,
+        "show_content": false,
+        "ba_heading": "Before & After (Heading)",
+        "ba_content": "<p>Text (Content)</p>"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "before_and_after_slider_yxUMRb"
   ]
 }
