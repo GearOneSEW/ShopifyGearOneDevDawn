@@ -122,7 +122,7 @@
     "custom_liquid_tkEyKa": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<section class=\"placeholder-section\">\n  <div class=\"container\">\n    <h1>{{ section.settings.header1_text }}</h1>\n    <h2>{{ section.settings.header2_text }}</h2>\n    <p>{{ section.settings.body_text }}</p>\n  </div>\n</section>",
+        "custom_liquid": "<p>text placeholder for book a call meeting widget</p>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
