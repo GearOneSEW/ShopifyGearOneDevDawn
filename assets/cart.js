@@ -284,18 +284,4 @@ if (!customElements.get('cart-note')) {
     }
   );
 }
-<script id="tpo-easify">
-  var tpoCartCollections = [
-    {%- for item in cart.items -%}
-        {
-          "productId": {{ item.product.id | default: "null" | json }},
-          "collections": [
-            {%- for collection in item.product.collections -%}
-              {{ collection.id }}{% unless forloop.last %},{% endunless %}
-            {%- endfor -%}
-          ]
-        }
-      {% unless forloop.last %},{% endunless %}
-      {%- endfor -%}
-  ]
-</script>
+
