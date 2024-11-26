@@ -32,6 +32,7 @@
         },
         "slide_wfiwVt": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Holiday-2024_Hero_688b6212-3265-4ee7-abdc-5d472c32f09f.jpg",
             "heading": "Holiday Party Solutions, Right on Time",
@@ -50,6 +51,7 @@
         },
         "slide_FWwxYk": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Events_Hero.jpg",
             "heading": "Effortless Event Planning Starts Here",
