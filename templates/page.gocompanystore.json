@@ -16,7 +16,7 @@
           "type": "heading",
           "settings": {
             "heading": "GoCompanyStore",
-            "heading_size": "hxl"
+            "heading_size": "h0"
           }
         },
         "text_FxB6AX": {
@@ -47,10 +47,91 @@
         "padding_bottom": 36
       }
     },
+    "collapsible_content_3bM8FL": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_HYH8Vw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Brand Consistency",
+            "icon": "check_mark",
+            "row_content": "<p>Do you need a solution to ensure that all branded merchandise aligns with your company’s standards, maintaining consistent logos, colors, and quality across every product?</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_437E6m": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Continuous Purchasing",
+            "icon": "check_mark",
+            "row_content": "<p>Do you need an intuitive online store to simplify purchasing for employees and departments?</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_LFQmet": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Annual Volume",
+            "icon": "check_mark",
+            "row_content": "<p>Are you purchasing large volumes of branded goods for recruiting, uniforms, or marketing, totaling $50,000+ annually?</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6TQXgg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Control Spending",
+            "icon": "check_mark",
+            "row_content": "<p>Do you need tools to set budgets, spending limits, and approval workflows for better cost control?</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_MMPpkC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Exclusive Access",
+            "icon": "check_mark",
+            "row_content": "<p>Do you need a dedicated platform for employees to access a curated selection of company-specific merchandise while keeping purchases for individuals, departments, or gifts private and secure?</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WKLmii": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Automated Reporting",
+            "icon": "check_mark",
+            "row_content": "<p>Do you need real-time insights into orders, spending, and inventory levels with comprehensive reporting tools?\"</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_HYH8Vw",
+        "collapsible_row_437E6m",
+        "collapsible_row_LFQmet",
+        "collapsible_row_6TQXgg",
+        "collapsible_row_MMPpkC",
+        "collapsible_row_WKLmii"
+      ],
+      "settings": {
+        "caption": "is a company store right for you?",
+        "heading": "Company Store Needs Checklist",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn_QHdMC6": {
       "type": "multicolumn",
       "settings": {
-        "title": "Unique Features of our GoCompanyStore Solution:",
+        "title": "Why Choose GoCompanyStore?",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -59,16 +140,27 @@
         "background_style": "primary",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "multirow_4ttAQC": {
       "type": "multirow",
       "blocks": {
+        "row_J3AEjz": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/emb2.jpg",
+            "caption": "KEY BENEFIT | JUST-IN-TIME NO-INVENTORY SELECTION",
+            "heading": "We Are The Factory",
+            "text": "<p>We have complete control over the manufacturing and shipping process. </p><p>We manufacture the products in-house and ship them directly to your employees with unmatched speed, ensuring top-tier quality and exceptional service. </p><p>From production to delivery, we handle it all, allowing your company to focus on what matters most.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
         "row_HMkfzn": {
           "type": "row",
           "settings": {
@@ -85,7 +177,7 @@
           "settings": {
             "image": "shopify://shop_images/Checkout_Hero.jpg",
             "caption": "KEY BENEFIT | PAYMENT INTEGRATIONS",
-            "heading": "Integrated with Your Systems",
+            "heading": "Integrated Payments",
             "text": "<p>GOCompanyStore integrates with ERP systems and Spend Management Platforms, streamlining the purchasing process and aligning with your company’s existing workflows. </p><p>This allows for seamless order placement, inventory management, and expense tracking—all within your organization’s established systems.</p>",
             "button_label": "",
             "button_link": ""
@@ -94,15 +186,17 @@
         "row_WJGtYp": {
           "type": "row",
           "settings": {
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
+            "image": "shopify://shop_images/boxes-shelves-in-warehouse.jpg",
+            "caption": "KEY BENEFIT | SHIPPING & WAREHOUSING SYSTEMS",
+            "heading": "Integrated Pick, Pack & Ship",
+            "text": "<p>For companies running ongoing programs, GOCompanyStore offers comprehensive pick, pack, and ship services. We manage your inventory and ensure that orders are quickly processed and delivered, so your team always has access to the branded merchandise they need.</p>",
+            "button_label": "",
             "button_link": ""
           }
         }
       },
       "block_order": [
+        "row_J3AEjz",
         "row_HMkfzn",
         "row_nwXgmL",
         "row_WJGtYp"
@@ -119,31 +213,23 @@
         "section_color_scheme": "",
         "row_color_scheme": "",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     },
     "contact_form_kPxRWN": {
       "type": "contact-form",
       "settings": {
-        "heading": "Have questions? Connect with our team to get started!",
+        "heading": "Connect with our team to get started!",
         "heading_size": "h1",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "custom_liquid_tkEyKa": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<p>text placeholder for book a call meeting widget</p>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
@@ -152,10 +238,10 @@
   },
   "order": [
     "image_with_text_LUwfW6",
+    "collapsible_content_3bM8FL",
     "multicolumn_QHdMC6",
     "multirow_4ttAQC",
     "contact_form_kPxRWN",
-    "custom_liquid_tkEyKa",
     "main"
   ]
 }
