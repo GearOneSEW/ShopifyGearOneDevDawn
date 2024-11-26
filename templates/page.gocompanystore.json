@@ -9,15 +9,131 @@
  */
 {
   "sections": {
+    "image_with_text_LUwfW6": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ynKYwJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "GoCompanyStore",
+            "heading_size": "hxl"
+          }
+        },
+        "text_FxB6AX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>GOCompanyStore provides Fortune 500 businesses with private online stores where employees and teams can directly purchase branded merchandise. With over two decades of expertise, we’ve developed seamless and scalable solutions to meet the needs of large enterprises.</p><p>Our stores deliver the most advanced B2C shopping experience, tailored specifically for individuals within your company. Whether it’s branded uniforms, promotional products, or employee rewards, GOCompanyStore provides a premium, user-friendly solution.</p>",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ynKYwJ",
+        "text_FxB6AX"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/GO-Coupa-Icon_100_100.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "multirow_4ttAQC": {
+      "type": "multirow",
+      "blocks": {
+        "row_HMkfzn": {
+          "type": "row",
+          "settings": {
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>GoCompanyStore offers Fortune 500 businesses exclusive private online stores for employees and teams to purchase branded merchandise directly. Backed by over 20 years of experience, we provide a seamless, scalable solution designed for large enterprises.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_nwXgmL": {
+          "type": "row",
+          "settings": {
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_WJGtYp": {
+          "type": "row",
+          "settings": {
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_HMkfzn",
+        "row_nwXgmL",
+        "row_WJGtYp"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "contact_form_kPxRWN": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Have questions? Connect with our team to get started!",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_tkEyKa": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<section class=\"placeholder-section\">\n  <div class=\"container\">\n    <h1>{{ section.settings.header1_text }}</h1>\n    <h2>{{ section.settings.header2_text }}</h2>\n    <p>{{ section.settings.body_text }}</p>\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "image_with_text_LUwfW6",
+    "main",
+    "multirow_4ttAQC",
+    "contact_form_kPxRWN",
+    "custom_liquid_tkEyKa"
   ]
 }
