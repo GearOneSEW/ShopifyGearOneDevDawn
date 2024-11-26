@@ -11,6 +11,7 @@
   "current": {
     "logo": "shopify://shop_images/Gearone-Logo-300.png",
     "logo_width": 200,
+    "favicon": "shopify://shop_images/GearOne_Fav-01.svg",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -221,11 +222,11 @@
       },
       "scheme-5": {
         "settings": {
-          "background": "#334fb4",
+          "background": "#005cab",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#334fb4",
+          "button_label": "#005cab",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
