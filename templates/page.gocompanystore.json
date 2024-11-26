@@ -22,7 +22,7 @@
         "text_FxB6AX": {
           "type": "text",
           "settings": {
-            "text": "<p>GOCompanyStore provides Fortune 500 businesses with private online stores where employees and teams can directly purchase branded merchandise. With over two decades of expertise, we’ve developed seamless and scalable solutions to meet the needs of large enterprises.</p><p>Our stores deliver the most advanced B2C shopping experience, tailored specifically for individuals within your company. Whether it’s branded uniforms, promotional products, or employee rewards, GOCompanyStore provides a premium, user-friendly solution.</p>",
+            "text": "<p>GOCompanyStore provides Major Corporations with private online stores where employees and teams can directly purchase branded merchandise. </p><p>With over two decades of expertise, we’ve developed seamless and scalable solutions with all features needed by large enterprises.</p>",
             "text_style": "subtitle"
           }
         }
@@ -47,33 +47,28 @@
         "padding_bottom": 36
       }
     },
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "multirow_4ttAQC": {
       "type": "multirow",
       "blocks": {
         "row_HMkfzn": {
           "type": "row",
           "settings": {
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>GoCompanyStore offers Fortune 500 businesses exclusive private online stores for employees and teams to purchase branded merchandise directly. Backed by over 20 years of experience, we provide a seamless, scalable solution designed for large enterprises.</p>",
-            "button_label": "Button label",
+            "image": "shopify://shop_images/shopper-viewed-through-a-mirror.jpg",
+            "caption": "KEY BENEFIT | USER EXPERIENCE",
+            "heading": "B2C Shopping Experience",
+            "text": "<p>Our stores deliver the most advanced B2C shopping experience, tailored specifically for individuals within your company. </p><p>Whether it’s branded uniforms, promotional products, or employee rewards, GOCompanyStore provides a premium, user-friendly solution.</p>",
+            "button_label": "",
             "button_link": ""
           }
         },
         "row_nwXgmL": {
           "type": "row",
           "settings": {
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
+            "image": "shopify://shop_images/Checkout_Hero.jpg",
+            "caption": "KEY BENEFIT | PAYMENT INTEGRATIONS",
+            "heading": "Integrated with Your Systems",
+            "text": "<p>GOCompanyStore integrates with ERP systems and Spend Management Platforms, streamlining the purchasing process and aligning with your company’s existing workflows. </p><p>This allows for seamless order placement, inventory management, and expense tracking—all within your organization’s established systems.</p>",
+            "button_label": "",
             "button_link": ""
           }
         },
@@ -127,13 +122,20 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
     }
   },
   "order": [
     "image_with_text_LUwfW6",
-    "main",
     "multirow_4ttAQC",
     "contact_form_kPxRWN",
-    "custom_liquid_tkEyKa"
+    "custom_liquid_tkEyKa",
+    "main"
   ]
 }
