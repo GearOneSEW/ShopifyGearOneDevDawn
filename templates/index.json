@@ -156,7 +156,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "custom_css": [
-        "/* Hide product prices in Featured Collection block */.featured-collection .price {display: none;}"
+        "/* Hide the entire card that contains price information in the Featured Collection */.featured-collection .card-information {display: none;}"
       ],
       "settings": {
         "title": "<a href=\"/collections/digital-catalogs\" title=\"Digital Catalogs\">Digital Catalogs</a>",
