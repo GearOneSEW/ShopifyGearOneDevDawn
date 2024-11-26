@@ -459,8 +459,14 @@
         {
           "productId": {{ item.product.id | default: "null" | json }},
           "collections": [
+            {%- comment %}<locksmith:1b7b>{% endcomment -%}
+              {%- assign locksmith_50a3_forloop__size = 0 %}{%- for collection in item.product.collections -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: collection, subject_parent: item.product, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_50a3_forloop__size = locksmith_50a3_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_50a3_forloop__index = nil -%}
+            {%- comment %}</locksmith:1b7b>{% endcomment -%}
             {%- for collection in item.product.collections -%}
-              {{ collection.id }}{% unless forloop.last %},{% endunless %}
+              {%- comment %}<locksmith:234e>{% endcomment -%}
+                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: collection, subject_parent: item.product, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_50a3_forloop__index == nil %}{% assign locksmith_50a3_forloop__index = 1 %}{% assign locksmith_50a3_forloop__index0 = 0 %}{% else %}{% assign locksmith_50a3_forloop__index = locksmith_50a3_forloop__index | plus: 1 %}{% assign locksmith_50a3_forloop__index0 = locksmith_50a3_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_50a3_forloop__index == 1 %}{% assign locksmith_50a3_forloop__first = true %}{% else %}{% assign locksmith_50a3_forloop__first = false %}{% endif %}{% if locksmith_50a3_forloop__index == locksmith_50a3_forloop__size %}{% assign locksmith_50a3_forloop__last = true %}{% else %}{% assign locksmith_50a3_forloop__last = false %}{% endif %}{% assign locksmith_50a3_forloop__rindex = locksmith_50a3_forloop__size | minus: locksmith_50a3_forloop__index | minus: 1 %}{% assign locksmith_50a3_forloop__rindex0 = locksmith_50a3_forloop__size | minus: locksmith_50a3_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+              {%- comment %}</locksmith:234e>{% endcomment -%}
+              {{ collection.id }}{% unless locksmith_50a3_forloop__last %},{% endunless %}
             {%- endfor -%}
           ]
         }
