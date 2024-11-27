@@ -9,8 +9,51 @@
  */
 {
   "sections": {
+    "rich_text_iYfc3m": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zbPt8X": {
+          "type": "heading",
+          "settings": {
+            "heading": "Lets Get in Touch!",
+            "heading_size": "h1"
+          }
+        },
+        "text_VB8NLJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you're looking to set up a custom uniform program, explore employee rewards solutions, or simply have a question, we're here to help. Reach out to us today, and let's build something great together.</p>"
+          }
+        },
+        "button_DecBBm": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_zbPt8X",
+        "text_VB8NLJ",
+        "button_DecBBm"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
@@ -133,11 +176,12 @@
     }
   },
   "order": [
+    "rich_text_iYfc3m",
     "main",
+    "multirow_xw9L9h",
     "multicolumn_aVywLB",
     "custom_liquid_ipNbBC",
     "multicolumn_dzVdNT",
-    "form",
-    "multirow_xw9L9h"
+    "form"
   ]
 }
