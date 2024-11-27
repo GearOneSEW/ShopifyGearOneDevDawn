@@ -217,12 +217,21 @@
         "padding_bottom": 36
       }
     },
+    "custom_liquid_fx3TE7": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<!-- Calendly inline widget begin -->\n<div class=\"calendly-inline-widget\" data-url=\"https://calendly.com/charles-gearone/30min?hide_gdpr_banner=1\" style=\"min-width:320px;height:700px;\"></div>\n<script type=\"text/javascript\" src=\"https://assets.calendly.com/assets/external/widget.js\" async></script>\n<!-- Calendly inline widget end -->",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "contact_form_kPxRWN": {
       "type": "contact-form",
       "settings": {
         "heading": "Connect with our team to get started!",
         "heading_size": "h1",
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -241,6 +250,7 @@
     "collapsible_content_3bM8FL",
     "multicolumn_QHdMC6",
     "multirow_4ttAQC",
+    "custom_liquid_fx3TE7",
     "contact_form_kPxRWN",
     "main"
   ]
