@@ -17,6 +17,119 @@
         "color_scheme": "scheme-1"
       }
     },
+    "image_with_text_Wm8Tdf": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LVqTXA": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>NEW Product of the Week! - 11.25</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_G987EQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Why We Love It:</strong><br/>Combines rugged, weatherproof performance with powerful, high-definition sound.</p><p><strong>Key Features:</strong><br/>Solar charging and easy to hang from your bag, this speaker is built for outdoor adventures.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LVqTXA",
+        "text_G987EQ"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/9915_7197-57_POW_PLP_Crop.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "featured_product_y8GVQb": {
+      "type": "featured-product",
+      "blocks": {
+        "text_FFcEVT": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_XMpBFM": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_7UXp3j": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_8UwCea": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "share_3XFVB3": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_FFcEVT",
+        "title_XMpBFM",
+        "price_7UXp3j",
+        "variant_picker_8UwCea",
+        "share_3XFVB3"
+      ],
+      "settings": {
+        "product": "solar-sound-outdoor-bluetooth-speaker",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_JzxJCw": {
+      "type": "multicolumn",
+      "settings": {
+        "title": "Shop All New Product of the Week!",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -33,13 +146,16 @@
         "filter_type": "vertical",
         "enable_sorting": true,
         "columns_mobile": "2",
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     }
   },
   "order": [
     "banner",
+    "image_with_text_Wm8Tdf",
+    "featured_product_y8GVQb",
+    "multicolumn_JzxJCw",
     "product-grid"
   ]
 }
