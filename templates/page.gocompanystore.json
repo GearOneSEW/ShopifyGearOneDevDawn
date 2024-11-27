@@ -47,6 +47,35 @@
         "padding_bottom": 36
       }
     },
+    "multicolumn_LJtUf3": {
+      "type": "multicolumn",
+      "settings": {
+        "title": "Your Private Store: See It in Action – Book a Demo!",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_fx3TE7": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<!-- Calendly inline widget begin -->\n<div class=\"calendly-inline-widget\" data-url=\"https://calendly.com/charles-gearone/30min?hide_gdpr_banner=1\" style=\"min-width:320px;height:700px;\"></div>\n<script type=\"text/javascript\" src=\"https://assets.calendly.com/assets/external/widget.js\" async></script>\n<!-- Calendly inline widget end -->",
+        "color_scheme": "scheme-3",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
     "collapsible_content_3bM8FL": {
       "type": "collapsible-content",
       "blocks": {
@@ -215,34 +244,6 @@
         "mobile_content_alignment": "left",
         "padding_top": 0,
         "padding_bottom": 36
-      }
-    },
-    "multicolumn_LJtUf3": {
-      "type": "multicolumn",
-      "settings": {
-        "title": "Your Private Store: See It in Action – Book a Demo!",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_fx3TE7": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<!-- Calendly inline widget begin -->\n<div class=\"calendly-inline-widget\" data-url=\"https://calendly.com/charles-gearone/30min?hide_gdpr_banner=1\" style=\"min-width:320px;height:700px;\"></div>\n<script type=\"text/javascript\" src=\"https://assets.calendly.com/assets/external/widget.js\" async></script>\n<!-- Calendly inline widget end -->",
-        "color_scheme": "scheme-3",
-        "padding_top": 0,
-        "padding_bottom": 52
       }
     },
     "contact_form_kPxRWN": {
