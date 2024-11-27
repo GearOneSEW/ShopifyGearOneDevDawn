@@ -33,11 +33,20 @@
             "text": "<p><strong>Why We Love It:</strong><br/>Combines rugged, weatherproof performance with powerful, high-definition sound.</p><p><strong>Key Features:</strong><br/>Solar charging and easy to hang from your bag, this speaker is built for outdoor adventures.</p>",
             "text_style": "body"
           }
+        },
+        "button_N9PfwU": {
+          "type": "button",
+          "settings": {
+            "button_label": "Check It Out",
+            "button_link": "shopify://products/solar-sound-outdoor-bluetooth-speaker",
+            "button_style_secondary": false
+          }
         }
       },
       "block_order": [
         "heading_LVqTXA",
-        "text_G987EQ"
+        "text_G987EQ",
+        "button_N9PfwU"
       ],
       "settings": {
         "image": "shopify://shop_images/9915_7197-57_POW_PLP_Crop.jpg",
@@ -65,6 +74,10 @@
             "text_style": "uppercase"
           }
         },
+        "rating_DYYPDj": {
+          "type": "rating",
+          "settings": {}
+        },
         "title_XMpBFM": {
           "type": "title",
           "settings": {
@@ -81,21 +94,16 @@
             "picker_type": "button",
             "swatch_shape": "circle"
           }
-        },
-        "share_3XFVB3": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
         "text_FFcEVT",
+        "rating_DYYPDj",
         "title_XMpBFM",
         "price_7UXp3j",
-        "variant_picker_8UwCea",
-        "share_3XFVB3"
+        "variant_picker_8UwCea"
       ],
+      "disabled": true,
       "settings": {
         "product": "solar-sound-outdoor-bluetooth-speaker",
         "color_scheme": "",
