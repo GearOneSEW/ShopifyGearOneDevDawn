@@ -68,9 +68,8 @@
     },
     "custom_liquid_fx3TE7": {
       "type": "custom-liquid",
-      "disabled": true,
       "settings": {
-        "custom_liquid": "<!-- Calendly inline widget begin -->\n<div class=\"calendly-inline-widget\" data-url=\"https://calendly.com/charles-gearone/30min?hide_gdpr_banner=1\" style=\"min-width:320px;height:700px;\"></div>\n<script type=\"text/javascript\" src=\"https://assets.calendly.com/assets/external/widget.js\" async></script>\n<!-- Calendly inline widget end -->",
+        "custom_liquid": "<!-- Calendly inline widget begin -->\n<div class=\"calendly-inline-widget\" data-url=\"https://calendly.com/charles-gearone/gocompanystore-demo-brand-benefits-evaluation\" style=\"min-width:320px;height:700px;\"></div>\n<script type=\"text/javascript\" src=\"https://assets.calendly.com/assets/external/widget.js\" async></script>\n<!-- Calendly inline widget end -->",
         "color_scheme": "scheme-3",
         "padding_top": 0,
         "padding_bottom": 52
