@@ -90,11 +90,11 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Shipping-Hero.jpg",
-            "heading": "No Minimum, Free Rush Manufacturing",
+            "heading": "No Minimum, No Setups",
             "heading_size": "h1",
             "subheading": "Browse products with no order minimums and fast, free manufacturing—perfect for any timeline.",
             "button_label": "Shop Fast & Easy",
-            "link": "",
+            "link": "shopify://collections/no-minimum-no-fees",
             "button_style_secondary": false,
             "box_align": "bottom-left",
             "show_text_box": true,
@@ -128,6 +128,7 @@
       "blocks": {
         "heading": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Talk about your brand",
             "heading_size": "h1"
@@ -135,6 +136,7 @@
         },
         "text": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
           }
@@ -144,6 +146,7 @@
         "heading",
         "text"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -210,6 +213,7 @@
         "product",
         "collection-1"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Multimedia collage",
         "heading_size": "h2",
@@ -223,6 +227,7 @@
     },
     "video": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
@@ -271,6 +276,7 @@
         "column2",
         "column3"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
