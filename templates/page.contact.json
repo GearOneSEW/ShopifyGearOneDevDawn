@@ -82,7 +82,7 @@
             "image": "shopify://shop_images/2022-09-25-20.36-crop.jpg",
             "caption": "SALES INQUIRIES",
             "heading": "Sales Team",
-            "text": "<p>Whether you're looking to set up a custom uniform program, explore employee rewards solutions, or simply have a question, we're here to help. Reach out to us today, and let's build something great together.</p><ul><li><strong>Email:</strong> <a>sales@gearone.com</a></li><li><strong>Phone:</strong> (770) 423-7300 ext. 1</li><li><strong>Hours:</strong> Monday - Friday | 9:00 AM - 6:00 PM (EST)</li></ul>",
+            "text": "<p>Whether you're looking to set up a custom uniform program, explore employee rewards solutions, or simply have a question, we're here to help. Reach out to us today, and let's build something great together.</p><ul><li><strong>Email:</strong> <a href=\"mailto:sales@gearone.com\" title=\"mailto:sales@gearone.com\">sales@gearone.com</a></li><li><strong>Phone:</strong> (770) 423-7300 ext. 1</li><li><strong>Hours:</strong> Monday - Friday | 9:00 AM - 6:00 PM (EST)</li></ul>",
             "button_label": "",
             "button_link": ""
           }
@@ -90,6 +90,7 @@
         "row_9LRw7W": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/customer-service-rep-on-headset.jpg",
             "caption": "Order Inquiries",
             "heading": "Customer Support",
             "text": "<p>Interested in learning more about our enterprise custom store solutions? Get in touch with our sales team to start your journey with GearOne.</p><ul><li><strong>Email:</strong> <a href=\"mailto:contact@gearone.com\" title=\"mailto:contact@gearone.com\">contact@gearone.com</a></li><li><strong>Phone:</strong> (770) 423-7300 ext. 2</li><li><strong>Hours:</strong> Monday - Friday | 9:00 AM - 6:00 PM (EST)</li></ul>",
@@ -100,9 +101,10 @@
         "row_pAtq9Q": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/paperwork-filing.jpg",
             "caption": "receivables | payables",
             "heading": "Accounting Inquiries",
-            "text": "<p>For all receivables and payables, please contact our accounting team.</p><ul><li><strong>Phone:</strong> (770) 423-7300 ext. 3</li><li><strong>Hours:</strong> Monday - Friday | 9:00 AM - 5:00 PM (EST)</li></ul>",
+            "text": "<p>For all receivables and payables, please contact our accounting team.</p><ul><li><strong>Email:</strong> <a href=\"mailto:accounting@gearone.com\" title=\"mailto:accounting@gearone.com\">accounting@gearone.com</a></li><li><strong>Phone:</strong> (770) 423-7300 ext. 3</li><li><strong>Hours:</strong> Monday - Friday | 9:00 AM - 5:00 PM (EST)</li></ul>",
             "button_label": "",
             "button_link": ""
           }
