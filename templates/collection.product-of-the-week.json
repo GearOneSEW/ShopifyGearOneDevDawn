@@ -23,7 +23,7 @@
         "heading_LVqTXA": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>NEW Product of the Week! - 11.25</strong>",
+            "heading": "<strong>Solar Sound Outdoor Bluetooth Speaker</strong>",
             "heading_size": "h2"
           }
         },
@@ -62,61 +62,6 @@
         "mobile_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 0
-      }
-    },
-    "featured_product_y8GVQb": {
-      "type": "featured-product",
-      "blocks": {
-        "text_FFcEVT": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "rating_DYYPDj": {
-          "type": "rating",
-          "settings": {}
-        },
-        "title_XMpBFM": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_7UXp3j": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_8UwCea": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        }
-      },
-      "block_order": [
-        "text_FFcEVT",
-        "rating_DYYPDj",
-        "title_XMpBFM",
-        "price_7UXp3j",
-        "variant_picker_8UwCea"
-      ],
-      "disabled": true,
-      "settings": {
-        "product": "solar-sound-outdoor-bluetooth-speaker",
-        "color_scheme": "",
-        "secondary_background": false,
-        "media_size": "small",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "none",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "multicolumn_JzxJCw": {
@@ -162,7 +107,6 @@
   "order": [
     "banner",
     "image_with_text_Wm8Tdf",
-    "featured_product_y8GVQb",
     "multicolumn_JzxJCw",
     "product-grid"
   ]
