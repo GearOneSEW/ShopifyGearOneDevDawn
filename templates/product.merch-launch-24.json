@@ -267,6 +267,53 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "image_with_text_zaDLdU": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ChJeQY": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.primary_decoration_method.value.decoration_name.value }}",
+            "heading_size": "h1"
+          }
+        },
+        "text_X9y7er": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Overview:<br/>{{ product.metafields.custom.primary_decoration_method.value.method_overview | metafield_tag }}<br/>Why Choose:<br/>{{ product.metafields.custom.primary_decoration_method.value.why_choose | metafield_tag }}<br/>Limitations:<br/>{{ product.metafields.custom.primary_decoration_method.value.limitations | metafield_tag }}<br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_fENDaD": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ChJeQY",
+        "text_X9y7er",
+        "button_fENDaD"
+      ],
+      "settings": {
+        "image": "{{ product.metafields.custom.primary_decoration_method.value.decoration_image.value }}",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -275,6 +322,7 @@
     "multicolumn_aUFFgV",
     "image-with-text",
     "multicolumn",
-    "related-products"
+    "related-products",
+    "image_with_text_zaDLdU"
   ]
 }
