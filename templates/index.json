@@ -16,7 +16,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/BFCM_Hero.jpg",
-            "heading": "Black Friday & Cyber Monday Deals Are Here!",
+            "heading": "<strong>Black Friday & Cyber Monday Deals Are Here!</strong>",
             "heading_size": "h1",
             "subheading": "Shop our featured products at unbeatable prices—limited-time offers you don't want to miss.",
             "button_label": "Shop the Deals",
@@ -35,7 +35,7 @@
           "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Holiday-2024_Hero_688b6212-3265-4ee7-abdc-5d472c32f09f.jpg",
-            "heading": "Holiday Party Solutions, Right on Time",
+            "heading": "Holiday Cutoff 12/12",
             "heading_size": "h1",
             "subheading": "Explore holiday catalogs and get rush delivery for your festive events.",
             "button_label": "Plan Your Holiday Party",
@@ -72,7 +72,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Checkout_Hero.jpg",
-            "heading": "Company Store Solutions, Factory-Direct",
+            "heading": "<strong>Company Store Solutions, Factory-Direct</strong>",
             "heading_size": "h1",
             "subheading": "We host, manage, and manufacture your items—all with unmatched expertise and quality.",
             "button_label": "Learn About Company Stores",
@@ -90,7 +90,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Shipping-Hero.jpg",
-            "heading": "No Minimum, No Setups",
+            "heading": "<strong>No Minimums, No Fees!</strong>",
             "heading_size": "h1",
             "subheading": "Browse products with no order minimums and fast, free manufacturing—perfect for any timeline.",
             "button_label": "Shop Fast & Easy",
