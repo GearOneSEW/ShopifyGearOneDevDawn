@@ -138,23 +138,11 @@
           "settings": {
             "text": "<p>Explore our latest products, top retail brands, fresh promotions, and more—all in one place.</p>"
           }
-        },
-        "button_dRcDRJ": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
         "heading_CC6fa4",
-        "text_9ipxCe",
-        "button_dRcDRJ"
+        "text_9ipxCe"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -162,63 +150,53 @@
         "color_scheme": "scheme-2",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 0
+        "padding_bottom": 4
       }
     },
-    "featured_product_FRfKGk": {
-      "type": "featured-product",
+    "image_with_text_CJFYVt": {
+      "type": "image-with-text",
       "blocks": {
-        "text_wf4YF8": {
-          "type": "text",
+        "heading_PNp4tz": {
+          "type": "heading",
           "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_qGFfTM": {
-          "type": "title",
-          "settings": {
+            "heading": "Solar Sound Outdoor Bluetooth Speaker",
             "heading_size": "h1"
           }
         },
-        "text_izdpUE": {
+        "text_BwHbW9": {
           "type": "text",
           "settings": {
-            "text": "MSRP Price | Login to see discount.",
+            "text": "<p><strong>Built to Last:</strong> IPX6 waterproof and durable enough for drops—perfect for outdoor adventures.</p><p><strong>Take Anywhere:</strong> Compact with a silicone strap for easy carry or clip, plus a built-in mic for calls or relaxation.</p><p><strong>High-Tech Performance:</strong> Powerful 5W sound, 6-hour playback, and quick 1-hour charging.</p><p><strong>Dual Charging Options:</strong> Recharge with solar power in under 11 hours or fully charge in 1 hour via included Type C cable.</p>",
             "text_style": "body"
           }
         },
-        "price_njfHHA": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_Tm93NG": {
-          "type": "variant_picker",
+        "button_7RqPPD": {
+          "type": "button",
           "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
+            "button_label": "View Details",
+            "button_link": "shopify://products/solar-sound-outdoor-bluetooth-speaker",
+            "button_style_secondary": false
           }
         }
       },
       "block_order": [
-        "text_wf4YF8",
-        "title_qGFfTM",
-        "text_izdpUE",
-        "price_njfHHA",
-        "variant_picker_Tm93NG"
+        "heading_PNp4tz",
+        "text_BwHbW9",
+        "button_7RqPPD"
       ],
       "settings": {
-        "product": "solar-sound-outdoor-bluetooth-speaker",
+        "image": "shopify://shop_images/Solar-Sound-Outdoor-Bluetooth-Speaker-7197-57.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-2",
         "color_scheme": "",
-        "secondary_background": true,
-        "media_size": "small",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "none",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 12,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 4,
         "padding_bottom": 36
       }
     },
@@ -413,7 +391,7 @@
   "order": [
     "slideshow_dgtTwj",
     "rich_text_Qg3f6f",
-    "featured_product_FRfKGk",
+    "image_with_text_CJFYVt",
     "featured_collection_EJte6i",
     "rich_text_JPykkd",
     "featured_product_exjPNW",
