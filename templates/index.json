@@ -129,7 +129,7 @@
         "heading_CC6fa4": {
           "type": "heading",
           "settings": {
-            "heading": "NEW! GearOne Product of the Week - 11.25",
+            "heading": "NEW! Product of the Week - 11.25",
             "heading_size": "h1"
           }
         },
@@ -205,6 +205,13 @@
             "text": "<strong>WHY WE LOVE IT</strong>",
             "text_style": "subtitle"
           }
+        },
+        "text_pGTapr": {
+          "type": "text",
+          "settings": {
+            "text": "Combines rugged, weatherproof performance with powerful, high-definition sound.",
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
@@ -213,7 +220,8 @@
         "text_izdpUE",
         "price_njfHHA",
         "variant_picker_Tm93NG",
-        "text_eyR8LM"
+        "text_eyR8LM",
+        "text_pGTapr"
       ],
       "settings": {
         "product": "solar-sound-outdoor-bluetooth-speaker",
