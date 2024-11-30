@@ -123,10 +123,117 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "rich_text_Qg3f6f": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_CC6fa4": {
+          "type": "heading",
+          "settings": {
+            "heading": "NEW! GearOne Product of the Week - 11.25",
+            "heading_size": "h1"
+          }
+        },
+        "text_9ipxCe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Explore our latest products, top retail brands, fresh promotions, and more—all in one place. Stay updated with what’s new at GearOne!</p>"
+          }
+        },
+        "button_dRcDRJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CC6fa4",
+        "text_9ipxCe",
+        "button_dRcDRJ"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_product_FRfKGk": {
+      "type": "featured-product",
+      "blocks": {
+        "text_wf4YF8": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_qGFfTM": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "text_izdpUE": {
+          "type": "text",
+          "settings": {
+            "text": "MSRP Price | Login to see discount.",
+            "text_style": "body"
+          }
+        },
+        "price_njfHHA": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_Tm93NG": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "text_eyR8LM": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>WHY WE LOVE IT</strong>",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "text_wf4YF8",
+        "title_qGFfTM",
+        "text_izdpUE",
+        "price_njfHHA",
+        "variant_picker_Tm93NG",
+        "text_eyR8LM"
+      ],
+      "settings": {
+        "product": "solar-sound-outdoor-bluetooth-speaker",
+        "color_scheme": "",
+        "secondary_background": true,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection_EJte6i": {
       "type": "featured-collection",
       "settings": {
-        "title": "{{ section.settings.collection.title }}",
+        "title": "Recent {{ section.settings.collection.title }} Items:",
         "heading_size": "h1",
         "description": "<p>{{ section.settings.collection.description }}</p>",
         "show_description": false,
@@ -151,52 +258,46 @@
         "padding_bottom": 36
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "custom_css": [],
+    "rich_text_JPykkd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7DmTKV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Featured Fast Selling Product:",
+            "heading_size": "h1"
+          }
+        },
+        "text_dtJdN6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Transform your space into a sanctuary with the Vitruvi Glow Diffuser and Glow Diffuser Essential Oil Bundle Kit - a perfect blend of elegant design and soothing aromas for ultimate relaxation.</p>"
+          }
+        },
+        "button_Uni7xm": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7DmTKV",
+        "text_dtJdN6",
+        "button_Uni7xm"
+      ],
       "settings": {
-        "title": "<a href=\"/collections/digital-catalogs\" title=\"Digital Catalogs\">Digital Catalogs</a>",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "subtitle",
-        "collection": "digital-catalogs",
-        "products_to_show": 25,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn_4bWBPm": {
-      "type": "multicolumn",
-      "settings": {
-        "title": "Featured Product: (only 60 left in stock on 12/1)",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 0
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 12
       }
     },
     "featured_product_exjPNW": {
@@ -275,7 +376,7 @@
       "settings": {
         "product": "vitruvi-glow-diffuser-and-essential-oil-bundle-set",
         "color_scheme": "",
-        "secondary_background": false,
+        "secondary_background": true,
         "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "contain",
@@ -286,13 +387,44 @@
         "padding_top": 0,
         "padding_bottom": 36
       }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "settings": {
+        "title": "<a href=\"/collections/digital-catalogs\" title=\"Digital Catalogs\">Digital Catalogs</a>",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "subtitle",
+        "collection": "digital-catalogs",
+        "products_to_show": 25,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "slideshow_dgtTwj",
+    "rich_text_Qg3f6f",
+    "featured_product_FRfKGk",
     "featured_collection_EJte6i",
-    "featured_collection",
-    "multicolumn_4bWBPm",
-    "featured_product_exjPNW"
+    "rich_text_JPykkd",
+    "featured_product_exjPNW",
+    "featured_collection"
   ]
 }
