@@ -129,14 +129,14 @@
         "heading_CC6fa4": {
           "type": "heading",
           "settings": {
-            "heading": "NEW! Product of the Week - 11.25",
+            "heading": "NEW! Product of the Week",
             "heading_size": "h1"
           }
         },
         "text_9ipxCe": {
           "type": "text",
           "settings": {
-            "text": "<p>Explore our latest products, top retail brands, fresh promotions, and more—all in one place. Stay updated with what’s new at GearOne!</p>"
+            "text": "<p>Explore our latest products, top retail brands, fresh promotions, and more—all in one place.</p>"
           }
         },
         "button_dRcDRJ": {
@@ -198,20 +198,6 @@
             "picker_type": "button",
             "swatch_shape": "circle"
           }
-        },
-        "text_eyR8LM": {
-          "type": "text",
-          "settings": {
-            "text": "<strong>WHY WE LOVE IT</strong>",
-            "text_style": "subtitle"
-          }
-        },
-        "text_pGTapr": {
-          "type": "text",
-          "settings": {
-            "text": "Combines rugged, weatherproof performance with powerful, high-definition sound.",
-            "text_style": "body"
-          }
         }
       },
       "block_order": [
@@ -219,9 +205,7 @@
         "title_qGFfTM",
         "text_izdpUE",
         "price_njfHHA",
-        "variant_picker_Tm93NG",
-        "text_eyR8LM",
-        "text_pGTapr"
+        "variant_picker_Tm93NG"
       ],
       "settings": {
         "product": "solar-sound-outdoor-bluetooth-speaker",
@@ -231,10 +215,10 @@
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "media_position": "left",
-        "image_zoom": "lightbox",
+        "image_zoom": "none",
         "hide_variants": false,
         "enable_video_looping": false,
-        "padding_top": 0,
+        "padding_top": 12,
         "padding_bottom": 36
       }
     },
