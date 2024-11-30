@@ -321,6 +321,113 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "multicolumn_4bWBPm": {
+      "type": "multicolumn",
+      "settings": {
+        "title": "Featured Product: (only 60 left in stock on 12/1)",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "featured_product_exjPNW": {
+      "type": "featured-product",
+      "blocks": {
+        "text_LVnqia": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_hziETT": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "text_A4zzmM": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Minimum Quantity: </strong><strong>{{ section.settings.product.metafields.custom.minimum_quantity.value }}</strong>",
+            "text_style": "body"
+          }
+        },
+        "text_BqK7pw": {
+          "type": "text",
+          "settings": {
+            "text": "MSRP Price: (login to see discount)",
+            "text_style": "subtitle"
+          }
+        },
+        "price_xHwdNf": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_Xr9rPT": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_yNnVxH": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons_VtwtHM": {
+          "type": "buy_buttons",
+          "disabled": true,
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_PpdFCh": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_LVnqia",
+        "title_hziETT",
+        "text_A4zzmM",
+        "text_BqK7pw",
+        "price_xHwdNf",
+        "variant_picker_Xr9rPT",
+        "quantity_selector_yNnVxH",
+        "buy_buttons_VtwtHM",
+        "share_PpdFCh"
+      ],
+      "settings": {
+        "product": "vitruvi-glow-diffuser-and-essential-oil-bundle-set",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -330,6 +437,8 @@
     "featured_collection",
     "collage",
     "video",
-    "multicolumn"
+    "multicolumn",
+    "multicolumn_4bWBPm",
+    "featured_product_exjPNW"
   ]
 }
