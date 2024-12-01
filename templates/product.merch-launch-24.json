@@ -298,6 +298,9 @@
     },
     "multicolumn_PhyDTa": {
       "type": "multicolumn",
+      "custom_css": [
+        "[custom.product_brand=\"\"] {display: none;}"
+      ],
       "settings": {
         "title": "About {{ product.metafields.custom.product_brand.value.brand_title.value }}:",
         "heading_size": "h1",
