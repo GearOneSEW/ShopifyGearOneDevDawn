@@ -17,22 +17,22 @@
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "<strong>RESOURCES</strong>",
             "menu": "footer"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
+            "heading": "<strong>SHOP</strong>",
             "menu": "footer"
           }
         },
         "footer-2": {
           "type": "text",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+            "heading": "<strong>ORDER HELP</strong>",
+            "subtext": "<p>We are here to help!  For order assistance or to place a special order:<br/><strong>Email:</strong> <a href=\"mailto:contact@gearone.com\" title=\"mailto:contact@gearone.com\">contact@gearone.com</a><br/><strong>Call:</strong> +1(770)423-7300 <br/>(M-F 8:00 AM - 5:00 PM EST)</p>"
           }
         }
       },
@@ -43,7 +43,7 @@
       ],
       "settings": {
         "color_scheme": "scheme-4",
-        "newsletter_enable": false,
+        "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,
         "show_social": false,
