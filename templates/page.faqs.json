@@ -15,9 +15,71 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "collapsible_content_XyrU9y": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_RNECNL": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_Hy8xjG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_eif9Pg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_cEUnWG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_RNECNL",
+        "collapsible_row_Hy8xjG",
+        "collapsible_row_eif9Pg",
+        "collapsible_row_cEUnWG"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQ from Merch",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "collapsible_content_XyrU9y"
   ]
 }
