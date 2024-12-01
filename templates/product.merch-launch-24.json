@@ -9,6 +9,15 @@
  */
 {
   "sections": {
+    "custom_liquid_GHNkTx": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"custom-section\" data-product-brand=\"{{ product.metafields.custom.product_brand }}\">\n  <!-- Section content -->\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -299,7 +308,7 @@
     "multicolumn_PhyDTa": {
       "type": "multicolumn",
       "custom_css": [
-        "[product.metafields.custom.product_brand=\"\"] {display: none;}"
+        "[data-product-brand=\"\"] {display: none;}"
       ],
       "settings": {
         "title": "About {{ product.metafields.custom.product_brand.value.brand_title.value }}:",
@@ -339,6 +348,9 @@
       "block_order": [
         "image-with-text-0",
         "image-with-text-1"
+      ],
+      "custom_css": [
+        "[data-product-brand=\"\"] {display: none;}"
       ],
       "settings": {
         "image": "{{ product.metafields.custom.product_brand.value.brand_lifestyle_image.value }}",
@@ -419,6 +431,7 @@
     }
   },
   "order": [
+    "custom_liquid_GHNkTx",
     "main",
     "1732217783ae414b1a",
     "multicolumn_aUFFgV",
