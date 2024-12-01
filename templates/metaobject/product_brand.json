@@ -134,11 +134,11 @@
     "video_jNRQBF": {
       "type": "video",
       "settings": {
-        "heading": "Video",
+        "heading": "{{ metaobject.brand_video_title.value }}",
         "heading_size": "h1",
         "enable_video_looping": false,
         "video": "{{ metaobject.brand_video.value }}",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_url": "",
         "description": "",
         "full_width": false,
         "color_scheme": "",
