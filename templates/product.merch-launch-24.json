@@ -365,6 +365,117 @@
         "padding_bottom": 36
       }
     },
+    "collapsible_content_AVrz7g": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_bQ6NkD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the minimum order quantity?",
+            "icon": "check_mark",
+            "row_content": "<p>The minimum quantity of this product is {{ product.metafields.custom.minimum_quantity.value }} units.</p><p>Most of our products have a minimum order quantity, which varies depending on the item. You can find this information on the product page below the color choices and above the quantity selector.<br/>If you have questions about quantities, feel free to contact us!</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_U3RLNM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I buy less than the minimum quantity?",
+            "icon": "check_mark",
+            "row_content": "<p>Most of the items with a specified minimum can be purchased with an absolute minimum of half the stated number. For example, if an item states a minimum of 100 pieces, you are able to purchase 50 items with a $60 less-than-minimum (LTM) fee.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_miDX79": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I have samples of the items before I buy?",
+            "icon": "check_mark",
+            "row_content": "<p>We offer two ways to sample our products:</p><ul><li><strong>Free Samples:</strong> Reach out to discuss eligibility for free samples, depending on the item and your project.</li><li><strong>Purchased Samples:</strong> Most items are available for purchase as blank samples. You can order up to 3 blank units to review before committing to a larger order. Contact us for more details!</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_D4RAFV": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you offer bulk discounts?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes, we offer tiered pricing for larger orders—the more you order, the more you save! For custom pricing on bulk quantities, or if you have an upcoming event and need special assistance, contact our team today.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Xynxhm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I see a proof before my order is produced?",
+            "icon": "check_mark",
+            "row_content": "<p>Absolutely! We provide detailed digital proofs for your approval before production begins. This ensures your branded merchandise looks exactly how you want it.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_jdkREY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I make changes to my order after it’s placed?",
+            "icon": "check_mark",
+            "row_content": "<p>Changes can typically be made before proof approval. Once your design is approved, production begins, and further changes may not be possible. Reach out as soon as possible if you need to adjust anything.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_EwnDqf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long will it take to receive my order?",
+            "icon": "check_mark",
+            "row_content": "<p>Production times vary based on the product and order size, but most items are produced within 7–10 business days after proof approval. Shipping times depend on your location and selected shipping method.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BWLAp3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I ship to multiple addresses?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes, we can accommodate split shipments for your order. Additional fees may apply depending on the number of destinations. Let us know during checkout or reach out to our team to arrange this.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_TwcHdA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What happens if there’s an issue with my order?",
+            "icon": "check_mark",
+            "row_content": "<p>If something isn’t right with your order, let us know immediately. We’ll work with you to resolve the issue and ensure you’re completely satisfied.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_bQ6NkD",
+        "collapsible_row_U3RLNM",
+        "collapsible_row_miDX79",
+        "collapsible_row_D4RAFV",
+        "collapsible_row_Xynxhm",
+        "collapsible_row_jdkREY",
+        "collapsible_row_EwnDqf",
+        "collapsible_row_BWLAp3",
+        "collapsible_row_TwcHdA"
+      ],
+      "settings": {
+        "caption": "Common Questions, Clear Answers",
+        "heading": "<strong>Ask Away: Your FAQ Hub</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -402,7 +513,7 @@
         "column_E8gcjx"
       ],
       "settings": {
-        "title": "No-Risk Order Process",
+        "title": "No-Risk Order Process Steps:",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -448,6 +559,7 @@
     "rich_text_tqniQT",
     "multicolumn_PhyDTa",
     "image-with-text",
+    "collapsible_content_AVrz7g",
     "multicolumn",
     "related-products"
   ]
