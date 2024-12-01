@@ -12,7 +12,7 @@
     "custom_liquid_GHNkTx": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"custom-section\" data-product-brand=\"{{ product.metafields.custom.product_brand }}\">\n  <!-- Section content -->\n</div>",
+        "custom_liquid": "<style>\n<div class=\"custom-section\" data-product-brand=\"{{ product.metafields.custom.product_brand }}\">\n  <!-- Section content -->\n</div>\n</style>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
