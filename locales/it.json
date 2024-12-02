@@ -545,10 +545,5 @@
       "expanded": "Modulo destinatario del buono regalo espanso",
       "collapsed": "Modulo destinatario del buono regalo compresso"
     }
-  },
-  "locksmith": {
-    "forms": {
-      "confirmation_button_text": "Confirm"
-    }
   }
 }

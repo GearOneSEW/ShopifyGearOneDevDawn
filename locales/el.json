@@ -533,10 +533,5 @@
       "expanded": "Η φόρμα παραλήπτη δωροκάρτας αναπτύχθηκε",
       "collapsed": "Η φόρμα παραλήπτη δωροκάρτας συμπτύχθηκε"
     }
-  },
-  "locksmith": {
-    "forms": {
-      "confirmation_button_text": "Confirm"
-    }
   }
 }

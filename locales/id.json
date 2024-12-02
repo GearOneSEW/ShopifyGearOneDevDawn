@@ -533,10 +533,5 @@
       "expanded": "Formulir penerima voucher dibuka",
       "collapsed": "Formulir penerima voucher ditutup"
     }
-  },
-  "locksmith": {
-    "forms": {
-      "confirmation_button_text": "Confirm"
-    }
   }
 }

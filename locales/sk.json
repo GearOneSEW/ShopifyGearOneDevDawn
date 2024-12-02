@@ -557,10 +557,5 @@
       "expanded": "Rozbalený formulár pre príjemcu darčekového poukazu",
       "collapsed": "Zbalený formulár pre príjemcu darčekového poukazu"
     }
-  },
-  "locksmith": {
-    "forms": {
-      "confirmation_button_text": "Confirm"
-    }
   }
 }

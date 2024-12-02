@@ -545,10 +545,5 @@
       "expanded": "Formulário de destinatário do cartão-presente expandido",
       "collapsed": "Formulário de destinatário do cartão-presente recolhido"
     }
-  },
-  "locksmith": {
-    "forms": {
-      "confirmation_button_text": "Confirm"
-    }
   }
 }
