@@ -342,11 +342,20 @@
             "text": "<p>{{ product.metafields.custom.product_brand.value.brand_short_description | metafield_tag }}</p>",
             "text_style": "body"
           }
+        },
+        "button_4rCNye": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop {{ product.metafields.custom.product_brand.value.brand_title.value }}",
+            "button_link": "{{ product.metafields.custom.product_brand.value.system.url }}",
+            "button_style_secondary": false
+          }
         }
       },
       "block_order": [
         "image-with-text-0",
-        "image-with-text-1"
+        "image-with-text-1",
+        "button_4rCNye"
       ],
       "custom_css": [],
       "settings": {
