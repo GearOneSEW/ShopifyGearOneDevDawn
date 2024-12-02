@@ -228,6 +228,45 @@
         "padding_bottom": 36
       }
     },
+    "collage_pyyg7Y": {
+      "type": "collage",
+      "blocks": {
+        "image_84VDgK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/The-Puffer-Collection-Hero.jpg"
+          }
+        },
+        "product_T3GLMt": {
+          "type": "product",
+          "settings": {
+            "product": "puffer-recycled-12-can-tote-cooler",
+            "second_image": true
+          }
+        },
+        "collection_CwRyn8": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-puffer-merch"
+          }
+        }
+      },
+      "block_order": [
+        "image_84VDgK",
+        "product_T3GLMt",
+        "collection_CwRyn8"
+      ],
+      "settings": {
+        "heading": "Puff Puff Puff it Up",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_JPykkd": {
       "type": "rich-text",
       "blocks": {
@@ -442,6 +481,7 @@
     "rich_text_Qg3f6f",
     "image_with_text_CJFYVt",
     "featured_collection_EJte6i",
+    "collage_pyyg7Y",
     "rich_text_JPykkd",
     "featured_product_exjPNW",
     "video_jGKxAr",
