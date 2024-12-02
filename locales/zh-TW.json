@@ -533,10 +533,5 @@
       "expanded": "禮品卡收件人表單已展開",
       "collapsed": "禮品卡收件人表單已收合"
     }
-  },
-  "locksmith": {
-    "forms": {
-      "confirmation_button_text": "Confirm"
-    }
   }
 }
