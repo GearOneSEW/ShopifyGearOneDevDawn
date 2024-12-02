@@ -1,7 +1,3 @@
-{%- comment %}<locksmith:67bb>{% endcomment -%}
-  {%- include 'locksmith' -%}
-{%- comment %}</locksmith:67bb>{% endcomment -%}
-
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
 
@@ -13,7 +9,6 @@ shopify-payment-terms {
 </style>
   
   <head>
-    {{ locksmith_initializations }}
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 
@@ -66,10 +61,7 @@ shopify-payment-terms {
     </title>
 
     {% if page_description %}
-      {%- comment %}<locksmith:3ac0>{% endcomment -%}
-        {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ page_description | escape }}">{% endif -%}
-        {%- comment %}original: <meta name="description" content="{{ page_description | escape }}">{%- endcomment %}
-      {%- comment %}</locksmith:3ac0>{% endcomment -%}
+      <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
     {% render 'meta-tags' %}
