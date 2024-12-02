@@ -385,11 +385,11 @@
         "button_JPxLLQ": {
           "type": "button",
           "settings": {
-            "button_label": "Shop BioLite Alpenglow 150",
+            "button_label": "Shop BioLite Alpenglow 250",
             "button_link": "shopify://products/biolite-alpenglow-250",
             "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
+            "button_label_2": "See All BioLite",
+            "button_link_2": "https://www.gearone.com/collections/all?filter.p.m.custom.product_brand=gid%3A%2F%2Fshopify%2FMetaobject%2F65021083842",
             "button_style_secondary_2": false
           }
         }
