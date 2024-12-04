@@ -14,6 +14,7 @@
       "blocks": {
         "slide_xJN8xi": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/BFCM_Hero.jpg",
             "heading": "<strong>Black Friday & Cyber Monday Deals Are Here!</strong>",
@@ -32,14 +33,13 @@
         },
         "slide_wfiwVt": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Holiday-2024_Hero_688b6212-3265-4ee7-abdc-5d472c32f09f.jpg",
             "heading": "Holiday Cutoff 12/12",
             "heading_size": "h1",
-            "subheading": "Explore holiday catalogs and get rush delivery for your festive events.",
-            "button_label": "Plan Your Holiday Party",
-            "link": "shopify://pages/holiday-2024",
+            "subheading": "FREE RUSH Now on All No-Fees No-Minimum Collection Items",
+            "button_label": "SHOP HOLIDAY RUSH COLLECTION",
+            "link": "shopify://collections/no-minimum-no-fees",
             "button_style_secondary": false,
             "box_align": "bottom-left",
             "show_text_box": true,
@@ -270,45 +270,6 @@
         "padding_bottom": 12
       }
     },
-    "collage_pyyg7Y": {
-      "type": "collage",
-      "blocks": {
-        "image_84VDgK": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/The-Puffer-Collection-Hero.jpg"
-          }
-        },
-        "product_T3GLMt": {
-          "type": "product",
-          "settings": {
-            "product": "puffer-recycled-12-can-tote-cooler",
-            "second_image": true
-          }
-        },
-        "collection_CwRyn8": {
-          "type": "collection",
-          "settings": {
-            "collection": "the-puffer-merch"
-          }
-        }
-      },
-      "block_order": [
-        "image_84VDgK",
-        "product_T3GLMt",
-        "collection_CwRyn8"
-      ],
-      "settings": {
-        "heading": "Puff Puff Puff it Up",
-        "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "column",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "featured_product_exjPNW": {
       "type": "featured-product",
       "blocks": {
@@ -394,6 +355,45 @@
         "hide_variants": false,
         "enable_video_looping": false,
         "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "collage_pyyg7Y": {
+      "type": "collage",
+      "blocks": {
+        "image_84VDgK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/The-Puffer-Collection-Hero.jpg"
+          }
+        },
+        "product_T3GLMt": {
+          "type": "product",
+          "settings": {
+            "product": "puffer-recycled-12-can-tote-cooler",
+            "second_image": true
+          }
+        },
+        "collection_CwRyn8": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-puffer-merch"
+          }
+        }
+      },
+      "block_order": [
+        "image_84VDgK",
+        "product_T3GLMt",
+        "collection_CwRyn8"
+      ],
+      "settings": {
+        "heading": "Puff Puff Puff it Up",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
