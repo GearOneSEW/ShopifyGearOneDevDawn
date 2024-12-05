@@ -21,7 +21,7 @@
             "heading_size": "h1",
             "subheading": "Shop our featured products at unbeatable prices—limited-time offers you don't want to miss.",
             "button_label": "Shop the Deals",
-            "link": "shopify://collections/featured-merch",
+            "link": "shopify://collections/holiday-rush-featured-merch",
             "button_style_secondary": false,
             "box_align": "bottom-left",
             "show_text_box": true,
