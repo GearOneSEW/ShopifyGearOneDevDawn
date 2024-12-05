@@ -12,25 +12,6 @@
     "slideshow_dgtTwj": {
       "type": "slideshow",
       "blocks": {
-        "slide_xJN8xi": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/BFCM_Hero.jpg",
-            "heading": "<strong>Black Friday & Cyber Monday Deals Are Here!</strong>",
-            "heading_size": "h1",
-            "subheading": "Shop our featured products at unbeatable prices—limited-time offers you don't want to miss.",
-            "button_label": "Shop the Deals",
-            "link": "shopify://collections/holiday-rush-featured-merch",
-            "button_style_secondary": false,
-            "box_align": "bottom-left",
-            "show_text_box": true,
-            "text_alignment": "left",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_wfiwVt": {
           "type": "slide",
           "settings": {
@@ -49,16 +30,15 @@
             "text_alignment_mobile": "center"
           }
         },
-        "slide_FWwxYk": {
+        "slide_dkETbP": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Events_Hero.jpg",
-            "heading": "Effortless Event Planning Starts Here",
+            "image": "shopify://shop_images/Shipping-Hero.jpg",
+            "heading": "<strong>No Minimums, No Fees!</strong>",
             "heading_size": "h1",
-            "subheading": "Discover our wide range of options, expert features, and tailored solutions to make your event unforgettable—all within your budget.",
-            "button_label": "Explore Event Solutions",
-            "link": "shopify://pages/events",
+            "subheading": "Browse products with no order minimums and fast, free manufacturing—perfect for any timeline.",
+            "button_label": "Shop Fast & Easy",
+            "link": "shopify://collections/no-minimum-no-fees",
             "button_style_secondary": false,
             "box_align": "bottom-left",
             "show_text_box": true,
@@ -86,15 +66,16 @@
             "text_alignment_mobile": "center"
           }
         },
-        "slide_dkETbP": {
+        "slide_FWwxYk": {
           "type": "slide",
+          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Shipping-Hero.jpg",
-            "heading": "<strong>No Minimums, No Fees!</strong>",
+            "image": "shopify://shop_images/Events_Hero.jpg",
+            "heading": "Effortless Event Planning Starts Here",
             "heading_size": "h1",
-            "subheading": "Browse products with no order minimums and fast, free manufacturing—perfect for any timeline.",
-            "button_label": "Shop Fast & Easy",
-            "link": "shopify://collections/no-minimum-no-fees",
+            "subheading": "Discover our wide range of options, expert features, and tailored solutions to make your event unforgettable—all within your budget.",
+            "button_label": "Explore Event Solutions",
+            "link": "shopify://pages/events",
             "button_style_secondary": false,
             "box_align": "bottom-left",
             "show_text_box": true,
@@ -106,11 +87,10 @@
         }
       },
       "block_order": [
-        "slide_xJN8xi",
         "slide_wfiwVt",
-        "slide_FWwxYk",
+        "slide_dkETbP",
         "slide_YwgTRr",
-        "slide_dkETbP"
+        "slide_FWwxYk"
       ],
       "settings": {
         "layout": "full_bleed",
