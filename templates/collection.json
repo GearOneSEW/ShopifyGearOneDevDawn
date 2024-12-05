@@ -11,6 +11,9 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "custom_css": [
+        ".collection-image {max-height: 200px; object-fit: cover; width: 100%; /* Optional: Adjusts image width to container */}"
+      ],
       "settings": {
         "show_collection_description": true,
         "show_collection_image": true,
