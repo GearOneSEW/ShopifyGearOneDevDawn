@@ -39,7 +39,7 @@
             "heading_size": "h1",
             "subheading": "Discover our wide range of options, expert features, and tailored solutions to make your event unforgettable—all within your budget.",
             "button_label": "Get Started",
-            "link": "shopify://pages/events",
+            "link": "shopify://pages/get-started",
             "button_style_secondary": false,
             "box_align": "bottom-left",
             "show_text_box": true,
