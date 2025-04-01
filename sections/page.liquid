@@ -25,13 +25,13 @@
         {{ 'sections.page.title' | t }}
       {%- endif -%}
       */
-{% endcomment %}
+
 {% if page.handle != 'get-started' %}
   <h1 class="page-title">{{ page.title }}</h1>
 {% endif %}
 <p>Page handle: {{ page.handle }}</p>
 
-
+{% endcomment %}
     </h2>
     <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       {%- if section.settings.page.content != blank -%}
