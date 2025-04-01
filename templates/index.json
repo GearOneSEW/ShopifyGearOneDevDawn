@@ -12,27 +12,9 @@
     "slideshow_dgtTwj": {
       "type": "slideshow",
       "blocks": {
-        "slide_wfiwVt": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Holiday-2024_Hero_688b6212-3265-4ee7-abdc-5d472c32f09f.jpg",
-            "heading": "Holiday Cutoff 12/15",
-            "heading_size": "h1",
-            "subheading": "FREE RUSH Now on All No-Fees No-Minimum Collection Items",
-            "button_label": "SHOP HOLIDAY RUSH COLLECTION",
-            "link": "shopify://collections/fast-track-featured-merch",
-            "button_style_secondary": false,
-            "box_align": "bottom-left",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_FWwxYk": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Events_Hero.jpg",
             "heading": "Effortless Apparel and Merch Starts Here",
@@ -87,7 +69,6 @@
         }
       },
       "block_order": [
-        "slide_wfiwVt",
         "slide_FWwxYk",
         "slide_dkETbP",
         "slide_YwgTRr"
