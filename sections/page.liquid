@@ -28,7 +28,7 @@
    
    {% endcomment %}
       ChatPGT Generated Comment if Statement to Remove Page Title for Get Started initiated below - CDL
-{% if page.handle != 'get-started' %}
+{% if template.suffix != 'get-started' %}
   <h2 class="page-title {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     {%- if section.settings.page.title != blank -%}
       {{ section.settings.page.title | escape }}
@@ -37,6 +37,7 @@
     {%- endif -%}
   </h2>
 {% endif %}
+
 
 
     </h2>
