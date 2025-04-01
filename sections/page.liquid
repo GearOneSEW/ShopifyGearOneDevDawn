@@ -16,6 +16,7 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width page-width--narrow section-{{ section.id }}-padding">
+{% comment %} 
     <h2 class="page-title {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
   
       {%- if section.settings.page.title != blank -%}
@@ -24,13 +25,20 @@
         {{ 'sections.page.title' | t }}
       {%- endif -%}
       */
-    {% comment %}
+   
+   {% endcomment %}
       ChatPGT Generated Comment if Statement to Remove Page Title for Get Started initiated below - CDL
 {% if page.handle != 'get-started' %}
-  <h1 class="page-title">{{ page.title }}</h1>
+  <h2 class="page-title {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    {%- if section.settings.page.title != blank -%}
+      {{ section.settings.page.title | escape }}
+    {%- else -%}
+      {{ 'sections.page.title' | t }}
+    {%- endif -%}
+  </h2>
 {% endif %}
 
-{% endcomment %}
+
     </h2>
     <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       {%- if section.settings.page.content != blank -%}
