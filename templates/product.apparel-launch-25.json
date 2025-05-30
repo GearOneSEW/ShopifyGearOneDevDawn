@@ -25,7 +25,7 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text": "{{ product.vendor }}  SKU#{{ product.metafields.custom.product_id.value }}",
+            "text": "{{ product.vendor }}",
             "text_style": "uppercase"
           }
         },
@@ -38,6 +38,13 @@
           "disabled": true,
           "settings": {
             "custom_liquid": "{% if product.metafields.custom.key_features_list and product.metafields.custom.key_features_list.value != '' %}\n  <div class=\"features-list\">\n    {{ product.metafields.custom.key_features_list.value }}\n  </div>\n{% endif %}"
+          }
+        },
+        "text_ngKNRG": {
+          "type": "text",
+          "settings": {
+            "text": "Vendor Product ID # {{ product.metafields.custom.product_id.value }}",
+            "text_style": "uppercase"
           }
         },
         "price": {
@@ -98,6 +105,7 @@
         "vendor",
         "title",
         "custom_liquid_KtcVKq",
+        "text_ngKNRG",
         "price",
         "variant_picker",
         "order_limits_minmaxify_product_limits_display_xTJdcr",
