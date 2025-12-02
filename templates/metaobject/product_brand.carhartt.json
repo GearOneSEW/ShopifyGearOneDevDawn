@@ -97,7 +97,7 @@
         "button_T8gPk6"
       ],
       "settings": {
-        "image": "{{ metaobject.brand_lifestyle_image.value }}",
+        "image": "shopify://shop_images/Carhartt_logo_2000px-01.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
