@@ -59,7 +59,7 @@
         "buttons_hcrrXk": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Catalog",
+            "button_label_1": "Browse Catalog",
             "button_link_1": "https://www.gearone.com/products/digital-catalog-carhartt-2025-new-2026-items",
             "button_style_secondary_1": false,
             "button_label_2": "Contact Us",
