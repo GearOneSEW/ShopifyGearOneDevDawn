@@ -18,6 +18,76 @@
         "color_scheme": "scheme-1"
       }
     },
+    "featured_product_WbLHBj": {
+      "type": "featured-product",
+      "blocks": {
+        "text_ai9zHx": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_YV3RhM": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_PYwTrH": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_cjyX9q": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_VEYjBY": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_jV77BR": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_6PYVx6": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_ai9zHx",
+        "title_YV3RhM",
+        "price_PYwTrH",
+        "variant_picker_cjyX9q",
+        "quantity_selector_VEYjBY",
+        "buy_buttons_jV77BR",
+        "share_6PYVx6"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "carhartt-sherpa-lined-coat",
+        "color_scheme": "scheme-2",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -41,6 +111,7 @@
   },
   "order": [
     "banner",
+    "featured_product_WbLHBj",
     "product-grid"
   ]
 }
