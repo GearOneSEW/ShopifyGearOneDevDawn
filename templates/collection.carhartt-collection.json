@@ -147,6 +147,7 @@
         "column_Af9FYn": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/Yourlogohere_carhartt.png",
             "title": "<strong>On-brand decoration</strong>",
             "text": "<p>Your logo, woven labels, and program marks are managed by the same GearOne teams that support your other branded apparel and merch, color-matched and consistent.</p>",
             "link_label": "",
@@ -174,7 +175,7 @@
         "title": "",
         "heading_size": "h2",
         "image_width": "full",
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
