@@ -137,8 +137,9 @@
         "column_qaU7dm": {
           "type": "column",
           "settings": {
-            "title": "1",
-            "text": "<h3><strong>Real Carhartt, real hard work</strong></h3><h3></h3><p>From duck jackets to insulated vests, we source genuine Carhartt product so your crew is wearing gear that can keep up with long shifts and rough conditions.</p>",
+            "image": "shopify://shop_images/012821_Safety_Cornerstone_1.jpg",
+            "title": "<strong>Real Carhartt, real hard work</strong>",
+            "text": "<p>From duck jackets to insulated vests, we source genuine Carhartt product so your crew is wearing gear that can keep up with long shifts and rough conditions.</p>",
             "link_label": "",
             "link": ""
           }
@@ -155,8 +156,9 @@
         "column_mXRyiA": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/100523_ColdWeatherFighters_Final.jpg",
+            "title": "<strong>Company store ready</strong>",
+            "text": "<p>Plug Carhartt styles into an existing GearOne company store or build a new portal for uniform programs, stipends, gifting, and new-hire kits.<br/><br/></p>",
             "link_label": "",
             "link": ""
           }
