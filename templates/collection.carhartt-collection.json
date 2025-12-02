@@ -137,8 +137,8 @@
         "column_qaU7dm": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "1",
+            "text": "<h3><strong>Real Carhartt, real hard work</strong></h3><h3></h3><p>From duck jackets to insulated vests, we source genuine Carhartt product so your crew is wearing gear that can keep up with long shifts and rough conditions.</p>",
             "link_label": "",
             "link": ""
           }
@@ -169,8 +169,8 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Legendary workwear, streamlined through a single partner.",
-        "heading_size": "h1",
+        "title": "",
+        "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
