@@ -15,7 +15,7 @@
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
-        "color_scheme": "scheme-1"
+        "color_scheme": "scheme-2"
       }
     },
     "product-grid": {
@@ -45,7 +45,7 @@
         "heading_aw6XYn": {
           "type": "heading",
           "settings": {
-            "heading": "Built for job sites.Finished by GearOne.",
+            "heading": "",
             "heading_size": "h1"
           }
         },
