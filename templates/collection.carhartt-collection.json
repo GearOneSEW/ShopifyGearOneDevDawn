@@ -45,7 +45,7 @@
         "heading_aw6XYn": {
           "type": "heading",
           "settings": {
-            "heading": "",
+            "heading": "Built for job sites. Finished by GearOne.",
             "heading_size": "h1"
           }
         },
@@ -53,7 +53,7 @@
           "type": "text",
           "settings": {
             "text": "Outfit your crew in authentic Carhartt gear decorated, managed, and fulfilled by GearOne—factory-direct, on-brand, and ready for tough days at work.",
-            "text_style": "body"
+            "text_style": "subtitle"
           }
         },
         "buttons_hcrrXk": {
