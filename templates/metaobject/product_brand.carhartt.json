@@ -170,7 +170,7 @@
         "variant_picker_Q7zYJn"
       ],
       "settings": {
-        "product": "{{ metaobject.brand_featured_product.value }}",
+        "product": "carhartt-rain-defender-soft-shell-vest",
         "color_scheme": "scheme-2",
         "secondary_background": true,
         "media_size": "small",
