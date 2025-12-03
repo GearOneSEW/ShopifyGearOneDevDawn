@@ -199,9 +199,9 @@
         "collapsible_row_WC6T4A": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Are these products genuine Carhartt items?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Yes. All <strong>Carhartt </strong>items sold through <strong>GearOne </strong>are <strong>100% authentic </strong>and sourced directly through authorized distribution channels.</p>",
             "page": ""
           }
         },
