@@ -15,7 +15,7 @@
         "column_T6hWDm": {
           "type": "column",
           "settings": {
-            "image": "{{ metaobject.brand_logo_1_color_vector.value }}",
+            "image": "shopify://shop_images/Carhartt_logo_2000px-01.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -58,7 +58,7 @@
         "background_style": "none",
         "button_label": "Shop All {{ metaobject.brand_title.value }}",
         "button_link": "{{ metaobject.product_brand_shop_all_url.value }}",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -97,13 +97,13 @@
         "button_T8gPk6"
       ],
       "settings": {
-        "image": "shopify://shop_images/Carhartt_logo_2000px-01.jpg",
+        "image": "shopify://shop_images/CT100615_CarbonHthr_Model_Lifestyle_CHLB23.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "content_layout": "overlap",
+        "content_layout": "no-overlap",
         "section_color_scheme": "",
         "color_scheme": "",
         "image_behavior": "none",
@@ -173,31 +173,15 @@
         "product": "{{ metaobject.brand_featured_product.value }}",
         "color_scheme": "scheme-2",
         "secondary_background": true,
-        "media_size": "medium",
+        "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "media_position": "left",
         "image_zoom": "lightbox",
         "hide_variants": false,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video_jNRQBF": {
-      "type": "video",
-      "settings": {
-        "heading": "{{ metaobject.brand_video_title.value }}",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video": "{{ metaobject.brand_video.value }}",
-        "video_url": "",
-        "cover_image": "{{ metaobject.brand_video_cover_image.value }}",
-        "description": "{{ metaobject.brand_video_alt_text.value }}",
-        "full_width": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     }
   },
@@ -205,7 +189,6 @@
     "multicolumn_nFx6Tp",
     "image_with_text_U3J9mr",
     "rich_text_HJ4phQ",
-    "featured_product_DrnnqK",
-    "video_jNRQBF"
+    "featured_product_DrnnqK"
   ]
 }
