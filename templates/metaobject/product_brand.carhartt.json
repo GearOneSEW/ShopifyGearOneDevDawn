@@ -208,18 +208,27 @@
         "collapsible_row_RYLNRm": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "What makes Carhartt workwear different from other brands?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p><strong>Carhartt </strong>is known for its exceptional durability, heavy-duty materials, and functional designs built to withstand rigorous work environments.</p>",
             "page": ""
           }
         },
         "collapsible_row_g7i7dx": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Do Carhartt products fit true to size?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Most <strong>Carhartt </strong>pieces fit true to size, but certain jackets, hoodies, and outerwear may have a relaxed fit. GearOne’s product pages include size charts for accuracy.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Q3pVek": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I customize Carhartt apparel with my company logo?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes. <strong>GearOne </strong>offers customization options like embroidery and screen-printing on select <strong>Carhartt </strong>items. Contact our team for volume pricing and design support.<br/><br/></p>",
             "page": ""
           }
         }
@@ -228,7 +237,8 @@
         "collapsible_row_UwkWVK",
         "collapsible_row_WC6T4A",
         "collapsible_row_RYLNRm",
-        "collapsible_row_g7i7dx"
+        "collapsible_row_g7i7dx",
+        "collapsible_row_Q3pVek"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
