@@ -231,6 +231,60 @@
             "row_content": "<p>Yes. <strong>GearOne </strong>offers customization options like embroidery and screen-printing on select <strong>Carhartt </strong>items. Contact our team for volume pricing and design support.<br/><br/></p>",
             "page": ""
           }
+        },
+        "collapsible_row_6JnEzx": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_JA3Kjr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the typical shipping time for Carhartt orders?",
+            "icon": "check_mark",
+            "row_content": "<p>Most in-stock <strong>Carhartt </strong>products ship within 1–3 business days. Customized items may require additional processing time.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_XnAHFA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the return policy on Carhartt items?",
+            "icon": "check_mark",
+            "row_content": "<p>Unworn, unwashed <strong>Carhartt </strong>products can be returned within the standard <strong>GearOne </strong>return window. Customized or decorated items are not eligible for return unless defective.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BtW6ap": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are Carhartt products available in bulk or for uniforms?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes. <strong>GearOne </strong>supplies <strong>Carhartt </strong>gear for teams, crews, and enterprise uniform programs. Bulk pricing and fulfillment support are available.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PwYxUU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will discontinued Carhartt styles be restocked?",
+            "icon": "check_mark",
+            "row_content": "<p>Discontinued styles typically won’t be restocked, but <strong>GearOne </strong>often carries updated or alternative versions. Contact customer support for recommendations.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_h9K7GL": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I care for my Carhartt clothing?",
+            "icon": "check_mark",
+            "row_content": "<p>Most items can be machine-washed in cold water and tumble-dried low. Always refer to the care label for specific instructions to maintain durability.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -238,7 +292,13 @@
         "collapsible_row_WC6T4A",
         "collapsible_row_RYLNRm",
         "collapsible_row_g7i7dx",
-        "collapsible_row_Q3pVek"
+        "collapsible_row_Q3pVek",
+        "collapsible_row_6JnEzx",
+        "collapsible_row_JA3Kjr",
+        "collapsible_row_XnAHFA",
+        "collapsible_row_BtW6ap",
+        "collapsible_row_PwYxUU",
+        "collapsible_row_h9K7GL"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
