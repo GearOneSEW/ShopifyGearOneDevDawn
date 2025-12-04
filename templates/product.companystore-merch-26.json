@@ -74,10 +74,6 @@
             "show_inventory_quantity": true
           }
         },
-        "easify_options_easify_product_options_dWgbUh": {
-          "type": "shopify://apps/easify-options/blocks/easify-product-options/d2288b18-c1ba-42f5-b3b3-26c75c8820bf",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -101,7 +97,6 @@
         "order_limits_minmaxify_product_limits_display_xTJdcr",
         "quantity_selector",
         "inventory_tEU7LP",
-        "easify_options_easify_product_options_dWgbUh",
         "buy_buttons",
         "share"
       ],
