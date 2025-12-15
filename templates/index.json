@@ -83,6 +83,56 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "image_banner_Yekc7p": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_Y4iUtG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_jFpCHK": {
+          "type": "text",
+          "settings": {
+            "text": "Esperience the quality of <strong>Carhartt by GearOne</strong> with our sample special. Enjoy <strong>$1 embroidery</strong>, complete with <strong>free online mockups</strong>, and see your custom design come to life before you buy.",
+            "text_style": "body"
+          }
+        },
+        "buttons_WtqRMc": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Y4iUtG",
+        "text_jFpCHK",
+        "buttons_WtqRMc"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/070519-Carhartt-Tees.jpg",
+        "image_2": "shopify://shop_images/CT103828_HW25_ProductGuide_CT_001_Lifestyle_Model.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "rich_text_Qg3f6f": {
       "type": "rich-text",
       "blocks": {
@@ -438,6 +488,7 @@
   },
   "order": [
     "slideshow_dgtTwj",
+    "image_banner_Yekc7p",
     "rich_text_Qg3f6f",
     "image_with_text_CJFYVt",
     "featured_collection_EJte6i",
