@@ -89,7 +89,7 @@
         "heading_Y4iUtG": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "<strong>Carhartt by GearOne</strong>",
             "heading_size": "h1"
           }
         },
@@ -103,10 +103,10 @@
         "buttons_WtqRMc": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/carhartt-by-gearone-copy",
             "button_style_secondary_1": false,
-            "button_label_2": "Button label",
+            "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
@@ -122,11 +122,11 @@
         "image": "shopify://shop_images/070519-Carhartt-Tees.jpg",
         "image_2": "shopify://shop_images/CT103828_HW25_ProductGuide_CT_001_Lifestyle_Model.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-center",
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
