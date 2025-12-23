@@ -67,7 +67,7 @@
         "column_alignment": "left",
         "background_style": "none",
         "button_label": "Shop All {{ metaobject.brand_title.value }}",
-        "button_link": "{{ metaobject.product_brand_shop_all_url.value }}",
+        "button_link": "shopify://collections/carhartt-by-gearone-copy",
         "color_scheme": "scheme-1",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
