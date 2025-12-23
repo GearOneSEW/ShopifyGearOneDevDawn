@@ -92,11 +92,11 @@
             "text_style": "body"
           }
         },
-        "button_T8gPk6": {
+        "button_bF6i7P": {
           "type": "button",
           "settings": {
-            "button_label": "",
-            "button_link": "",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/carhartt-by-gearone-copy",
             "button_style_secondary": false
           }
         }
@@ -104,7 +104,7 @@
       "block_order": [
         "heading_x33gWb",
         "text_hhgpcR",
-        "button_T8gPk6"
+        "button_bF6i7P"
       ],
       "settings": {
         "image": "shopify://shop_images/CT100615_CarbonHthr_Model_Lifestyle_CHLB23.jpg",
