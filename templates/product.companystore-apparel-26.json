@@ -41,6 +41,14 @@
           "type": "price",
           "settings": {}
         },
+        "text_YRfgzd": {
+          "type": "text",
+          "name": "Minimum Quantity",
+          "settings": {
+            "text": "Minimum Quantity:  {{ product.metafields.custom.minimum_quantity.value }}",
+            "text_style": "body"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -91,6 +99,7 @@
         "custom_liquid_KtcVKq",
         "text_ngKNRG",
         "price",
+        "text_YRfgzd",
         "variant_picker",
         "order_limits_minmaxify_product_limits_display_xTJdcr",
         "quantity_selector",
