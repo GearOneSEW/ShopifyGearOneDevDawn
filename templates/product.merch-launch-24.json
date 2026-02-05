@@ -44,6 +44,13 @@
           "type": "price",
           "settings": {}
         },
+        "custom_liquid_N9GbX9": {
+          "type": "custom_liquid",
+          "name": "Minimum Quantity Block",
+          "settings": {
+            "custom_liquid": "{% if product.metafields.custom.key_features_list and product.metafields.custom.key_features_list.value != '' %}\n  <div class=\"features-list\">\n    {{ product.metafields.custom.key_features_list.value }}\n  </div>\n{% endif %}"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -52,7 +59,7 @@
           }
         },
         "order_limits_minmaxify_product_limits_display_xTJdcr": {
-          "type": "shopify://apps/order-limits-minmaxify/blocks/product-limits-display/3acfba32-89f3-4377-ae20-cbb9abc48475",
+          "type": "shopify://apps/minmaxify-order-limits/blocks/product-limits-display/3acfba32-89f3-4377-ae20-cbb9abc48475",
           "settings": {
             "fontWeight": "normal",
             "color": "",
@@ -97,6 +104,7 @@
         "title",
         "custom_liquid_KtcVKq",
         "price",
+        "custom_liquid_N9GbX9",
         "variant_picker",
         "order_limits_minmaxify_product_limits_display_xTJdcr",
         "quantity_selector",

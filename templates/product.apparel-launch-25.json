@@ -35,6 +35,7 @@
         },
         "custom_liquid_KtcVKq": {
           "type": "custom_liquid",
+          "name": "Minimum Quantity Block",
           "disabled": true,
           "settings": {
             "custom_liquid": "{% if product.metafields.custom.key_features_list and product.metafields.custom.key_features_list.value != '' %}\n  <div class=\"features-list\">\n    {{ product.metafields.custom.key_features_list.value }}\n  </div>\n{% endif %}"
@@ -50,6 +51,14 @@
         "price": {
           "type": "price",
           "settings": {}
+        },
+        "text_AEMizT": {
+          "type": "text",
+          "name": "Minimum Quantity",
+          "settings": {
+            "text": "Minimum Quantity:  {{ product.metafields.custom.minimum_quantity.value }}",
+            "text_style": "body"
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -107,6 +116,7 @@
         "custom_liquid_KtcVKq",
         "text_ngKNRG",
         "price",
+        "text_AEMizT",
         "variant_picker",
         "order_limits_minmaxify_product_limits_display_xTJdcr",
         "quantity_selector",
