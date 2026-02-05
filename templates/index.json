@@ -117,6 +117,7 @@
         "text_jFpCHK",
         "buttons_WtqRMc"
       ],
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/070519-Carhartt-Tees.jpg",
