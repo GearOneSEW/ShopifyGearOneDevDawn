@@ -41,6 +41,14 @@
           "type": "price",
           "settings": {}
         },
+        "text_QwJHGQ": {
+          "type": "text",
+          "name": "Minimum Quantity",
+          "settings": {
+            "text": "Minimum Quantity:  {{ product.metafields.custom.minimum_quantity.value }}",
+            "text_style": "body"
+          }
+        },
         "text_UxPz78": {
           "type": "text",
           "settings": {
@@ -120,6 +128,7 @@
         "caption",
         "text_rKDbYc",
         "price",
+        "text_QwJHGQ",
         "text_UxPz78",
         "variant_picker",
         "quantity_selector",
