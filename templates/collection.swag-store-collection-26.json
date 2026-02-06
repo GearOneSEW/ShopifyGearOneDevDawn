@@ -86,6 +86,96 @@
         "color_scheme": "scheme-1"
       }
     },
+    "ss_circle_menu_7p3zAi": {
+      "type": "ss-circle-menu",
+      "blocks": {
+        "image_nfRtda": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/NF0A3LGZ_darkgreyhthr_flat_front-Ledgerway-White_fa50cca1-fe2e-4cff-8ade-0dbec0f8f3b5.jpg",
+            "bubble_text": "Apparel",
+            "bubble_link": ""
+          }
+        },
+        "image_WXUMhC": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/1603-01_Back_Black_print-white-Ledgerway.jpg",
+            "bubble_text": "Drinkware",
+            "bubble_link": ""
+          }
+        },
+        "image_FNDRmm": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/NKFB6447_NAVY_Flat_Left_183a7e22-0d02-427a-9483-bfff4d79697d.jpg",
+            "bubble_text": "Caps",
+            "bubble_link": ""
+          }
+        },
+        "image_6hnJDd": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/1450-95_Set_Ledgerway.jpg",
+            "bubble_text": "Outdoors",
+            "bubble_link": ""
+          }
+        },
+        "image_fehRjy": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/CT89132109_carharttbrown_flat_left_prop2-Ledgerway-white.jpg",
+            "bubble_text": "Bags",
+            "bubble_link": "https://www.gearone.com/collections/ledgerway-swag-store?filter.v.price.gte=&filter.v.price.lte=&filter.p.t.category=lb&sort_by=created-ascending"
+          }
+        }
+      },
+      "block_order": [
+        "image_nfRtda",
+        "image_WXUMhC",
+        "image_FNDRmm",
+        "image_6hnJDd",
+        "image_fehRjy"
+      ],
+      "name": "SS - Circle Menu",
+      "settings": {
+        "slider_width": 100,
+        "slider_gap": 16,
+        "slider_gap_mobile": 16,
+        "icon_size": 108,
+        "icon_size_mobile": 74,
+        "icon_space": 4,
+        "icon_space_mobile": 4,
+        "icon_border_thickness": 2,
+        "icon_square": false,
+        "use_hover": true,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 12,
+        "text_size_mobile": 10,
+        "text_height": 130,
+        "text_mt": 8,
+        "icon_border_color": "#121212",
+        "icon_border_gradient": "",
+        "text_color": "#121212",
+        "background_color": "#FFFFFF",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "border_gradient": "",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1500,
+        "border_thickness": 0,
+        "lazy": true,
+        "hide_mobile": false,
+        "hide_desktop": false
+      }
+    },
     "1770401529d438e379": {
       "type": "_blocks",
       "blocks": {
@@ -213,10 +303,11 @@
   "order": [
     "177041011197c9b74d",
     "177040994964b948a4",
-    "banner",
+    "ss_circle_menu_7p3zAi",
     "1770401529d438e379",
     "rich_text_CcrGq4",
     "product-grid",
+    "banner",
     "17704100776f7a1757"
   ]
 }
