@@ -1,6 +1,453 @@
+{% doc %}
+  @prompt
+    I want a section that can act like a header with a selectable logo, and a currency selector. I want the logo to be selectable by upload, or tied to a metafield per template., I want to be able to select the logo position and I woulld like the currency selector to be just like in the header and have the same account and cart links like i have on the dawn header, can you preselect the customers local currency based on location and the use the same styling as the header on our Dawn home page? , Can you also have the country name beside the Currency like United States | USD$ 
+    Also make the shopping bag icon the same size as the accounts icon.
+    Finally, for the uploaded logo, I would like to choose where it links to instead of it taking me to the home page. 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-custom-header-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-custom-header__container-{{ ai_gen_id }} {
+    max-width: {{ settings.page_width }}px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .ai-custom-header__logo-wrapper-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    order: {% if block.settings.logo_position == 'left' %}1{% elsif block.settings.logo_position == 'center' %}2{% else %}3{% endif %};
+  }
+
+  .ai-custom-header__logo-link-{{ ai_gen_id }} {
+    display: block;
+    line-height: 0;
+  }
+
+  .ai-custom-header__logo-{{ ai_gen_id }} {
+    max-width: {{ block.settings.logo_width }}px;
+    height: auto;
+    display: block;
+  }
+
+  .ai-custom-header__logo-placeholder-{{ ai_gen_id }} {
+    width: {{ block.settings.logo_width }}px;
+    height: 60px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+
+  .ai-custom-header__logo-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 100px;
+    max-height: 50px;
+  }
+
+  .ai-custom-header__spacer-{{ ai_gen_id }} {
+    flex-grow: 1;
+    order: {% if block.settings.logo_position == 'left' %}2{% elsif block.settings.logo_position == 'center' %}1{% else %}1{% endif %};
+  }
+
+  .ai-custom-header__actions-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    order: {% if block.settings.logo_position == 'left' %}3{% elsif block.settings.logo_position == 'center' %}3{% else %}2{% endif %};
+  }
+
+  .ai-custom-header__localization-{{ ai_gen_id }} {
+    position: relative;
+  }
+
+  .ai-custom-header__localization-button-{{ ai_gen_id }} {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: {{ block.settings.text_color }};
+    font-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    font-weight: {{ settings.type_body_font.weight }};
+  }
+
+  .ai-custom-header__localization-button-{{ ai_gen_id }}:hover {
+    opacity: 0.7;
+  }
+
+  .ai-custom-header__localization-icon-{{ ai_gen_id }} {
+    width: 16px;
+    height: 16px;
+  }
+
+  .ai-custom-header__localization-dropdown-{{ ai_gen_id }} {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  }
+
+  .ai-custom-header__localization-dropdown-{{ ai_gen_id }}.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .ai-custom-header__currency-list-{{ ai_gen_id }} {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  .ai-custom-header__currency-item-{{ ai_gen_id }} {
+    margin: 0;
+  }
+
+  .ai-custom-header__currency-button-{{ ai_gen_id }} {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 10px 16px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    color: #121212;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+  }
+
+  .ai-custom-header__currency-button-{{ ai_gen_id }}:hover {
+    background-color: #f3f3f3;
+  }
+
+  .ai-custom-header__currency-button-{{ ai_gen_id }}.active {
+    background-color: #f3f3f3;
+    font-weight: 600;
+  }
+
+  .ai-custom-header__icon-link-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: {{ block.settings.text_color }};
+    text-decoration: none;
+    position: relative;
+  }
+
+  .ai-custom-header__icon-link-{{ ai_gen_id }}:hover {
+    opacity: 0.7;
+  }
+
+  .ai-custom-header__icon-{{ ai_gen_id }} {
+    width: 22px;
+    height: 22px;
+  }
+
+  .ai-custom-header__cart-count-{{ ai_gen_id }} {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: {{ block.settings.badge_color }};
+    color: {{ block.settings.badge_text_color }};
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-custom-header__container-{{ ai_gen_id }} {
+      padding: 12px 15px;
+    }
+
+    .ai-custom-header__logo-{{ ai_gen_id }} {
+      max-width: {{ block.settings.logo_width | times: 0.7 }}px;
+    }
+
+    .ai-custom-header__actions-{{ ai_gen_id }} {
+      gap: 15px;
+    }
+
+    .ai-custom-header__localization-button-{{ ai_gen_id }} {
+      padding: 6px 8px;
+      font-size: 13px;
+    }
+  }
+{% endstyle %}
+
+<custom-header-{{ ai_gen_id }} class="ai-custom-header-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-custom-header__container-{{ ai_gen_id }}">
+    <div class="ai-custom-header__logo-wrapper-{{ ai_gen_id }}">
+      <a href="{{ block.settings.logo_link | default: routes.root_url }}" class="ai-custom-header__logo-link-{{ ai_gen_id }}">
+        {% if block.settings.use_metafield_logo and template.suffix != blank %}
+          {% assign metafield_key = 'custom.logo_' | append: template.suffix %}
+          {% assign metafield_logo = shop.metafields[metafield_key] %}
+          {% if metafield_logo %}
+            <img
+              src="{{ metafield_logo | image_url: width: 600 }}"
+              alt="{{ shop.name }}"
+              class="ai-custom-header__logo-{{ ai_gen_id }}"
+              width="{{ block.settings.logo_width }}"
+              height="auto"
+              loading="lazy"
+            >
+          {% elsif block.settings.logo %}
+            <img
+              src="{{ block.settings.logo | image_url: width: 600 }}"
+              alt="{{ shop.name }}"
+              class="ai-custom-header__logo-{{ ai_gen_id }}"
+              width="{{ block.settings.logo_width }}"
+              height="auto"
+              loading="lazy"
+            >
+          {% else %}
+            <div class="ai-custom-header__logo-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        {% elsif block.settings.logo %}
+          <img
+            src="{{ block.settings.logo | image_url: width: 600 }}"
+            alt="{{ shop.name }}"
+            class="ai-custom-header__logo-{{ ai_gen_id }}"
+            width="{{ block.settings.logo_width }}"
+            height="auto"
+            loading="lazy"
+          >
+        {% else %}
+          <div class="ai-custom-header__logo-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+      </a>
+    </div>
+
+    {% if block.settings.logo_position == 'center' %}
+      <div class="ai-custom-header__spacer-{{ ai_gen_id }}"></div>
+    {% endif %}
+
+    <div class="ai-custom-header__actions-{{ ai_gen_id }}">
+      <div class="ai-custom-header__localization-{{ ai_gen_id }}">
+        <button
+          type="button"
+          class="ai-custom-header__localization-button-{{ ai_gen_id }}"
+          aria-expanded="false"
+          aria-label="Select currency"
+        >
+          <svg class="ai-custom-header__localization-icon-{{ ai_gen_id }}" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M10 1a9 9 0 1 0 9 9 9 9 0 0 0-9-9Z" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M2 10h16M10 2a12.5 12.5 0 0 1 2.5 8A12.5 12.5 0 0 1 10 18a12.5 12.5 0 0 1-2.5-8A12.5 12.5 0 0 1 10 2Z" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          <span class="ai-custom-header__localization-text-{{ ai_gen_id }}">
+            {{ localization.country.name }} | {{ localization.country.currency.iso_code }}{{ localization.country.currency.symbol }}
+          </span>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <div class="ai-custom-header__localization-dropdown-{{ ai_gen_id }}">
+          {% form 'localization', class: 'ai-custom-header__localization-form-{{ ai_gen_id }}' %}
+            <ul class="ai-custom-header__currency-list-{{ ai_gen_id }}">
+              {% for country in localization.available_countries %}
+                <li class="ai-custom-header__currency-item-{{ ai_gen_id }}">
+                  <button
+                    type="submit"
+                    name="country_code"
+                    value="{{ country.iso_code }}"
+                    class="ai-custom-header__currency-button-{{ ai_gen_id }} {% if country.iso_code == localization.country.iso_code %}active{% endif %}"
+                  >
+                    {{ country.name }} | {{ country.currency.iso_code }}{{ country.currency.symbol }}
+                  </button>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endform %}
+        </div>
+      </div>
+
+      <a href="{{ routes.account_url }}" class="ai-custom-header__icon-link-{{ ai_gen_id }}" aria-label="Account">
+        <svg class="ai-custom-header__icon-{{ ai_gen_id }}" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15ZM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35Z" fill="currentColor"/>
+        </svg>
+      </a>
+
+      <a href="{{ routes.cart_url }}" class="ai-custom-header__icon-link-{{ ai_gen_id }}" aria-label="Cart">
+        <svg class="ai-custom-header__icon-{{ ai_gen_id }}" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M1 1h3.27l.94 2H20a1 1 0 0 1 .98 1.21l-1.8 8.4a1 1 0 0 1-.97.79H6.75l.42 1H18v2H6a1 1 0 0 1-.97-1.24L6.27 11l-3.5-8H1V1Zm8.75 19a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM17.5 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" fill="currentColor"/>
+        </svg>
+        {% if cart.item_count > 0 %}
+          <span class="ai-custom-header__cart-count-{{ ai_gen_id }}">{{ cart.item_count }}</span>
+        {% endif %}
+      </a>
+    </div>
+
+    {% if block.settings.logo_position == 'left' %}
+      <div class="ai-custom-header__spacer-{{ ai_gen_id }}"></div>
+    {% endif %}
+  </div>
+</custom-header-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class CustomHeader{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.localizationButton = this.querySelector('.ai-custom-header__localization-button-{{ ai_gen_id }}');
+        this.localizationDropdown = this.querySelector('.ai-custom-header__localization-dropdown-{{ ai_gen_id }}');
+      }
+
+      connectedCallback() {
+        if (this.localizationButton && this.localizationDropdown) {
+          this.localizationButton.addEventListener('click', this.toggleDropdown.bind(this));
+          document.addEventListener('click', this.closeDropdownOutside.bind(this));
+        }
+      }
+
+      toggleDropdown(event) {
+        event.stopPropagation();
+        const isActive = this.localizationDropdown.classList.contains('active');
+        this.localizationDropdown.classList.toggle('active');
+        this.localizationButton.setAttribute('aria-expanded', !isActive);
+      }
+
+      closeDropdownOutside(event) {
+        if (!this.contains(event.target)) {
+          this.localizationDropdown.classList.remove('active');
+          this.localizationButton.setAttribute('aria-expanded', 'false');
+        }
+      }
+
+      disconnectedCallback() {
+        document.removeEventListener('click', this.closeDropdownOutside.bind(this));
+      }
+    }
+
+    customElements.define('custom-header-{{ ai_gen_id }}', CustomHeader{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Custom header",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Logo width",
+      "default": 150
+    },
+    {
+      "type": "url",
+      "id": "logo_link",
+      "label": "Logo link"
+    },
+    {
+      "type": "select",
+      "id": "logo_position",
+      "label": "Logo position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_metafield_logo",
+      "label": "Use template metafield logo",
+      "info": "When enabled, will use shop.metafields.custom.logo_{template_suffix} if available",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "badge_color",
+      "label": "Cart badge background",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Cart badge text",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom header"
+    }
+  ]
+}
 {% endschema %}
