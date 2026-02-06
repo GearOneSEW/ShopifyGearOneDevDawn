@@ -71,6 +71,51 @@
       "name": "Video Columns (Sidekick 02062026))",
       "settings": {}
     },
+    "rich_text_CcrGq4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mNhbPX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop All Ledgerway Store Products",
+            "heading_size": "h1"
+          }
+        },
+        "text_ViYGdE": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_EeizKG": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_mNhbPX",
+        "text_ViYGdE",
+        "button_EeizKG"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 12
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -90,66 +135,12 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "multicolumn_8zFWir": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_wJeQMM": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_hGdjJQ": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_LDGbU3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_wJeQMM",
-        "column_hGdjJQ",
-        "column_LDGbU3"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Staff Favorites",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "banner",
     "1770401529d438e379",
-    "product-grid",
-    "multicolumn_8zFWir"
+    "rich_text_CcrGq4",
+    "product-grid"
   ]
 }
