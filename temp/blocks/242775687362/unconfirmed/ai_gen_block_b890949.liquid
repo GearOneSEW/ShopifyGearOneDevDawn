@@ -1,6 +1,571 @@
+{% doc %}
+  @prompt
+    I want to have a different menu than the one on the home page, can you add menu type, can you add the option for mega menu
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-menu-container-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding_vertical }}px {{ block.settings.padding_horizontal }}px;
+  }
+
+  .ai-menu-nav-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: {{ block.settings.menu_alignment }};
+    align-items: center;
+    gap: {{ block.settings.item_spacing }}px;
+    flex-wrap: wrap;
+  }
+
+  .ai-menu-item-{{ ai_gen_id }} {
+    position: relative;
+  }
+
+  .ai-menu-link-{{ ai_gen_id }} {
+    display: block;
+    padding: {{ block.settings.link_padding_vertical }}px {{ block.settings.link_padding_horizontal }}px;
+    color: {{ block.settings.text_color }};
+    text-decoration: none;
+    font-size: {{ block.settings.font_size }}px;
+    font-weight: {{ block.settings.font_weight }};
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .ai-menu-link-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.text_hover_color }};
+  }
+
+  .ai-menu-item-{{ ai_gen_id }}.has-dropdown > .ai-menu-link-{{ ai_gen_id }}::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid currentColor;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  .ai-menu-dropdown-{{ ai_gen_id }} {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background-color: {{ block.settings.dropdown_background_color }};
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+    border-radius: {{ block.settings.dropdown_border_radius }}px;
+  }
+
+  .ai-menu-item-{{ ai_gen_id }}:hover > .ai-menu-dropdown-{{ ai_gen_id }} {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .ai-menu-dropdown-link-{{ ai_gen_id }} {
+    display: block;
+    padding: 12px 20px;
+    color: {{ block.settings.dropdown_text_color }};
+    text-decoration: none;
+    font-size: {{ block.settings.dropdown_font_size }}px;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .ai-menu-dropdown-link-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.dropdown_hover_background }};
+    color: {{ block.settings.dropdown_hover_text_color }};
+  }
+
+  .ai-menu-mega-dropdown-{{ ai_gen_id }} {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    width: {{ block.settings.mega_menu_width }}%;
+    max-width: 1200px;
+    background-color: {{ block.settings.dropdown_background_color }};
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+    border-radius: {{ block.settings.dropdown_border_radius }}px;
+    padding: {{ block.settings.mega_menu_padding }}px;
+  }
+
+  .ai-menu-item-{{ ai_gen_id }}:hover > .ai-menu-mega-dropdown-{{ ai_gen_id }} {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .ai-menu-mega-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat({{ block.settings.mega_menu_columns }}, 1fr);
+    gap: {{ block.settings.mega_menu_gap }}px;
+  }
+
+  .ai-menu-mega-column-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ai-menu-mega-heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.mega_heading_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.dropdown_text_color }};
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-menu-mega-link-{{ ai_gen_id }} {
+    display: block;
+    padding: 8px 0;
+    color: {{ block.settings.dropdown_text_color }};
+    text-decoration: none;
+    font-size: {{ block.settings.dropdown_font_size }}px;
+    transition: color 0.2s ease;
+  }
+
+  .ai-menu-mega-link-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.dropdown_hover_text_color }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-menu-nav-{{ ai_gen_id }} {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .ai-menu-dropdown-{{ ai_gen_id }},
+    .ai-menu-mega-dropdown-{{ ai_gen_id }} {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      margin-top: 8px;
+      display: none;
+    }
+
+    .ai-menu-item-{{ ai_gen_id }}.mobile-open > .ai-menu-dropdown-{{ ai_gen_id }},
+    .ai-menu-item-{{ ai_gen_id }}.mobile-open > .ai-menu-mega-dropdown-{{ ai_gen_id }} {
+      display: block;
+    }
+
+    .ai-menu-mega-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+
+    .ai-menu-mega-dropdown-{{ ai_gen_id }} {
+      width: 100%;
+      transform: none;
+    }
+  }
+{% endstyle %}
+
+<custom-menu-{{ ai_gen_id }} class="ai-menu-container-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <nav class="ai-menu-nav-{{ ai_gen_id }}" role="navigation" aria-label="Main menu">
+    {% if block.settings.menu != blank %}
+      {% for link in block.settings.menu.links %}
+        <div class="ai-menu-item-{{ ai_gen_id }} {% if link.links.size > 0 %}has-dropdown{% endif %}" data-menu-item>
+          {% if link.links.size > 0 %}
+            <span class="ai-menu-link-{{ ai_gen_id }}" tabindex="0" role="button" aria-expanded="false">
+              {{ link.title }}
+            </span>
+            
+            {% if block.settings.enable_mega_menu and link.links.size >= block.settings.mega_menu_threshold %}
+              <div class="ai-menu-mega-dropdown-{{ ai_gen_id }}">
+                <div class="ai-menu-mega-grid-{{ ai_gen_id }}">
+                  {% assign items_per_column = link.links.size | divided_by: block.settings.mega_menu_columns | plus: 1 %}
+                  {% assign column_index = 0 %}
+                  
+                  {% for i in (1..block.settings.mega_menu_columns) %}
+                    {% assign start_index = column_index %}
+                    {% assign end_index = column_index | plus: items_per_column %}
+                    
+                    <div class="ai-menu-mega-column-{{ ai_gen_id }}">
+                      {% if block.settings.show_mega_headings and link.links[start_index] %}
+                        <div class="ai-menu-mega-heading-{{ ai_gen_id }}">
+                          {{ link.title }}
+                        </div>
+                      {% endif %}
+                      
+                      {% for child_link in link.links limit: items_per_column offset: start_index %}
+                        <a href="{{ child_link.url }}" class="ai-menu-mega-link-{{ ai_gen_id }}">
+                          {{ child_link.title }}
+                        </a>
+                      {% endfor %}
+                    </div>
+                    
+                    {% assign column_index = end_index %}
+                  {% endfor %}
+                </div>
+              </div>
+            {% else %}
+              <div class="ai-menu-dropdown-{{ ai_gen_id }}">
+                {% for child_link in link.links %}
+                  <a href="{{ child_link.url }}" class="ai-menu-dropdown-link-{{ ai_gen_id }}">
+                    {{ child_link.title }}
+                  </a>
+                {% endfor %}
+              </div>
+            {% endif %}
+          {% else %}
+            <a href="{{ link.url }}" class="ai-menu-link-{{ ai_gen_id }}">
+              {{ link.title }}
+            </a>
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="ai-menu-empty-state-{{ ai_gen_id }}" style="padding: 20px; text-align: center; color: #666;">
+        Select a menu to display
+      </div>
+    {% endif %}
+  </nav>
+</custom-menu-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class CustomMenu{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.menuItems = this.querySelectorAll('[data-menu-item]');
+        this.setupMobileToggle();
+      }
+
+      setupMobileToggle() {
+        this.menuItems.forEach((item) => {
+          const link = item.querySelector('.ai-menu-link-{{ ai_gen_id }}');
+          const hasDropdown = item.classList.contains('has-dropdown');
+
+          if (hasDropdown && link) {
+            link.addEventListener('click', (e) => {
+              if (window.innerWidth <= 749) {
+                e.preventDefault();
+                item.classList.toggle('mobile-open');
+                const isExpanded = item.classList.contains('mobile-open');
+                link.setAttribute('aria-expanded', isExpanded);
+              }
+            });
+
+            link.addEventListener('keydown', (e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                if (window.innerWidth <= 749) {
+                  item.classList.toggle('mobile-open');
+                  const isExpanded = item.classList.contains('mobile-open');
+                  link.setAttribute('aria-expanded', isExpanded);
+                }
+              }
+            });
+          }
+        });
+      }
+    }
+
+    customElements.define('custom-menu-{{ ai_gen_id }}', CustomMenu{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Custom menu",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "select",
+      "id": "menu_alignment",
+      "label": "Menu alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        },
+        {
+          "value": "space-between",
+          "label": "Space between"
+        }
+      ],
+      "default": "flex-start"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Mega menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_mega_menu",
+      "label": "Enable mega menu",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "mega_menu_threshold",
+      "label": "Minimum items for mega menu",
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "mega_menu_columns",
+      "label": "Mega menu columns",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "mega_menu_width",
+      "label": "Mega menu width",
+      "min": 60,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 90
+    },
+    {
+      "type": "range",
+      "id": "mega_menu_padding",
+      "label": "Mega menu padding",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "mega_menu_gap",
+      "label": "Column gap",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mega_headings",
+      "label": "Show column headings",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "mega_heading_size",
+      "label": "Heading size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "text_hover_color",
+      "label": "Text hover color",
+      "default": "#005cab"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "label": "Vertical padding",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "label": "Horizontal padding",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "item_spacing",
+      "label": "Item spacing",
+      "min": 5,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "link_padding_vertical",
+      "label": "Link vertical padding",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "link_padding_horizontal",
+      "label": "Link horizontal padding",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Dropdown style"
+    },
+    {
+      "type": "color",
+      "id": "dropdown_background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "dropdown_text_color",
+      "label": "Text color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "dropdown_hover_background",
+      "label": "Hover background color",
+      "default": "#f3f3f3"
+    },
+    {
+      "type": "color",
+      "id": "dropdown_hover_text_color",
+      "label": "Hover text color",
+      "default": "#005cab"
+    },
+    {
+      "type": "range",
+      "id": "dropdown_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "dropdown_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom menu"
+    }
+  ]
+}
 {% endschema %}
