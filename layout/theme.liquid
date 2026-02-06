@@ -353,7 +353,15 @@ shopify-payment-terms {
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
-    {% sections 'header-group' %}
+   {% capture show_header %}{% render 'header-visibility' %}{% endcapture %}
+{% assign show_header = show_header | strip %}
+
+
+{% if show_header == 'true' %}
+ {% sections 'header-group' %}
+{% endif %}
+
+
 {% comment %}Added/Modified by Limoni Apps on 22/11/24 to support Discount Ninja{% endcomment %}
 
     <main id="MainContent" class="{% if template == 'cart' %}limoniapps-discountninja-cart-root{% endif %} content-for-layout focus-none" role="main" tabindex="-1">
