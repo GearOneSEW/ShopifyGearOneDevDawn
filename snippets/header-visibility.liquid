@@ -1,0 +1,8 @@
+{% assign hide_header_templates = 'collection.conference,product.customizer' | split: ',' %}
+
+
+{% if hide_header_templates contains template %}
+ false
+{% else %}
+ true
+{% endif %}
