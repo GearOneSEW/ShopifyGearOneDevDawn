@@ -40,7 +40,7 @@
         "ai_gen_block_b890949_i33KQb": {
           "type": "ai_gen_block_b890949",
           "settings": {
-            "menu": "main-menu",
+            "menu": "footer",
             "menu_alignment": "center",
             "desktop_width_percent": 100,
             "enable_mega_menu": true,
