@@ -181,6 +181,9 @@
   <nav class="ai-menu-nav-{{ ai_gen_id }}" role="navigation" aria-label="Main menu">
     {% if block.settings.menu != blank %}
       {% for link in block.settings.menu.links %}
+        {%- comment %}<locksmith:0880>{% endcomment -%}
+          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: block.settings.menu, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+        {%- comment %}</locksmith:0880>{% endcomment -%}
         <div class="ai-menu-item-{{ ai_gen_id }} {% if link.links.size > 0 %}has-dropdown{% endif %}" data-menu-item>
           {% if link.links.size > 0 %}
             <span class="ai-menu-link-{{ ai_gen_id }}" tabindex="0" role="button" aria-expanded="false">
@@ -205,6 +208,9 @@
                       {% endif %}
                       
                       {% for child_link in link.links limit: items_per_column offset: start_index %}
+                        {%- comment %}<locksmith:501f>{% endcomment -%}
+                          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: child_link, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                        {%- comment %}</locksmith:501f>{% endcomment -%}
                         <a href="{{ child_link.url }}" class="ai-menu-mega-link-{{ ai_gen_id }}">
                           {{ child_link.title }}
                         </a>
@@ -218,6 +224,9 @@
             {% else %}
               <div class="ai-menu-dropdown-{{ ai_gen_id }}">
                 {% for child_link in link.links %}
+                  {%- comment %}<locksmith:cdc0>{% endcomment -%}
+                    {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: child_link, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                  {%- comment %}</locksmith:cdc0>{% endcomment -%}
                   <a href="{{ child_link.url }}" class="ai-menu-dropdown-link-{{ ai_gen_id }}">
                     {{ child_link.title }}
                   </a>
