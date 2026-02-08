@@ -9,6 +9,32 @@
  */
 {
   "sections": {
+    "1770572806f805b7ee": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_aeb991d_NrGfEr": {
+          "type": "ai_gen_block_aeb991d",
+          "settings": {
+            "announcement_text": "You are Shopping a Custom Swag Store | Return to",
+            "collection": "{{ closest.product.metafields.custom.swag_store_collection.value }}",
+            "link_text": "Store Home",
+            "background_color": "#005cab",
+            "text_color": "#ffffff",
+            "link_color": "#ffffff",
+            "link_hover_color": "#e0e0e0",
+            "link_style": "underline",
+            "font_size": 14,
+            "padding_vertical": 12,
+            "max_width": 1300
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_aeb991d_NrGfEr"
+      ],
+      "settings": {}
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -675,6 +701,7 @@
     }
   },
   "order": [
+    "1770572806f805b7ee",
     "main",
     "1732217783ae414b1a",
     "multicolumn_aUFFgV",
