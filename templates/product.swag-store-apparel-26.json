@@ -15,9 +15,9 @@
         "ai_gen_block_aeb991d_NrGfEr": {
           "type": "ai_gen_block_aeb991d",
           "settings": {
-            "announcement_text": "You are Shopping a Custom Swag Store | Return to",
+            "announcement_text": "<strong>You are Shopping a Custom Swag Store |</strong>",
             "collection": "{{ closest.product.metafields.custom.swag_store_collection.value }}",
-            "link_text": "Store Home",
+            "link_text": "{{ closest.collection.title }}",
             "background_color": "#005cab",
             "text_color": "#ffffff",
             "link_color": "#ffffff",
@@ -33,6 +33,7 @@
       "block_order": [
         "ai_gen_block_aeb991d_NrGfEr"
       ],
+      "name": "Swag Store Menu Bar",
       "settings": {}
     },
     "main": {
