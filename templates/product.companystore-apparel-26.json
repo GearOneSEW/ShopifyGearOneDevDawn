@@ -473,6 +473,7 @@
         "collapsible_row_BWLAp3",
         "collapsible_row_TwcHdA"
       ],
+      "disabled": true,
       "settings": {
         "caption": "Common Questions, Clear Answers",
         "heading": "<strong>Ask Away: Your FAQ Hub</strong>",
