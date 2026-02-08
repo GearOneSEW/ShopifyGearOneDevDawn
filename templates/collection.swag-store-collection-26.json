@@ -74,6 +74,7 @@
       "block_order": [
         "ai_gen_block_b890949_i33KQb"
       ],
+      "disabled": true,
       "name": "Selectable Menu (Custom Code)",
       "settings": {}
     },
@@ -85,6 +86,35 @@
         "show_collection_description": true,
         "show_collection_image": true,
         "color_scheme": "scheme-1"
+      }
+    },
+    "featured_collection_Q4XKhd": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "1770401529d438e379": {
@@ -137,6 +167,7 @@
       "block_order": [
         "ai_gen_block_730aa8d_8jzCqc"
       ],
+      "disabled": true,
       "name": "Video Columns (Sidekick 02062026))",
       "settings": {}
     },
@@ -191,6 +222,7 @@
         "image_6hnJDd",
         "image_fehRjy"
       ],
+      "disabled": true,
       "name": "SS - Circle Menu",
       "settings": {
         "slider_width": 100,
@@ -382,6 +414,7 @@
     "177041011197c9b74d",
     "177040994964b948a4",
     "banner",
+    "featured_collection_Q4XKhd",
     "1770401529d438e379",
     "ss_circle_menu_7p3zAi",
     "rich_text_CcrGq4",
