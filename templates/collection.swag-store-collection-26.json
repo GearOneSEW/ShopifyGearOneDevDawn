@@ -330,7 +330,25 @@
           "settings": {
             "heading": "Who do I contact if I have questions or issues with my order?",
             "icon": "question_mark",
-            "row_content": "<p><br/>For questions about products, orders, or shipping, contact the GearOne support team using the help link on this store. For company-specific questions (such as eligibility or approvals), please reach out to your company’s designated point of contact.</p>",
+            "row_content": "<p><br/>For questions about products, orders, or shipping, contact the GearOne support team using the help link on this store or email <a><strong>contact@gearone.com</strong></a>. For company-specific questions (such as eligibility or approvals), please reach out to your company’s designated point of contact.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_e8RdhD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I return or exchange my items?",
+            "icon": "return",
+            "row_content": "<p>Because final branding is applied specifically for your organization, items cannot be resold or redistributed outside of your company. Return and exchange eligibility is handled according to the individual store program rules set by each company. If your item arrives damaged, incorrect, or you have a concern, please reach out through the store’s help link and our team will work with you to be as accommodating as possible.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_A7MzHG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will it fit? What happens if it doesn’t?",
+            "icon": "shirt",
+            "row_content": "<p>We recommend reviewing the size chart on each product page before placing your order, as fit can vary by brand and item style. For higher-priced items or if you have specific fit concerns, we can provide blank (undecorated) samples for sizing review prior to decoration—just reach out through the store’s help link to request samples before purchasing.</p><p>Because fit varies by brand, some customers choose to place an initial order using lower-priced items to confirm sizing, then place a follow-up order once their fit is locked in. </p><p>Since apparel is custom-branded for your organization, fit-related returns or exchanges follow the individual store program rules set by each company. If you need help deciding, our team is happy to assist and will work with you to be as accommodating as possible.</p>",
             "page": ""
           }
         }
@@ -339,7 +357,9 @@
         "collapsible_row_ahhzXh",
         "collapsible_row_yaaNwq",
         "collapsible_row_Ntny99",
-        "collapsible_row_e9j68L"
+        "collapsible_row_e9j68L",
+        "collapsible_row_e8RdhD",
+        "collapsible_row_A7MzHG"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
