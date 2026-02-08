@@ -377,6 +377,117 @@
         "padding_bottom": 36
       }
     },
+    "collapsible_content_WR4BqL": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_kLWH8N": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who is eligible to order from this store?",
+            "icon": "eye",
+            "row_content": "<p><br/>This store is created specifically for members, employees, or approved partners of the company shown. Orders placed outside of the intended audience may be canceled. If you’re unsure whether you’re eligible to order, please contact your company’s point of contact or the GearOne support team.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PjTjTC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long will it take to receive my order?",
+            "icon": "stopwatch",
+            "row_content": "<p><br/>Production and shipping times vary by product. Most items are made to order and typically ship within 5 business days after your order is placed. Once your order ships, you’ll receive a confirmation email with tracking information.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_FQq9HX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if I need a RUSH ORDER?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>If you need your order sooner, we can help. Rush production and expedited shipping are available for most items. To get started, please reach out through the chat on this store or email <a><strong>contact@gearone.com</strong></a> with your deadline and the items you’re interested in. Our team will confirm availability, timing, and any additional costs before proceeding.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6kTV3V": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who do I contact if I have questions or issues with my order?",
+            "icon": "question_mark",
+            "row_content": "<p><br/>For questions about products, orders, or shipping, contact the GearOne support team using the help link on this store or email <a><strong>contact@gearone.com</strong></a>. For company-specific questions (such as eligibility or approvals), please reach out to your company’s designated point of contact.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_n4HFjm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I return or exchange my items?",
+            "icon": "return",
+            "row_content": "<p>Because final branding is applied specifically for your organization, items cannot be resold or redistributed outside of your company. Return and exchange eligibility is handled according to the individual store program rules set by each company. If your item arrives damaged, incorrect, or you have a concern, please reach out through the store’s help link and our team will work with you to be as accommodating as possible.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_B36nm3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will it fit? What happens if it doesn’t?",
+            "icon": "shirt",
+            "row_content": "<p>We recommend reviewing the size chart on each product page before placing your order, as fit can vary by brand and item style. For higher-priced items or if you have specific fit concerns, we can provide blank (undecorated) samples for sizing review prior to decoration—just reach out through the store’s help link to request samples before purchasing.</p><p>Because fit varies by brand, some customers choose to place an initial order using lower-priced items to confirm sizing, then place a follow-up order once their fit is locked in. </p><p>Since apparel is custom-branded for your organization, fit-related returns or exchanges follow the individual store program rules set by each company. If you need help deciding, our team is happy to assist and will work with you to be as accommodating as possible.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_kLWH8N",
+        "collapsible_row_PjTjTC",
+        "collapsible_row_FQq9HX",
+        "collapsible_row_6kTV3V",
+        "collapsible_row_n4HFjm",
+        "collapsible_row_B36nm3"
+      ],
+      "name": "Swag Store FAQ v02082026",
+      "settings": {
+        "caption": "",
+        "heading": "<strong>Swag Store Product FAQs</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_hRDgiC": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Featured {{ section.settings.collection.title }} Products",
+        "heading_size": "h1",
+        "description": "{{ section.settings.collection.description }}",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "{{ product.metafields.custom.swag_store_collection.value }}",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collapsible_content_AVrz7g": {
       "type": "collapsible-content",
       "blocks": {
@@ -525,6 +636,7 @@
         "column-1",
         "column_E8gcjx"
       ],
+      "disabled": true,
       "settings": {
         "title": "No-Risk Order Process Steps:",
         "heading_size": "h1",
@@ -544,6 +656,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "Similar Items",
         "heading_size": "h1",
@@ -571,6 +684,8 @@
     "rich_text_tqniQT",
     "multicolumn_PhyDTa",
     "image-with-text",
+    "collapsible_content_WR4BqL",
+    "featured_collection_hRDgiC",
     "collapsible_content_AVrz7g",
     "multicolumn",
     "related-products"
