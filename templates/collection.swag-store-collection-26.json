@@ -31,7 +31,7 @@
       "block_order": [
         "ai_gen_block_a7d3426_zfbQC4"
       ],
-      "name": "Custom Header",
+      "name": "Custom Header (Custom Code)",
       "settings": {}
     },
     "177040994964b948a4": {
@@ -74,17 +74,71 @@
       "block_order": [
         "ai_gen_block_b890949_i33KQb"
       ],
-      "name": "Selectable Menu",
+      "name": "Selectable Menu (Custom Code)",
       "settings": {}
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "show_collection_description": true,
         "show_collection_image": true,
         "color_scheme": "scheme-1"
       }
+    },
+    "1770401529d438e379": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_730aa8d_8jzCqc": {
+          "type": "ai_gen_block_730aa8d",
+          "settings": {
+            "heading": "GearOne Staff Favorites - Specials",
+            "heading_size": 32,
+            "heading_color": "#121212",
+            "heading_alignment": "center",
+            "heading_spacing": 20,
+            "column_1_video": "https://cdn.shopify.com/videos/c/o/v/b910a2c714114f15804a4d1537814a38.mp4",
+            "column_1_heading": "<a href=\"https://www.gearone.com/products/ledgerway-carhartt-storm-defender%C2%AE-shoreline-jacket\" title=\"Ledgerway Carhartt® Shoreline Jacket\">Carhartt® Storm Defender® Shoreline Jacket (2026 Edition)</a>",
+            "column_1_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "column_2_video": "https://cdn.shopify.com/videos/c/o/v/563c107dc422416d813a0e2e9e843ca6.mp4",
+            "column_2_heading": "OGIO® Mastermind Backpack",
+            "column_2_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "column_3_video": "",
+            "column_3_heading": "Column 3",
+            "column_3_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_alignment": "center",
+            "button_spacing": 40,
+            "button_background": "#121212",
+            "button_background_hover": "#000000",
+            "button_text_color": "#ffffff",
+            "button_text_size": 16,
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 32,
+            "button_radius": 8,
+            "column_heading_size": 20,
+            "column_heading_color": "#121212",
+            "column_text_size": 16,
+            "column_text_color": "#121212",
+            "column_text_alignment": "left",
+            "content_gap": 16,
+            "desktop_width_percent": 100,
+            "container_width": 1300,
+            "column_gap": 24,
+            "media_radius": 4,
+            "padding_top": 40,
+            "padding_bottom": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_730aa8d_8jzCqc"
+      ],
+      "name": "Video Columns (Sidekick 02062026))",
+      "settings": {}
     },
     "ss_circle_menu_7p3zAi": {
       "type": "ss-circle-menu",
@@ -158,7 +212,7 @@
         "icon_border_color": "#121212",
         "icon_border_gradient": "",
         "text_color": "#121212",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "background_gradient": "",
         "border_color": "#121212",
         "border_gradient": "",
@@ -175,60 +229,6 @@
         "hide_mobile": false,
         "hide_desktop": false
       }
-    },
-    "1770401529d438e379": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_730aa8d_8jzCqc": {
-          "type": "ai_gen_block_730aa8d",
-          "settings": {
-            "heading": "GearOne Staff Favorite Picks",
-            "heading_size": 32,
-            "heading_color": "#121212",
-            "heading_alignment": "center",
-            "heading_spacing": 20,
-            "column_1_video": "https://cdn.shopify.com/videos/c/o/v/b910a2c714114f15804a4d1537814a38.mp4",
-            "column_1_heading": "<a href=\"https://www.gearone.com/products/ledgerway-carhartt-storm-defender%C2%AE-shoreline-jacket\" title=\"Ledgerway Carhartt® Shoreline Jacket\">Carhartt® Storm Defender® Shoreline Jacket (2026 Edition)</a>",
-            "column_1_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
-            "column_2_video": "https://cdn.shopify.com/videos/c/o/v/563c107dc422416d813a0e2e9e843ca6.mp4",
-            "column_2_heading": "OGIO® Mastermind Backpack",
-            "column_2_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
-            "column_3_video": "",
-            "column_3_heading": "Column 3",
-            "column_3_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_alignment": "center",
-            "button_spacing": 40,
-            "button_background": "#121212",
-            "button_background_hover": "#000000",
-            "button_text_color": "#ffffff",
-            "button_text_size": 16,
-            "button_padding_vertical": 12,
-            "button_padding_horizontal": 32,
-            "button_radius": 8,
-            "column_heading_size": 20,
-            "column_heading_color": "#121212",
-            "column_text_size": 16,
-            "column_text_color": "#121212",
-            "column_text_alignment": "left",
-            "content_gap": 16,
-            "desktop_width_percent": 100,
-            "container_width": 1300,
-            "column_gap": 24,
-            "media_radius": 4,
-            "padding_top": 40,
-            "padding_bottom": 40
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_730aa8d_8jzCqc"
-      ],
-      "disabled": true,
-      "name": "Video Columns (Sidekick 02062026))",
-      "settings": {}
     },
     "rich_text_CcrGq4": {
       "type": "rich-text",
@@ -295,19 +295,77 @@
         "padding_bottom": 36
       }
     },
-    "17704100776f7a1757": {
-      "type": "_blocks",
-      "settings": {}
+    "collapsible_content_Df687Y": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_ahhzXh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who is eligible to order from this store?",
+            "icon": "eye",
+            "row_content": "<p><br/>This store is created specifically for members, employees, or approved partners of the company shown. Orders placed outside of the intended audience may be canceled. If you’re unsure whether you’re eligible to order, please contact your company’s point of contact or the GearOne support team.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_yaaNwq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long will it take to receive my order?",
+            "icon": "stopwatch",
+            "row_content": "<p><br/>Production and shipping times vary by product. Most items are made to order and typically ship within 5 business days after your order is placed. Once your order ships, you’ll receive a confirmation email with tracking information.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Ntny99": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if I need a RUSH ORDER?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>If you need your order sooner, we can help. Rush production and expedited shipping are available for most items. To get started, please reach out through the chat on this store or email <a><strong>contact@gearone.com</strong></a> with your deadline and the items you’re interested in. Our team will confirm availability, timing, and any additional costs before proceeding.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_e9j68L": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who do I contact if I have questions or issues with my order?",
+            "icon": "question_mark",
+            "row_content": "<p><br/>For questions about products, orders, or shipping, contact the GearOne support team using the help link on this store. For company-specific questions (such as eligibility or approvals), please reach out to your company’s designated point of contact.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_ahhzXh",
+        "collapsible_row_yaaNwq",
+        "collapsible_row_Ntny99",
+        "collapsible_row_e9j68L"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "{{ collection.title }} FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "177041011197c9b74d",
     "177040994964b948a4",
-    "ss_circle_menu_7p3zAi",
+    "banner",
     "1770401529d438e379",
+    "ss_circle_menu_7p3zAi",
     "rich_text_CcrGq4",
     "product-grid",
-    "banner",
-    "17704100776f7a1757"
+    "collapsible_content_Df687Y"
   ]
 }
