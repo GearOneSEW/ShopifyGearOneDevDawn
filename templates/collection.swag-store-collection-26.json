@@ -176,7 +176,7 @@
             "bubble_img": "shopify://shop_images/113_Split_White--Navy--Red_Left.jpg",
             "bubble_text": "Hats",
             "bubble_collection": "{{ collection }}",
-            "bubble_url_suffix": "&filter.p.t.category=aa-2-17&filter.p.t.category=aa-2-18",
+            "bubble_url_suffix": "?&filter.p.t.category=aa-2-17&filter.p.t.category=aa-2-18",
             "bubble_text_override": ""
           }
         },
