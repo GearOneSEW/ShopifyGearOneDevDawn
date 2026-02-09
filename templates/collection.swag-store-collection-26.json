@@ -163,7 +163,7 @@
           "name": "Bag Bubble",
           "settings": {
             "bubble_img": "shopify://shop_images/CT89132109_black_flat_left_featured.jpg",
-            "bubble_text": "BAGS",
+            "bubble_text": "Bags & Coolers",
             "bubble_collection": "{{ collection }}",
             "bubble_url_suffix": "?&filter.p.t.category=lb",
             "bubble_text_override": ""
@@ -185,7 +185,7 @@
           "name": "Kitchen & Dinking Bubble",
           "settings": {
             "bubble_img": "shopify://shop_images/front-view-of-clear-stanley-20oz-cafe-to-go-trav-mug_2.jpg",
-            "bubble_text": "Collection",
+            "bubble_text": "Kitchen & Dining",
             "bubble_collection": "{{ collection }}",
             "bubble_url_suffix": "?&filter.p.t.category=hg-11",
             "bubble_text_override": ""
@@ -193,9 +193,11 @@
         },
         "image_mqcL8k": {
           "type": "Image",
+          "name": "Office & Tech",
           "settings": {
-            "bubble_text": "Collection",
-            "bubble_collection": "",
+            "bubble_img": "shopify://shop_images/black-sound-shine-desktop-lamp-and-bluetooth-speaker_8.jpg",
+            "bubble_text": "Office & Tech",
+            "bubble_collection": "{{ collection }}",
             "bubble_url_suffix": "",
             "bubble_text_override": ""
           }
