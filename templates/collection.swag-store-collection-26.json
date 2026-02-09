@@ -15,9 +15,9 @@
         "ai_gen_block_a7d3426_zfbQC4": {
           "type": "ai_gen_block_a7d3426",
           "settings": {
-            "logo": "shopify://shop_images/LW_Logo_Trademark_Blue_800x400_106fe0d8-bd3b-4240-92a7-cdcccaf4daa1.png",
+            "logo": "{{ closest.collection.image }}",
             "logo_width": 300,
-            "logo_link": "shopify://collections/ledgerway-swag-store",
+            "logo_link": "{{ closest.collection.url }}",
             "logo_position": "center",
             "use_metafield_logo": false,
             "background_color": "#ffffff",
