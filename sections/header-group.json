@@ -53,10 +53,37 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "blocks_9yzgJ7": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_a7d3426_LKw9PW": {
+          "type": "ai_gen_block_a7d3426",
+          "settings": {
+            "logo": "{{ closest.collection.image }}",
+            "logo_width": 300,
+            "logo_link": "{{ closest.collection.url }}",
+            "logo_position": "center",
+            "use_metafield_logo": false,
+            "background_color": "#ffffff",
+            "text_color": "#121212",
+            "badge_color": "#121212",
+            "badge_text_color": "#ffffff"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_a7d3426_LKw9PW"
+      ],
+      "disabled": true,
+      "name": "Custom Header (v02062026)",
+      "settings": {}
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "blocks_9yzgJ7"
   ]
 }
