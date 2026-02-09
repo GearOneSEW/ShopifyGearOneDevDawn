@@ -69,6 +69,69 @@
       "name": "Swag Header Collection (v02092026)",
       "settings": {}
     },
+    "17706639258a6f4eba": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_f6da63e_keXqUE": {
+          "type": "ai_gen_block_f6da63e",
+          "settings": {
+            "layout": "row",
+            "alignment": "center",
+            "link_spacing": 12,
+            "desktop_width_percent": 100,
+            "link_font_size": 16,
+            "link_font_weight": "500",
+            "link_padding_horizontal": 20,
+            "link_padding_vertical": 10,
+            "link_border_radius": 8,
+            "link_border_thickness": 1,
+            "link_background_color": "#121212",
+            "link_text_color": "#ffffff",
+            "link_border_color": "#121212",
+            "link_hover_background_color": "#242833",
+            "link_hover_text_color": "#ffffff",
+            "link_hover_border_color": "#242833",
+            "link_1_enabled": true,
+            "link_1_collection": "{{ closest.collection }}",
+            "link_1_url_suffix": "?filter.p.m.custom.product_brand=gid%3A%2F%2Fshopify%2FMetaobject%2F65088487618&filter.v.price.gte=&filter.v.price.lte=&sort_by=created-ascending",
+            "link_1_text": "Filter1",
+            "link_2_enabled": true,
+            "link_2_collection": "",
+            "link_2_url_suffix": "",
+            "link_2_text": "",
+            "link_3_enabled": true,
+            "link_3_collection": "",
+            "link_3_url_suffix": "",
+            "link_3_text": "",
+            "link_4_enabled": false,
+            "link_4_collection": "",
+            "link_4_url_suffix": "",
+            "link_4_text": "",
+            "link_5_enabled": false,
+            "link_5_collection": "",
+            "link_5_url_suffix": "",
+            "link_5_text": "",
+            "link_6_enabled": false,
+            "link_6_collection": "",
+            "link_6_url_suffix": "",
+            "link_6_text": "",
+            "link_7_enabled": false,
+            "link_7_collection": "",
+            "link_7_url_suffix": "",
+            "link_7_text": "",
+            "link_8_enabled": false,
+            "link_8_collection": "",
+            "link_8_url_suffix": "",
+            "link_8_text": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_f6da63e_keXqUE"
+      ],
+      "settings": {}
+    },
     "177040994964b948a4": {
       "type": "_blocks",
       "blocks": {
@@ -473,6 +536,7 @@
   "order": [
     "177041011197c9b74d",
     "blocks_4MaJmz",
+    "17706639258a6f4eba",
     "177040994964b948a4",
     "banner",
     "blocks_L4kFRx",
