@@ -12,33 +12,34 @@
     "1770664802c2dbd11e": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_d9ed006_93e6f7": {
-          "type": "ai_gen_block_d9ed006",
+        "ai_gen_block_001ed17_y3ynac": {
+          "type": "ai_gen_block_001ed17",
           "settings": {
-            "selected_collection": "{{ closest.product.metafields.custom.swag_store_collection.value }}",
+            "collection": "{{ closest.product.metafields.custom.swag_store_collection.value }}",
             "logo": "{{ closest.collection.image }}",
-            "use_metafield": false,
-            "metafield_namespace": "custom",
-            "metafield_key": "logo",
+            "logo_link": "{{ closest.collection.url }}",
             "logo_width": 300,
             "logo_position": "left",
             "description": "{{ closest.collection.description }}",
             "description_size": 16,
-            "background_color": "#ffffff",
-            "text_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}",
-            "border_color": "#e8e8e8",
+            "description_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}",
+            "logo_description_gap": 20,
+            "icon_size": 24,
             "icon_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}",
-            "icon_hover_color": "#005cab",
-            "badge_background": "{{ closest.collection.metafields.custom.swag_store_color.value }}",
-            "badge_text_color": "#ffffff"
+            "cart_badge_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}",
+            "cart_badge_text_color": "#ffffff",
+            "background_color": "#ffffff",
+            "padding_vertical": 20,
+            "padding_horizontal": 20,
+            "desktop_width_percent": 100
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_d9ed006_93e6f7"
+        "ai_gen_block_001ed17_y3ynac"
       ],
-      "name": "Swag Store Header v02092026",
+      "name": "Swag Store Header Product v02092026",
       "settings": {}
     },
     "1770572806f805b7ee": {
