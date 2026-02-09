@@ -179,18 +179,18 @@
             "bubble_img": "shopify://shop_images/black-sound-shine-desktop-lamp-and-bluetooth-speaker_8.jpg",
             "bubble_text": "Office & Tech",
             "bubble_collection": "{{ collection }}",
-            "bubble_url_suffix": "?&filter.p.t.category=os&?&filter.p.t.category=el",
+            "bubble_url_suffix": "?&filter.p.t.category=os&filter.p.t.category=el",
             "bubble_text_override": ""
           }
         },
         "image_RP7XyL": {
           "type": "Image",
           "name": "Sports, Games, & Outdoors",
-          "disabled": true,
           "settings": {
+            "bubble_img": "shopify://shop_images/personalized-solo-stove-mesa-xl-etc-st-mesaxl-ssmesaxl-water-swaasi-laser-primary-549909.jpg",
             "bubble_text": "Sports, Games, & Outdoors",
             "bubble_collection": "{{ collection }}",
-            "bubble_url_suffix": "",
+            "bubble_url_suffix": "?&filter.p.t.category=sg&filter.p.t.category=ha&filter.p.t.category=tg",
             "bubble_text_override": ""
           }
         },
@@ -254,31 +254,6 @@
         "lazy": true,
         "hide_mobile": false,
         "hide_desktop": false
-      }
-    },
-    "rich_text_deCwWA": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_bWaAAy": {
-          "type": "heading",
-          "settings": {
-            "heading": "{{ collection.title }} Products:",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_bWaAAy"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 0
       }
     },
     "product-grid": {
@@ -597,7 +572,6 @@
     "blocks_L4kFRx",
     "rich_text_FWDw3m",
     "circle_menu2_TrgVBA",
-    "rich_text_deCwWA",
     "product-grid",
     "rich_text_Rf7nHB",
     "circle_menu2_H4nV8i",
