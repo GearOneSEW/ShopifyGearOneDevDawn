@@ -187,7 +187,7 @@
             "bubble_img": "shopify://shop_images/front-view-of-clear-stanley-20oz-cafe-to-go-trav-mug_2.jpg",
             "bubble_text": "Collection",
             "bubble_collection": "{{ collection }}",
-            "bubble_url_suffix": "",
+            "bubble_url_suffix": "?&filter.p.t.category=hg-11",
             "bubble_text_override": ""
           }
         },
