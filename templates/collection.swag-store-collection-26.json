@@ -266,7 +266,7 @@
         "heading_mNhbPX": {
           "type": "heading",
           "settings": {
-            "heading": "Shop All Ledgerway Store Products",
+            "heading": "Shop All {{ collection.title }} Products",
             "heading_size": "h1"
           }
         },
