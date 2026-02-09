@@ -180,30 +180,36 @@
     "circle_menu2_TrgVBA": {
       "type": "CircleMenu2",
       "blocks": {
+        "image_p4HAbN": {
+          "type": "Image",
+          "name": "Clothing Bubble",
+          "settings": {
+            "bubble_img": "shopify://shop_images/DM10_ClassicRed_Flat_Front_LC-Ledgerway-white_43939b8f-ace2-4655-961a-92f5284f0445.jpg",
+            "bubble_text": "Clothing",
+            "bubble_collection": "{{ collection }}",
+            "bubble_url_suffix": "&filter.p.t.category=aa-1",
+            "bubble_text_override": ""
+          }
+        },
         "image_477Qdd": {
           "type": "Image",
+          "name": "Bag Bubble",
           "settings": {
-            "bubble_text": "Collection",
-            "bubble_collection": "",
-            "bubble_url_suffix": "",
+            "bubble_img": "shopify://shop_images/CT89132109_black_flat_left_featured.jpg",
+            "bubble_text": "BAGS",
+            "bubble_collection": "{{ collection }}",
+            "bubble_url_suffix": "&filter.p.t.category=lb",
             "bubble_text_override": ""
           }
         },
         "image_w4kXKJ": {
           "type": "Image",
+          "name": "Hat Bubble",
           "settings": {
-            "bubble_text": "Collection",
-            "bubble_collection": "",
-            "bubble_url_suffix": "",
-            "bubble_text_override": ""
-          }
-        },
-        "image_p4HAbN": {
-          "type": "Image",
-          "settings": {
-            "bubble_text": "Collection",
-            "bubble_collection": "",
-            "bubble_url_suffix": "",
+            "bubble_img": "shopify://shop_images/113_Split_White--Navy--Red_Left.jpg",
+            "bubble_text": "Hats",
+            "bubble_collection": "{{ collection }}",
+            "bubble_url_suffix": "&filter.p.t.category=aa-2-17",
             "bubble_text_override": ""
           }
         },
@@ -227,9 +233,9 @@
         }
       },
       "block_order": [
+        "image_p4HAbN",
         "image_477Qdd",
         "image_w4kXKJ",
-        "image_p4HAbN",
         "image_LgbyqD",
         "image_mqcL8k"
       ],
