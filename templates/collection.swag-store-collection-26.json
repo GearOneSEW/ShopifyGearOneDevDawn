@@ -115,6 +115,33 @@
       "name": "Swag Store Menu Bar (v02092026)",
       "settings": {}
     },
+    "blocks_JcqPeH": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_aeb991d_Frzgxy": {
+          "type": "ai_gen_block_aeb991d",
+          "settings": {
+            "announcement_text": "<strong>You are Shopping a Custom Swag Store |</strong>",
+            "collection": "{{ closest.collection }}",
+            "link_text": "{{ closest.collection.title }}",
+            "background_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}",
+            "text_color": "#ffffff",
+            "link_color": "#ffffff",
+            "link_hover_color": "#e0e0e0",
+            "link_style": "underline",
+            "font_size": 14,
+            "padding_vertical": 12,
+            "max_width": 1300
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_aeb991d_Frzgxy"
+      ],
+      "name": "Swag Store Menu Bar (v02092026)",
+      "settings": {}
+    },
     "1770401529d438e379": {
       "type": "_blocks",
       "blocks": {
@@ -417,6 +444,7 @@
     "ss_circle_menu_7p3zAi",
     "rich_text_CcrGq4",
     "product-grid",
-    "collapsible_content_Df687Y"
+    "collapsible_content_Df687Y",
+    "blocks_JcqPeH"
   ]
 }
