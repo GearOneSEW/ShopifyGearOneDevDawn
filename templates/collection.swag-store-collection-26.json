@@ -9,6 +9,16 @@
  */
 {
   "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "color_scheme": "scheme-1"
+      }
+    },
     "blocks_9qUER9": {
       "type": "_blocks",
       "blocks": {
@@ -41,121 +51,6 @@
       ],
       "name": "Swag Store Header Collection v02092026",
       "settings": {}
-    },
-    "177041011197c9b74d": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_a7d3426_zfbQC4": {
-          "type": "ai_gen_block_a7d3426",
-          "settings": {
-            "logo": "{{ closest.collection.image }}",
-            "logo_width": 300,
-            "logo_link": "{{ closest.collection.url }}",
-            "logo_position": "center",
-            "use_metafield_logo": false,
-            "background_color": "#ffffff",
-            "text_color": "#121212",
-            "badge_color": "#121212",
-            "badge_text_color": "#ffffff"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_a7d3426_zfbQC4"
-      ],
-      "disabled": true,
-      "name": "Collection Header (v02062026)",
-      "settings": {}
-    },
-    "blocks_4MaJmz": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_ab10089_wjA7WA": {
-          "type": "ai_gen_block_ab10089",
-          "settings": {
-            "collection": "{{ closest.collection }}",
-            "logo_source": "upload",
-            "logo_upload": "{{ closest.collection.image }}",
-            "metafield_namespace": "",
-            "metafield_key": "",
-            "logo_link": "{{ closest.collection.url }}",
-            "logo_width": 250,
-            "logo_position": "left",
-            "show_currency_selector": true,
-            "show_account_link": true,
-            "show_cart_link": true,
-            "background_color": "#ffffff",
-            "text_color": "#121212",
-            "border_color": "#e8e8e8",
-            "badge_color": "#121212",
-            "badge_text_color": "#ffffff",
-            "vertical_padding": 20,
-            "horizontal_padding": 20
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_ab10089_wjA7WA"
-      ],
-      "disabled": true,
-      "name": "Swag Header Collection (v02092026)",
-      "settings": {}
-    },
-    "177040994964b948a4": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_b890949_i33KQb": {
-          "type": "ai_gen_block_b890949",
-          "settings": {
-            "menu": "footer",
-            "menu_alignment": "center",
-            "desktop_width_percent": 100,
-            "enable_mega_menu": true,
-            "mega_menu_threshold": 6,
-            "mega_menu_columns": 3,
-            "mega_menu_width": 90,
-            "mega_menu_padding": 30,
-            "mega_menu_gap": 30,
-            "show_mega_headings": true,
-            "mega_heading_size": 16,
-            "background_color": "#ffffff",
-            "text_color": "#121212",
-            "text_hover_color": "#005cab",
-            "font_size": 16,
-            "font_weight": "400",
-            "padding_vertical": 15,
-            "padding_horizontal": 20,
-            "item_spacing": 20,
-            "link_padding_vertical": 8,
-            "link_padding_horizontal": 12,
-            "dropdown_background_color": "#ffffff",
-            "dropdown_text_color": "#121212",
-            "dropdown_hover_background": "#f3f3f3",
-            "dropdown_hover_text_color": "#005cab",
-            "dropdown_font_size": 14,
-            "dropdown_border_radius": 4
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_b890949_i33KQb"
-      ],
-      "disabled": true,
-      "name": "Selectable Menu (Custom Code)",
-      "settings": {}
-    },
-    "banner": {
-      "type": "main-collection-banner",
-      "disabled": true,
-      "custom_css": [],
-      "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
-      }
     },
     "blocks_L4kFRx": {
       "type": "_blocks",
@@ -234,100 +129,8 @@
       "block_order": [
         "ai_gen_block_730aa8d_8jzCqc"
       ],
-      "disabled": true,
       "name": "Video Columns (Sidekick 02062026))",
       "settings": {}
-    },
-    "ss_circle_menu_7p3zAi": {
-      "type": "ss-circle-menu",
-      "blocks": {
-        "image_nfRtda": {
-          "type": "Image",
-          "settings": {
-            "bubble_img": "shopify://shop_images/NF0A3LGZ_darkgreyhthr_flat_front-Ledgerway-White_fa50cca1-fe2e-4cff-8ade-0dbec0f8f3b5.jpg",
-            "bubble_text": "Apparel",
-            "bubble_link": ""
-          }
-        },
-        "image_WXUMhC": {
-          "type": "Image",
-          "settings": {
-            "bubble_img": "shopify://shop_images/1603-01_Back_Black_print-white-Ledgerway.jpg",
-            "bubble_text": "Drinkware",
-            "bubble_link": ""
-          }
-        },
-        "image_FNDRmm": {
-          "type": "Image",
-          "settings": {
-            "bubble_img": "shopify://shop_images/NKFB6447_NAVY_Flat_Left_183a7e22-0d02-427a-9483-bfff4d79697d.jpg",
-            "bubble_text": "Caps",
-            "bubble_link": ""
-          }
-        },
-        "image_6hnJDd": {
-          "type": "Image",
-          "settings": {
-            "bubble_img": "shopify://shop_images/1450-95_Set_Ledgerway.jpg",
-            "bubble_text": "Outdoors",
-            "bubble_link": ""
-          }
-        },
-        "image_fehRjy": {
-          "type": "Image",
-          "settings": {
-            "bubble_img": "shopify://shop_images/CT89132109_carharttbrown_flat_left_prop2-Ledgerway-white.jpg",
-            "bubble_text": "Bags",
-            "bubble_link": "https://www.gearone.com/collections/ledgerway-swag-store?filter.v.price.gte=&filter.v.price.lte=&filter.p.t.category=lb&sort_by=created-ascending"
-          }
-        }
-      },
-      "block_order": [
-        "image_nfRtda",
-        "image_WXUMhC",
-        "image_FNDRmm",
-        "image_6hnJDd",
-        "image_fehRjy"
-      ],
-      "disabled": true,
-      "name": "SS - Circle Menu",
-      "settings": {
-        "slider_width": 100,
-        "slider_gap": 16,
-        "slider_gap_mobile": 16,
-        "icon_size": 108,
-        "icon_size_mobile": 74,
-        "icon_space": 4,
-        "icon_space_mobile": 4,
-        "icon_border_thickness": 2,
-        "icon_square": false,
-        "use_hover": true,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 12,
-        "text_size_mobile": 10,
-        "text_height": 130,
-        "text_mt": 8,
-        "icon_border_color": "#121212",
-        "icon_border_gradient": "",
-        "text_color": "#121212",
-        "background_color": "#ffffff",
-        "background_gradient": "",
-        "border_color": "#121212",
-        "border_gradient": "",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 1.5,
-        "full_width": true,
-        "content_width": 1500,
-        "border_thickness": 0,
-        "lazy": true,
-        "hide_mobile": false,
-        "hide_desktop": false
-      }
     },
     "rich_text_CcrGq4": {
       "type": "rich-text",
@@ -372,6 +175,101 @@
         "full_width": true,
         "padding_top": 20,
         "padding_bottom": 12
+      }
+    },
+    "circle_menu2_TrgVBA": {
+      "type": "CircleMenu2",
+      "blocks": {
+        "image_477Qdd": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "Collection",
+            "bubble_collection": "",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        },
+        "image_w4kXKJ": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "Collection",
+            "bubble_collection": "",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        },
+        "image_p4HAbN": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "Collection",
+            "bubble_collection": "",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        },
+        "image_LgbyqD": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "Collection",
+            "bubble_collection": "",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        },
+        "image_mqcL8k": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "Collection",
+            "bubble_collection": "",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_477Qdd",
+        "image_w4kXKJ",
+        "image_p4HAbN",
+        "image_LgbyqD",
+        "image_mqcL8k"
+      ],
+      "name": "SS - Circle Menu (Collection + Suffix) v02092026",
+      "settings": {
+        "slider_width": 100,
+        "slider_gap": 16,
+        "slider_gap_mobile": 16,
+        "icon_size": 108,
+        "icon_size_mobile": 74,
+        "icon_space": 4,
+        "icon_space_mobile": 4,
+        "icon_border_thickness": 2,
+        "icon_square": false,
+        "use_hover": true,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 12,
+        "text_size_mobile": 10,
+        "text_height": 130,
+        "text_mt": 8,
+        "icon_border_color": "#121212",
+        "icon_border_gradient": "",
+        "text_color": "#121212",
+        "background_color": "#FFFFFF",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "border_gradient": "",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1500,
+        "border_thickness": 0,
+        "lazy": true,
+        "hide_mobile": false,
+        "hide_desktop": false
       }
     },
     "product-grid": {
@@ -505,15 +403,12 @@
     }
   },
   "order": [
-    "blocks_9qUER9",
-    "177041011197c9b74d",
-    "blocks_4MaJmz",
-    "177040994964b948a4",
     "banner",
+    "blocks_9qUER9",
     "blocks_L4kFRx",
     "1770401529d438e379",
-    "ss_circle_menu_7p3zAi",
     "rich_text_CcrGq4",
+    "circle_menu2_TrgVBA",
     "product-grid",
     "collapsible_content_Df687Y",
     "blocks_JcqPeH"
