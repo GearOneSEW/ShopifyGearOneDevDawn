@@ -9,57 +9,6 @@
  */
 {
   "sections": {
-    "blocks_ET3nBa": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_ab10089_8hgQHB": {
-          "type": "ai_gen_block_ab10089",
-          "settings": {
-            "collection": "{{ closest.product.metafields.custom.swag_store_collection.value }}",
-            "logo_source": "upload",
-            "logo_upload": "{{ closest.collection.image }}",
-            "metafield_namespace": "",
-            "metafield_key": "",
-            "logo_link": "{{ closest.collection.url }}",
-            "logo_width": 250,
-            "logo_position": "left",
-            "show_currency_selector": true,
-            "show_account_link": true,
-            "show_cart_link": true,
-            "background_color": "#ffffff",
-            "text_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}",
-            "border_color": "#e8e8e8",
-            "badge_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}",
-            "badge_text_color": "#ffffff",
-            "vertical_padding": 10,
-            "horizontal_padding": 20
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_381f7a2_CibHNr": {
-          "type": "ai_gen_block_381f7a2",
-          "settings": {
-            "collection": "{{ closest.product.metafields.custom.swag_store_collection.value }}",
-            "show_title": false,
-            "text_alignment": "center",
-            "title_size": 32,
-            "description_size": 16,
-            "padding": 20,
-            "border_radius": 4,
-            "desktop_width_percent": 100,
-            "background_color": "#f3f3f3",
-            "text_color": "#121212"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_ab10089_8hgQHB",
-        "ai_gen_block_381f7a2_CibHNr"
-      ],
-      "name": "Swag Header Product (v02092026)",
-      "settings": {}
-    },
     "1770661999e318e27e": {
       "type": "_blocks",
       "blocks": {
@@ -72,20 +21,45 @@
             "logo_link": "{{ closest.collection.url }}",
             "logo_width": 300,
             "logo_position": "left",
-            "description": "{{ closest.collection.description }}",
+            "description": "",
             "description_font_size": 18,
             "description_alignment": "left",
             "background_color": "#ffffff",
-            "text_color": "#121212",
+            "text_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}",
             "padding_top": 20,
-            "padding_bottom": 20
+            "padding_bottom": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_518b7a3_wmcUgE": {
+          "type": "ai_gen_block_518b7a3",
+          "settings": {
+            "description_source": "manual",
+            "manual_description": "{{ closest.collection.description }}",
+            "selected_collection": "{{ closest.product.metafields.custom.swag_store_collection.value }}",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "desktop_width_percent": 100,
+            "padding_left": 140,
+            "padding_right": 130,
+            "mobile_padding_left": 20,
+            "mobile_padding_right": 20,
+            "padding_top": 0,
+            "padding_bottom": 20,
+            "font_size": 16,
+            "mobile_font_size": 14,
+            "line_height": 1.5,
+            "text_alignment": "left",
+            "text_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_690d1e5_4THiM4"
+        "ai_gen_block_690d1e5_4THiM4",
+        "ai_gen_block_518b7a3_wmcUgE"
       ],
+      "name": "Swag Header Product (v02092026)",
       "settings": {}
     },
     "1770572806f805b7ee": {
@@ -808,7 +782,6 @@
     }
   },
   "order": [
-    "blocks_ET3nBa",
     "1770661999e318e27e",
     "1770572806f805b7ee",
     "main",
