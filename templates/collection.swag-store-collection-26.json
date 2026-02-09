@@ -190,7 +190,7 @@
             "bubble_img": "shopify://shop_images/personalized-solo-stove-mesa-xl-etc-st-mesaxl-ssmesaxl-water-swaasi-laser-primary-549909.jpg",
             "bubble_text": "Sports, Games, & Outdoors",
             "bubble_collection": "{{ collection }}",
-            "bubble_url_suffix": "?&filter.p.t.category=sg&filter.p.t.category=ha&filter.p.t.category=tg",
+            "bubble_url_suffix": "?&filter.p.t.category=sg&filter.p.t.category=ha&filter.p.t.category=tg&filter.p.t.category=hg-6",
             "bubble_text_override": ""
           }
         },
