@@ -36,6 +36,33 @@
       "name": "Swag Store Menu Bar (v02092026)",
       "settings": {}
     },
+    "blocks_qiJtKL": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_aeb991d_aYxQEW": {
+          "type": "ai_gen_block_aeb991d",
+          "settings": {
+            "announcement_text": "<strong>You are Shopping a Custom Swag Store |</strong>",
+            "collection": "{{ closest.product.metafields.custom.swag_store_collection.value }}",
+            "link_text": "{{ closest.collection.title }}",
+            "background_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}",
+            "text_color": "#ffffff",
+            "link_color": "#ffffff",
+            "link_hover_color": "#e0e0e0",
+            "link_style": "underline",
+            "font_size": 14,
+            "padding_vertical": 12,
+            "max_width": 1300
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_aeb991d_aYxQEW"
+      ],
+      "name": "Swag Store Menu Bar (v02092026)",
+      "settings": {}
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -699,33 +726,6 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "blocks_y9w4zz": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_aeb991d_8yj96Y": {
-          "type": "ai_gen_block_aeb991d",
-          "settings": {
-            "announcement_text": "<strong>You are Shopping a Custom Swag Store |</strong>",
-            "collection": "{{ closest.product.metafields.custom.swag_store_collection.value }}",
-            "link_text": "{{ closest.collection.title }}",
-            "background_color": "#005cab",
-            "text_color": "#ffffff",
-            "link_color": "#ffffff",
-            "link_hover_color": "#e0e0e0",
-            "link_style": "underline",
-            "font_size": 14,
-            "padding_vertical": 12,
-            "max_width": 1300
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_aeb991d_8yj96Y"
-      ],
-      "name": "Swag Store Menu Bar",
-      "settings": {}
     }
   },
   "order": [
@@ -744,6 +744,6 @@
     "collapsible_content_AVrz7g",
     "multicolumn",
     "related-products",
-    "blocks_y9w4zz"
+    "blocks_qiJtKL"
   ]
 }
