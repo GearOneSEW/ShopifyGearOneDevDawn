@@ -21,7 +21,7 @@
             "logo_link": "{{ closest.collection.url }}",
             "logo_width": 300,
             "logo_position": "left",
-            "description": "",
+            "description": "{{ closest.collection.description }}",
             "description_font_size": 18,
             "description_alignment": "left",
             "background_color": "#ffffff",
