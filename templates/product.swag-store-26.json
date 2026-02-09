@@ -18,7 +18,7 @@
             "announcement_text": "<strong>You are Shopping a Custom Swag Store |</strong>",
             "collection": "{{ closest.product.metafields.custom.swag_store_collection.value }}",
             "link_text": "{{ closest.collection.title }}",
-            "background_color": "#005cab",
+            "background_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}",
             "text_color": "#ffffff",
             "link_color": "#ffffff",
             "link_hover_color": "#e0e0e0",
