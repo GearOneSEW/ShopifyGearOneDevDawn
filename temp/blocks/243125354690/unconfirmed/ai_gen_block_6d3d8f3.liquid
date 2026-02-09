@@ -1,6 +1,379 @@
+{% doc %}
+  @prompt
+    I want to have a selected collection field. Then from that attribute I want a section that can act like a header with a selectable logo and description. I want the logo to be tied to a metafield per template, I want to be able to select the logo position, I would like the header to have the same account and cart links like i have on the dawn header default make the shopping bag icon the same size as the accounts icon.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-custom-header-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    border-bottom: 1px solid {{ block.settings.border_color }};
+  }
+
+  .ai-custom-header__container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+    padding: {{ block.settings.vertical_padding }}px {{ block.settings.horizontal_padding }}px;
+  }
+
+  .ai-custom-header__inner-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .ai-custom-header__logo-section-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: {{ block.settings.logo_text_gap }}px;
+    {% if block.settings.logo_position == 'left' %}
+      order: 1;
+    {% elsif block.settings.logo_position == 'center' %}
+      order: 2;
+      flex: 1;
+      justify-content: center;
+    {% else %}
+      order: 3;
+    {% endif %}
+  }
+
+  .ai-custom-header__logo-{{ ai_gen_id }} {
+    flex-shrink: 0;
+  }
+
+  .ai-custom-header__logo-{{ ai_gen_id }} img {
+    display: block;
+    width: {{ block.settings.logo_width }}px;
+    height: auto;
+  }
+
+  .ai-custom-header__description-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.description_font_size }}px;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .ai-custom-header__icons-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    {% if block.settings.logo_position == 'left' %}
+      order: 3;
+    {% elsif block.settings.logo_position == 'center' %}
+      order: 3;
+    {% else %}
+      order: 1;
+    {% endif %}
+  }
+
+  .ai-custom-header__icon-link-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: {{ block.settings.icon_color }};
+    text-decoration: none;
+    position: relative;
+  }
+
+  .ai-custom-header__icon-link-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.icon_hover_color }};
+  }
+
+  .ai-custom-header__icon-link-{{ ai_gen_id }} svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .ai-custom-header__cart-count-{{ ai_gen_id }} {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: {{ block.settings.cart_badge_bg }};
+    color: {{ block.settings.cart_badge_text }};
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-custom-header__container-{{ ai_gen_id }} {
+      padding: {{ block.settings.vertical_padding | times: 0.7 }}px {{ block.settings.horizontal_padding | times: 0.7 }}px;
+    }
+
+    .ai-custom-header__logo-{{ ai_gen_id }} img {
+      width: {{ block.settings.logo_width | times: 0.7 }}px;
+    }
+
+    .ai-custom-header__description-{{ ai_gen_id }} {
+      font-size: {{ block.settings.description_font_size | times: 0.9 }}px;
+    }
+
+    .ai-custom-header__logo-section-{{ ai_gen_id }} {
+      {% if block.settings.logo_position == 'center' %}
+        flex-direction: column;
+        text-align: center;
+      {% endif %}
+    }
+  }
+{% endstyle %}
+
+<custom-header-{{ ai_gen_id }} class="ai-custom-header-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-custom-header__container-{{ ai_gen_id }}">
+    <div class="ai-custom-header__inner-{{ ai_gen_id }}">
+      <div class="ai-custom-header__logo-section-{{ ai_gen_id }}">
+        {% if block.settings.collection %}
+          {% assign collection_logo = block.settings.collection.metafields.custom.logo %}
+          {% if collection_logo %}
+            <div class="ai-custom-header__logo-{{ ai_gen_id }}">
+              <img
+                src="{{ collection_logo | image_url: width: 400 }}"
+                alt="{{ block.settings.collection.title }}"
+                width="{{ block.settings.logo_width }}"
+                height="auto"
+                loading="lazy"
+              >
+            </div>
+          {% endif %}
+        {% endif %}
+
+        {% if block.settings.description != blank %}
+          <div class="ai-custom-header__description-{{ ai_gen_id }}">
+            {{ block.settings.description }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="ai-custom-header__icons-{{ ai_gen_id }}">
+        <a href="{{ routes.account_url }}" class="ai-custom-header__icon-link-{{ ai_gen_id }}" aria-label="Account">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+          </svg>
+        </a>
+
+        <a href="{{ routes.cart_url }}" class="ai-custom-header__icon-link-{{ ai_gen_id }}" aria-label="Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+          </svg>
+          {% if cart.item_count > 0 %}
+            <span class="ai-custom-header__cart-count-{{ ai_gen_id }}">{{ cart.item_count }}</span>
+          {% endif %}
+        </a>
+      </div>
+    </div>
+  </div>
+</custom-header-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class CustomHeader{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.cartIcon = this.querySelector('.ai-custom-header__icon-link-{{ ai_gen_id }}[href="{{ routes.cart_url }}"]');
+        
+        if (this.cartIcon) {
+          document.addEventListener('cart:updated', this.updateCartCount.bind(this));
+        }
+      }
+
+      updateCartCount(event) {
+        const cartCount = event.detail?.cart?.item_count || 0;
+        let countBadge = this.querySelector('.ai-custom-header__cart-count-{{ ai_gen_id }}');
+        
+        if (cartCount > 0) {
+          if (!countBadge) {
+            countBadge = document.createElement('span');
+            countBadge.className = 'ai-custom-header__cart-count-{{ ai_gen_id }}';
+            this.cartIcon.appendChild(countBadge);
+          }
+          countBadge.textContent = cartCount;
+        } else if (countBadge) {
+          countBadge.remove();
+        }
+      }
+    }
+
+    customElements.define('custom-header-{{ ai_gen_id }}', CustomHeader{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Custom collection header",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "paragraph",
+      "content": "Logo will be pulled from the collection's custom.logo metafield"
+    },
+    {
+      "type": "header",
+      "content": "Logo"
+    },
+    {
+      "type": "select",
+      "id": "logo_position",
+      "label": "Logo position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Logo width",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "default": 150
+    },
+    {
+      "type": "range",
+      "id": "logo_text_gap",
+      "label": "Gap between logo and text",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Description"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Welcome to our collection</p>"
+    },
+    {
+      "type": "range",
+      "id": "description_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Container width",
+      "min": 1000,
+      "max": 1600,
+      "step": 100,
+      "unit": "px",
+      "default": 1300
+    },
+    {
+      "type": "range",
+      "id": "vertical_padding",
+      "label": "Vertical padding",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "horizontal_padding",
+      "label": "Horizontal padding",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border",
+      "default": "#e8e8e8"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "icon_hover_color",
+      "label": "Icon hover",
+      "default": "#005cab"
+    },
+    {
+      "type": "color",
+      "id": "cart_badge_bg",
+      "label": "Cart badge background",
+      "default": "#005cab"
+    },
+    {
+      "type": "color",
+      "id": "cart_badge_text",
+      "label": "Cart badge text",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom collection header"
+    }
+  ]
+}
 {% endschema %}
