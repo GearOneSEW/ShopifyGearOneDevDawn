@@ -1,6 +1,619 @@
+{% doc %}
+  @prompt
+    I want to have a selected collection field. Then from that attribute I want a section that can act like a header with a selectable logo, description, and a currency selector. I want the logo to be tied to a metafield per template., I want to be able to select the logo position, I want to be able to select if the description appears in line with the logo or if it is below on a second row, and I woulld like the currency selector to be just like in the header and have the same account and cart links like i have on the dawn header, can you preselect the customers local currency based on location and the use the same styling as the header on our Dawn home page? , Can you also have the country name beside the Currency like United States | USD$ Also make the shopping bag icon the same size as the accounts icon. Finally, for the uploaded logo, I would like to choose where it links to instead of it taking me to the home page.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% liquid
+  assign selected_collection = block.settings.collection
+  assign logo_metafield = selected_collection.metafields.custom.logo
+  if logo_metafield != blank
+    assign logo_image = logo_metafield
+  else
+    assign logo_image = block.settings.fallback_logo
+  endif
+%}
+
+{% style %}
+  .ai-collection-header-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    border-bottom: 1px solid rgba(18, 18, 18, 0.08);
+  }
+
+  .ai-collection-header__container-{{ ai_gen_id }} {
+    max-width: {{ settings.page_width }}px;
+    margin: 0 auto;
+    padding: {{ block.settings.vertical_padding }}px {{ block.settings.horizontal_padding }}px;
+  }
+
+  .ai-collection-header__wrapper-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    {% if block.settings.layout == 'stacked' %}
+      flex-direction: column;
+    {% endif %}
+  }
+
+  .ai-collection-header__left-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    {% if block.settings.layout == 'stacked' %}
+      flex-direction: column;
+      width: 100%;
+    {% endif %}
+    {% if block.settings.logo_position == 'right' and block.settings.layout == 'inline' %}
+      flex-direction: row-reverse;
+    {% endif %}
+  }
+
+  .ai-collection-header__logo-wrapper-{{ ai_gen_id }} {
+    flex-shrink: 0;
+  }
+
+  .ai-collection-header__logo-{{ ai_gen_id }} {
+    display: block;
+    max-width: {{ block.settings.logo_width }}px;
+    height: auto;
+  }
+
+  .ai-collection-header__logo-placeholder-{{ ai_gen_id }} {
+    width: {{ block.settings.logo_width }}px;
+    height: 60px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+
+  .ai-collection-header__logo-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 100px;
+    max-height: 50px;
+  }
+
+  .ai-collection-header__description-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.description_font_size }}px;
+    line-height: 1.5;
+    margin: 0;
+    {% if block.settings.layout == 'stacked' %}
+      text-align: center;
+      width: 100%;
+    {% endif %}
+  }
+
+  .ai-collection-header__right-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    {% if block.settings.layout == 'stacked' %}
+      width: 100%;
+      justify-content: center;
+    {% endif %}
+  }
+
+  .ai-collection-header__localization-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ai-collection-header__currency-selector-{{ ai_gen_id }} {
+    position: relative;
+  }
+
+  .ai-collection-header__currency-button-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid rgba(18, 18, 18, 0.08);
+    border-radius: {{ settings.inputs_radius }}px;
+    cursor: pointer;
+    font-size: 14px;
+    color: {{ block.settings.text_color }};
+    transition: border-color 0.2s ease;
+  }
+
+  .ai-collection-header__currency-button-{{ ai_gen_id }}:hover {
+    border-color: rgba(18, 18, 18, 0.2);
+  }
+
+  .ai-collection-header__currency-icon-{{ ai_gen_id }} {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+  }
+
+  .ai-collection-header__currency-button-{{ ai_gen_id }}[aria-expanded="true"] .ai-collection-header__currency-icon-{{ ai_gen_id }} {
+    transform: rotate(180deg);
+  }
+
+  .ai-collection-header__currency-dropdown-{{ ai_gen_id }} {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #ffffff;
+    border: 1px solid rgba(18, 18, 18, 0.08);
+    border-radius: {{ settings.inputs_radius }}px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  }
+
+  .ai-collection-header__currency-dropdown-{{ ai_gen_id }}.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .ai-collection-header__currency-option-{{ ai_gen_id }} {
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #121212;
+    transition: background-color 0.2s ease;
+    border: none;
+    background: transparent;
+    width: 100%;
+    text-align: left;
+    display: block;
+  }
+
+  .ai-collection-header__currency-option-{{ ai_gen_id }}:hover {
+    background-color: #f3f3f3;
+  }
+
+  .ai-collection-header__currency-option-{{ ai_gen_id }}.selected {
+    background-color: #f3f3f3;
+    font-weight: 600;
+  }
+
+  .ai-collection-header__icons-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .ai-collection-header__icon-link-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: {{ block.settings.text_color }};
+    text-decoration: none;
+    position: relative;
+  }
+
+  .ai-collection-header__icon-{{ ai_gen_id }} {
+    width: 20px;
+    height: 20px;
+  }
+
+  .ai-collection-header__cart-count-{{ ai_gen_id }} {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #121212;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-collection-header__wrapper-{{ ai_gen_id }} {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .ai-collection-header__left-{{ ai_gen_id }} {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+
+    .ai-collection-header__description-{{ ai_gen_id }} {
+      text-align: center;
+    }
+
+    .ai-collection-header__right-{{ ai_gen_id }} {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+{% endstyle %}
+
+<collection-header-{{ ai_gen_id }}
+  class="ai-collection-header-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-collection-header__container-{{ ai_gen_id }}">
+    <div class="ai-collection-header__wrapper-{{ ai_gen_id }}">
+      <div class="ai-collection-header__left-{{ ai_gen_id }}">
+        {% if logo_image != blank or block.settings.fallback_logo != blank %}
+          <div class="ai-collection-header__logo-wrapper-{{ ai_gen_id }}">
+            <a href="{{ block.settings.logo_link }}" class="ai-collection-header__logo-link-{{ ai_gen_id }}">
+              <img
+                src="{{ logo_image | image_url: width: 600 }}"
+                alt="{{ selected_collection.title | escape }}"
+                class="ai-collection-header__logo-{{ ai_gen_id }}"
+                width="{{ block.settings.logo_width }}"
+                height="auto"
+                loading="lazy"
+              >
+            </a>
+          </div>
+        {% else %}
+          <div class="ai-collection-header__logo-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+
+        {% if block.settings.description != blank %}
+          <div class="ai-collection-header__description-{{ ai_gen_id }}">
+            {{ block.settings.description }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="ai-collection-header__right-{{ ai_gen_id }}">
+        <div class="ai-collection-header__localization-{{ ai_gen_id }}">
+          <div class="ai-collection-header__currency-selector-{{ ai_gen_id }}">
+            <button
+              type="button"
+              class="ai-collection-header__currency-button-{{ ai_gen_id }}"
+              aria-expanded="false"
+              aria-label="Select currency"
+            >
+              <span class="ai-collection-header__currency-text-{{ ai_gen_id }}">
+                <span class="ai-collection-header__country-name-{{ ai_gen_id }}"></span>
+                <span class="ai-collection-header__currency-code-{{ ai_gen_id }}"></span>
+              </span>
+              <svg class="ai-collection-header__currency-icon-{{ ai_gen_id }}" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="ai-collection-header__currency-dropdown-{{ ai_gen_id }}">
+            </div>
+          </div>
+        </div>
+
+        <div class="ai-collection-header__icons-{{ ai_gen_id }}">
+          <a href="/account" class="ai-collection-header__icon-link-{{ ai_gen_id }}" aria-label="Account">
+            <svg class="ai-collection-header__icon-{{ ai_gen_id }}" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 10C12.7614 10 15 7.76142 15 5C15 2.23858 12.7614 0 10 0C7.23858 0 5 2.23858 5 5C5 7.76142 7.23858 10 10 10Z" fill="currentColor"/>
+              <path d="M10 12.5C5.16667 12.5 1.25 14.5833 1.25 17.0833V20H18.75V17.0833C18.75 14.5833 14.8333 12.5 10 12.5Z" fill="currentColor"/>
+            </svg>
+          </a>
+
+          <a href="/cart" class="ai-collection-header__icon-link-{{ ai_gen_id }}" aria-label="Cart">
+            <svg class="ai-collection-header__icon-{{ ai_gen_id }}" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 2L3 6V18C3 18.5304 3.21071 19.0391 3.58579 19.4142C3.96086 19.7893 4.46957 20 5 20H15C15.5304 20 16.0391 19.7893 16.4142 19.4142C16.7893 19.0391 17 18.5304 17 18V6L14 2H6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <path d="M3 6H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13 10C13 10.7956 12.6839 11.5587 12.1213 12.1213C11.5587 12.6839 10.7956 13 10 13C9.20435 13 8.44129 12.6839 7.87868 12.1213C7.31607 11.5587 7 10.7956 7 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="ai-collection-header__cart-count-{{ ai_gen_id }}" style="display: none;">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</collection-header-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class CollectionHeader{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currencyData = [
+          { country: 'United States', code: 'USD', symbol: '$' },
+          { country: 'Canada', code: 'CAD', symbol: 'CA$' },
+          { country: 'United Kingdom', code: 'GBP', symbol: '£' },
+          { country: 'European Union', code: 'EUR', symbol: '€' },
+          { country: 'Australia', code: 'AUD', symbol: 'A$' },
+          { country: 'Japan', code: 'JPY', symbol: '¥' },
+          { country: 'China', code: 'CNY', symbol: '¥' },
+          { country: 'India', code: 'INR', symbol: '₹' },
+          { country: 'Brazil', code: 'BRL', symbol: 'R$' },
+          { country: 'Mexico', code: 'MXN', symbol: 'MX$' },
+          { country: 'Switzerland', code: 'CHF', symbol: 'CHF' },
+          { country: 'Sweden', code: 'SEK', symbol: 'kr' },
+          { country: 'Norway', code: 'NOK', symbol: 'kr' },
+          { country: 'Denmark', code: 'DKK', symbol: 'kr' },
+          { country: 'Singapore', code: 'SGD', symbol: 'S$' },
+          { country: 'Hong Kong', code: 'HKD', symbol: 'HK$' },
+          { country: 'New Zealand', code: 'NZD', symbol: 'NZ$' },
+          { country: 'South Korea', code: 'KRW', symbol: '₩' },
+          { country: 'South Africa', code: 'ZAR', symbol: 'R' },
+          { country: 'United Arab Emirates', code: 'AED', symbol: 'د.إ' }
+        ];
+      }
+
+      connectedCallback() {
+        this.button = this.querySelector('.ai-collection-header__currency-button-{{ ai_gen_id }}');
+        this.dropdown = this.querySelector('.ai-collection-header__currency-dropdown-{{ ai_gen_id }}');
+        this.countryNameEl = this.querySelector('.ai-collection-header__country-name-{{ ai_gen_id }}');
+        this.currencyCodeEl = this.querySelector('.ai-collection-header__currency-code-{{ ai_gen_id }}');
+        this.cartCount = this.querySelector('.ai-collection-header__cart-count-{{ ai_gen_id }}');
+
+        this.detectUserCurrency();
+        this.renderCurrencyOptions();
+        this.setupEventListeners();
+        this.updateCartCount();
+      }
+
+      detectUserCurrency() {
+        const shopCurrency = '{{ cart.currency.iso_code }}' || 'USD';
+        const userLocale = navigator.language || 'en-US';
+        const userCountry = userLocale.split('-')[1] || 'US';
+        
+        let detectedCurrency = this.currencyData.find(c => 
+          c.code === shopCurrency
+        );
+
+        if (!detectedCurrency) {
+          detectedCurrency = this.currencyData[0];
+        }
+
+        this.currentCurrency = detectedCurrency;
+        this.updateCurrencyDisplay();
+      }
+
+      updateCurrencyDisplay() {
+        if (this.countryNameEl && this.currencyCodeEl) {
+          this.countryNameEl.textContent = this.currentCurrency.country + ' | ';
+          this.currencyCodeEl.textContent = this.currentCurrency.symbol + this.currentCurrency.code;
+        }
+      }
+
+      renderCurrencyOptions() {
+        this.dropdown.innerHTML = '';
+        this.currencyData.forEach(currency => {
+          const option = document.createElement('button');
+          option.className = 'ai-collection-header__currency-option-{{ ai_gen_id }}';
+          option.textContent = `${currency.country} | ${currency.symbol}${currency.code}`;
+          option.dataset.currency = currency.code;
+          option.dataset.country = currency.country;
+          option.dataset.symbol = currency.symbol;
+          
+          if (currency.code === this.currentCurrency.code) {
+            option.classList.add('selected');
+          }
+
+          option.addEventListener('click', () => {
+            this.selectCurrency(currency);
+          });
+
+          this.dropdown.appendChild(option);
+        });
+      }
+
+      selectCurrency(currency) {
+        this.currentCurrency = currency;
+        this.updateCurrencyDisplay();
+        this.closeDropdown();
+
+        this.querySelectorAll('.ai-collection-header__currency-option-{{ ai_gen_id }}').forEach(opt => {
+          opt.classList.remove('selected');
+          if (opt.dataset.currency === currency.code) {
+            opt.classList.add('selected');
+          }
+        });
+
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = '/cart/update';
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'currency_code';
+        input.value = currency.code;
+        form.appendChild(input);
+        document.body.appendChild(form);
+        form.submit();
+      }
+
+      setupEventListeners() {
+        this.button.addEventListener('click', (e) => {
+          e.stopPropagation();
+          this.toggleDropdown();
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!this.contains(e.target)) {
+            this.closeDropdown();
+          }
+        });
+      }
+
+      toggleDropdown() {
+        const isExpanded = this.button.getAttribute('aria-expanded') === 'true';
+        this.button.setAttribute('aria-expanded', !isExpanded);
+        this.dropdown.classList.toggle('active');
+      }
+
+      closeDropdown() {
+        this.button.setAttribute('aria-expanded', 'false');
+        this.dropdown.classList.remove('active');
+      }
+
+      updateCartCount() {
+        fetch('/cart.js')
+          .then(response => response.json())
+          .then(cart => {
+            if (cart.item_count > 0) {
+              this.cartCount.textContent = cart.item_count;
+              this.cartCount.style.display = 'flex';
+            } else {
+              this.cartCount.style.display = 'none';
+            }
+          })
+          .catch(error => {
+            console.error('Error fetching cart:', error);
+          });
+      }
+    }
+
+    customElements.define('collection-header-{{ ai_gen_id }}', CollectionHeader{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Collection header",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "header",
+      "content": "Logo"
+    },
+    {
+      "type": "paragraph",
+      "content": "Logo will be pulled from collection metafield 'custom.logo'. If not set, fallback logo will be used."
+    },
+    {
+      "type": "image_picker",
+      "id": "fallback_logo",
+      "label": "Fallback logo"
+    },
+    {
+      "type": "url",
+      "id": "logo_link",
+      "label": "Logo link"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Logo width",
+      "default": 150
+    },
+    {
+      "type": "select",
+      "id": "logo_position",
+      "label": "Logo position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Description layout",
+      "options": [
+        {
+          "value": "inline",
+          "label": "Inline with logo"
+        },
+        {
+          "value": "stacked",
+          "label": "Below logo (second row)"
+        }
+      ],
+      "default": "inline"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Explore our curated collection</p>"
+    },
+    {
+      "type": "range",
+      "id": "description_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Description font size",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "vertical_padding",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "horizontal_padding",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection header"
+    }
+  ]
+}
 {% endschema %}
