@@ -30,34 +30,10 @@
             "padding_bottom": 0
           },
           "blocks": {}
-        },
-        "ai_gen_block_518b7a3_wmcUgE": {
-          "type": "ai_gen_block_518b7a3",
-          "settings": {
-            "description_source": "manual",
-            "manual_description": "{{ closest.collection.description }}",
-            "selected_collection": "{{ closest.product.metafields.custom.swag_store_collection.value }}",
-            "metafield_namespace": "",
-            "metafield_key": "",
-            "desktop_width_percent": 100,
-            "padding_left": 140,
-            "padding_right": 130,
-            "mobile_padding_left": 20,
-            "mobile_padding_right": 20,
-            "padding_top": 0,
-            "padding_bottom": 20,
-            "font_size": 16,
-            "mobile_font_size": 14,
-            "line_height": 1.5,
-            "text_alignment": "left",
-            "text_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}"
-          },
-          "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_690d1e5_4THiM4",
-        "ai_gen_block_518b7a3_wmcUgE"
+        "ai_gen_block_690d1e5_4THiM4"
       ],
       "name": "Swag Header Product (v02092026)",
       "settings": {}
