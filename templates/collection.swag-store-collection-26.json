@@ -9,6 +9,39 @@
  */
 {
   "sections": {
+    "blocks_9qUER9": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_001ed17_eKgkXW": {
+          "type": "ai_gen_block_001ed17",
+          "settings": {
+            "collection": "{{ closest.collection }}",
+            "logo": "{{ closest.collection.image }}",
+            "logo_link": "{{ closest.collection.url }}",
+            "logo_width": 300,
+            "logo_position": "left",
+            "description": "{{ closest.collection.description }}",
+            "description_size": 16,
+            "description_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}",
+            "logo_description_gap": 20,
+            "icon_size": 24,
+            "icon_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}",
+            "cart_badge_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}",
+            "cart_badge_text_color": "#ffffff",
+            "background_color": "#ffffff",
+            "padding_vertical": 20,
+            "padding_horizontal": 20,
+            "desktop_width_percent": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_001ed17_eKgkXW"
+      ],
+      "name": "Swag Store Header Collection v02092026",
+      "settings": {}
+    },
     "177041011197c9b74d": {
       "type": "_blocks",
       "blocks": {
@@ -66,6 +99,7 @@
       "block_order": [
         "ai_gen_block_ab10089_wjA7WA"
       ],
+      "disabled": true,
       "name": "Swag Header Collection (v02092026)",
       "settings": {}
     },
@@ -471,6 +505,7 @@
     }
   },
   "order": [
+    "blocks_9qUER9",
     "177041011197c9b74d",
     "blocks_4MaJmz",
     "177040994964b948a4",
