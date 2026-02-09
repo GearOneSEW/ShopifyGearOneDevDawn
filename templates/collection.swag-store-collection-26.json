@@ -31,7 +31,42 @@
       "block_order": [
         "ai_gen_block_a7d3426_zfbQC4"
       ],
+      "disabled": true,
       "name": "Collection Header (v02062026)",
+      "settings": {}
+    },
+    "blocks_4MaJmz": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_ab10089_wjA7WA": {
+          "type": "ai_gen_block_ab10089",
+          "settings": {
+            "collection": "{{ closest.collection }}",
+            "logo_source": "upload",
+            "logo_upload": "{{ closest.collection.image }}",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "logo_link": "{{ closest.collection.url }}",
+            "logo_width": 250,
+            "logo_position": "left",
+            "show_currency_selector": true,
+            "show_account_link": true,
+            "show_cart_link": true,
+            "background_color": "#ffffff",
+            "text_color": "#121212",
+            "border_color": "#e8e8e8",
+            "badge_color": "#121212",
+            "badge_text_color": "#ffffff",
+            "vertical_padding": 20,
+            "horizontal_padding": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_ab10089_wjA7WA"
+      ],
+      "name": "Swag Header Collection (v02092026)",
       "settings": {}
     },
     "177040994964b948a4": {
@@ -437,6 +472,7 @@
   },
   "order": [
     "177041011197c9b74d",
+    "blocks_4MaJmz",
     "177040994964b948a4",
     "banner",
     "blocks_L4kFRx",
