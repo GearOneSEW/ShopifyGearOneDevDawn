@@ -182,9 +182,11 @@
         },
         "image_LgbyqD": {
           "type": "Image",
+          "name": "Kitchen & Dinking Bubble",
           "settings": {
+            "bubble_img": "shopify://shop_images/front-view-of-clear-stanley-20oz-cafe-to-go-trav-mug_2.jpg",
             "bubble_text": "Collection",
-            "bubble_collection": "",
+            "bubble_collection": "{{ collection }}",
             "bubble_url_suffix": "",
             "bubble_text_override": ""
           }
