@@ -79,183 +79,6 @@
       "name": "Swag Store Menu Bar (v02092026)",
       "settings": {}
     },
-    "1770401529d438e379": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_730aa8d_8jzCqc": {
-          "type": "ai_gen_block_730aa8d",
-          "settings": {
-            "heading": "GearOne Staff Favorites - Specials",
-            "heading_size": 32,
-            "heading_color": "#121212",
-            "heading_alignment": "center",
-            "heading_spacing": 20,
-            "column_1_video": "https://cdn.shopify.com/videos/c/o/v/b910a2c714114f15804a4d1537814a38.mp4",
-            "column_1_heading": "<a href=\"https://www.gearone.com/products/ledgerway-carhartt-storm-defender%C2%AE-shoreline-jacket\" title=\"Ledgerway Carhartt® Shoreline Jacket\">Carhartt® Storm Defender® Shoreline Jacket (2026 Edition)</a>",
-            "column_1_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
-            "column_2_video": "https://cdn.shopify.com/videos/c/o/v/563c107dc422416d813a0e2e9e843ca6.mp4",
-            "column_2_heading": "OGIO® Mastermind Backpack",
-            "column_2_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
-            "column_3_video": "",
-            "column_3_heading": "Column 3",
-            "column_3_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_alignment": "center",
-            "button_spacing": 40,
-            "button_background": "#121212",
-            "button_background_hover": "#000000",
-            "button_text_color": "#ffffff",
-            "button_text_size": 16,
-            "button_padding_vertical": 12,
-            "button_padding_horizontal": 32,
-            "button_radius": 8,
-            "column_heading_size": 20,
-            "column_heading_color": "#121212",
-            "column_text_size": 16,
-            "column_text_color": "#121212",
-            "column_text_alignment": "left",
-            "content_gap": 16,
-            "desktop_width_percent": 100,
-            "container_width": 1300,
-            "column_gap": 24,
-            "media_radius": 4,
-            "padding_top": 40,
-            "padding_bottom": 40
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_730aa8d_8jzCqc"
-      ],
-      "name": "Video Columns (Sidekick 02062026))",
-      "settings": {}
-    },
-    "rich_text_Rf7nHB": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_8qFTrM": {
-          "type": "heading",
-          "settings": {
-            "heading": "Shop Trends",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_8qFTrM"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "circle_menu2_H4nV8i": {
-      "type": "CircleMenu2",
-      "blocks": {
-        "image_RpXRjR": {
-          "type": "Image",
-          "name": "TRENDING HOT",
-          "settings": {
-            "bubble_text": "Top Selling",
-            "bubble_collection": "",
-            "bubble_url_suffix": "",
-            "bubble_text_override": ""
-          }
-        },
-        "image_UVd3xb": {
-          "type": "Image",
-          "name": "NEW",
-          "settings": {
-            "bubble_text": "NEW 2026!",
-            "bubble_collection": "",
-            "bubble_url_suffix": "",
-            "bubble_text_override": ""
-          }
-        },
-        "image_eaYFgJ": {
-          "type": "Image",
-          "name": "RUSH SPEED",
-          "settings": {
-            "bubble_text": "Free RUSH",
-            "bubble_collection": "",
-            "bubble_url_suffix": "",
-            "bubble_text_override": ""
-          }
-        },
-        "image_GxQPER": {
-          "type": "Image",
-          "name": "SALE",
-          "settings": {
-            "bubble_text": "Sales",
-            "bubble_collection": "",
-            "bubble_url_suffix": "",
-            "bubble_text_override": ""
-          }
-        },
-        "image_VjWfkA": {
-          "type": "Image",
-          "name": "ECO Friendly",
-          "settings": {
-            "bubble_text": "ECO Friendly",
-            "bubble_collection": "",
-            "bubble_url_suffix": "",
-            "bubble_text_override": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_RpXRjR",
-        "image_UVd3xb",
-        "image_eaYFgJ",
-        "image_GxQPER",
-        "image_VjWfkA"
-      ],
-      "name": "SS - Circle Menu (Collection + Suffix) v02092026",
-      "settings": {
-        "slider_width": 100,
-        "slider_gap": 16,
-        "slider_gap_mobile": 16,
-        "icon_size": 108,
-        "icon_size_mobile": 60,
-        "icon_space": 4,
-        "icon_space_mobile": 4,
-        "icon_border_thickness": 2,
-        "icon_square": false,
-        "use_hover": true,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 12,
-        "text_size_mobile": 10,
-        "text_height": 130,
-        "text_mt": 8,
-        "icon_border_color": "#121212",
-        "icon_border_gradient": "",
-        "text_color": "#121212",
-        "background_color": "#ffffff",
-        "background_gradient": "",
-        "border_color": "#121212",
-        "border_gradient": "",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 36,
-        "padding_bottom": 12,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 1.5,
-        "full_width": true,
-        "content_width": 1500,
-        "border_thickness": 0,
-        "lazy": true,
-        "hide_mobile": false,
-        "hide_desktop": false
-      }
-    },
     "rich_text_FWDw3m": {
       "type": "rich-text",
       "blocks": {
@@ -276,7 +99,7 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 20,
         "padding_bottom": 0
       }
     },
@@ -460,7 +283,7 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "products_per_page": 36,
+        "products_per_page": 20,
         "columns_desktop": 4,
         "color_scheme": "",
         "image_ratio": "portrait",
@@ -476,6 +299,183 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_Rf7nHB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8qFTrM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop Trends",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8qFTrM"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "circle_menu2_H4nV8i": {
+      "type": "CircleMenu2",
+      "blocks": {
+        "image_RpXRjR": {
+          "type": "Image",
+          "name": "TRENDING HOT",
+          "settings": {
+            "bubble_text": "Top Selling",
+            "bubble_collection": "",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        },
+        "image_UVd3xb": {
+          "type": "Image",
+          "name": "NEW",
+          "settings": {
+            "bubble_text": "NEW 2026!",
+            "bubble_collection": "",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        },
+        "image_eaYFgJ": {
+          "type": "Image",
+          "name": "RUSH SPEED",
+          "settings": {
+            "bubble_text": "Free RUSH",
+            "bubble_collection": "",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        },
+        "image_GxQPER": {
+          "type": "Image",
+          "name": "SALE",
+          "settings": {
+            "bubble_text": "Sales",
+            "bubble_collection": "",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        },
+        "image_VjWfkA": {
+          "type": "Image",
+          "name": "ECO Friendly",
+          "settings": {
+            "bubble_text": "ECO Friendly",
+            "bubble_collection": "",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_RpXRjR",
+        "image_UVd3xb",
+        "image_eaYFgJ",
+        "image_GxQPER",
+        "image_VjWfkA"
+      ],
+      "name": "SS - Circle Menu (Collection + Suffix) v02092026",
+      "settings": {
+        "slider_width": 100,
+        "slider_gap": 16,
+        "slider_gap_mobile": 16,
+        "icon_size": 108,
+        "icon_size_mobile": 60,
+        "icon_space": 4,
+        "icon_space_mobile": 4,
+        "icon_border_thickness": 2,
+        "icon_square": false,
+        "use_hover": true,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 12,
+        "text_size_mobile": 10,
+        "text_height": 130,
+        "text_mt": 8,
+        "icon_border_color": "#121212",
+        "icon_border_gradient": "",
+        "text_color": "#121212",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "border_gradient": "",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 12,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1500,
+        "border_thickness": 0,
+        "lazy": true,
+        "hide_mobile": false,
+        "hide_desktop": false
+      }
+    },
+    "1770401529d438e379": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_730aa8d_8jzCqc": {
+          "type": "ai_gen_block_730aa8d",
+          "settings": {
+            "heading": "GearOne Staff Favorites - Specials",
+            "heading_size": 32,
+            "heading_color": "#121212",
+            "heading_alignment": "center",
+            "heading_spacing": 20,
+            "column_1_video": "https://cdn.shopify.com/videos/c/o/v/b910a2c714114f15804a4d1537814a38.mp4",
+            "column_1_heading": "<a href=\"https://www.gearone.com/products/ledgerway-carhartt-storm-defender%C2%AE-shoreline-jacket\" title=\"Ledgerway Carhartt® Shoreline Jacket\">Carhartt® Storm Defender® Shoreline Jacket (2026 Edition)</a>",
+            "column_1_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "column_2_video": "https://cdn.shopify.com/videos/c/o/v/563c107dc422416d813a0e2e9e843ca6.mp4",
+            "column_2_heading": "OGIO® Mastermind Backpack",
+            "column_2_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "column_3_video": "",
+            "column_3_heading": "Column 3",
+            "column_3_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_alignment": "center",
+            "button_spacing": 40,
+            "button_background": "#121212",
+            "button_background_hover": "#000000",
+            "button_text_color": "#ffffff",
+            "button_text_size": 16,
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 32,
+            "button_radius": 8,
+            "column_heading_size": 20,
+            "column_heading_color": "#121212",
+            "column_text_size": 16,
+            "column_text_color": "#121212",
+            "column_text_alignment": "left",
+            "content_gap": 16,
+            "desktop_width_percent": 100,
+            "container_width": 1300,
+            "column_gap": 24,
+            "media_radius": 4,
+            "padding_top": 40,
+            "padding_bottom": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_730aa8d_8jzCqc"
+      ],
+      "name": "Video Columns (Sidekick 02062026))",
+      "settings": {}
     },
     "collapsible_content_Df687Y": {
       "type": "collapsible-content",
@@ -591,13 +591,13 @@
     "banner",
     "blocks_9qUER9",
     "blocks_L4kFRx",
-    "1770401529d438e379",
-    "rich_text_Rf7nHB",
-    "circle_menu2_H4nV8i",
     "rich_text_FWDw3m",
     "circle_menu2_TrgVBA",
     "rich_text_deCwWA",
     "product-grid",
+    "rich_text_Rf7nHB",
+    "circle_menu2_H4nV8i",
+    "1770401529d438e379",
     "collapsible_content_Df687Y",
     "blocks_JcqPeH"
   ]
