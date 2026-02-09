@@ -198,7 +198,7 @@
             "bubble_img": "shopify://shop_images/black-sound-shine-desktop-lamp-and-bluetooth-speaker_8.jpg",
             "bubble_text": "Office & Tech",
             "bubble_collection": "{{ collection }}",
-            "bubble_url_suffix": "",
+            "bubble_url_suffix": "?&filter.p.t.category=os&?&filter.p.t.category=el",
             "bubble_text_override": ""
           }
         }
@@ -217,7 +217,7 @@
         "slider_gap": 16,
         "slider_gap_mobile": 16,
         "icon_size": 108,
-        "icon_size_mobile": 74,
+        "icon_size_mobile": 60,
         "icon_space": 4,
         "icon_space_mobile": 4,
         "icon_border_thickness": 2,
