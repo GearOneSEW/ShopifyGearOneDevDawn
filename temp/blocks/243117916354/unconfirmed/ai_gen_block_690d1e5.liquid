@@ -1,6 +1,615 @@
+{% doc %}
+  @prompt
+    I want to have a selected collection field. Then from that attribute I want a section that can act like a header with a selectable logo, description, and a currency selector. I want the logo to be selectable by upload, or tied to a metafield per template., I want to be able to select the logo position and I woulld like the currency selector to be just like in the header and have the same account and cart links like i have on the dawn header, can you preselect the customers local currency based on location and the use the same styling as the header on our Dawn home page? , Can you also have the country name beside the Currency like United States | USD$ Also make the shopping bag icon the same size as the accounts icon. Finally, for the uploaded logo, I would like to choose where it links to instead of it taking me to the home page.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-collection-header-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding_top }}px 0 {{ block.settings.padding_bottom }}px;
+  }
+
+  .ai-collection-header__container-{{ ai_gen_id }} {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-collection-header__content-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .ai-collection-header__logo-wrapper-{{ ai_gen_id }} {
+    flex-shrink: 0;
+  }
+
+  .ai-collection-header__logo-{{ ai_gen_id }} {
+    display: block;
+    max-width: {{ block.settings.logo_width }}px;
+    height: auto;
+  }
+
+  .ai-collection-header__logo-{{ ai_gen_id }} img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-collection-header__description-{{ ai_gen_id }} {
+    flex: 1;
+    min-width: 200px;
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.description_font_size }}px;
+    text-align: {{ block.settings.description_alignment }};
+  }
+
+  .ai-collection-header__utilities-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+
+  .ai-collection-header__localization-{{ ai_gen_id }} {
+    position: relative;
+  }
+
+  .ai-collection-header__localization-button-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    color: {{ block.settings.text_color }};
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+
+  .ai-collection-header__localization-button-{{ ai_gen_id }}:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .ai-collection-header__localization-icon-{{ ai_gen_id }} {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+  }
+
+  .ai-collection-header__localization-button-{{ ai_gen_id }}[aria-expanded="true"] .ai-collection-header__localization-icon-{{ ai_gen_id }} {
+    transform: rotate(180deg);
+  }
+
+  .ai-collection-header__localization-dropdown-{{ ai_gen_id }} {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    z-index: 100;
+  }
+
+  .ai-collection-header__localization-dropdown-{{ ai_gen_id }}.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .ai-collection-header__localization-form-{{ ai_gen_id }} {
+    padding: 8px 0;
+  }
+
+  .ai-collection-header__localization-option-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    color: #121212;
+  }
+
+  .ai-collection-header__localization-option-{{ ai_gen_id }}:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .ai-collection-header__localization-option-{{ ai_gen_id }}.selected {
+    background-color: rgba(0, 0, 0, 0.08);
+    font-weight: 600;
+  }
+
+  .ai-collection-header__icon-link-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: {{ block.settings.text_color }};
+    text-decoration: none;
+    position: relative;
+    padding: 8px;
+  }
+
+  .ai-collection-header__icon-{{ ai_gen_id }} {
+    width: 20px;
+    height: 20px;
+  }
+
+  .ai-collection-header__cart-count-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #121212;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-collection-header__content-{{ ai_gen_id }} {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .ai-collection-header__description-{{ ai_gen_id }} {
+      text-align: center;
+    }
+
+    .ai-collection-header__utilities-{{ ai_gen_id }} {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+{% endstyle %}
+
+<collection-header-{{ ai_gen_id }}
+  class="ai-collection-header-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-collection-header__container-{{ ai_gen_id }}">
+    <div class="ai-collection-header__content-{{ ai_gen_id }}">
+      {% if block.settings.logo_position == 'left' %}
+        {% if block.settings.logo != blank or block.settings.logo_metafield != blank %}
+          <div class="ai-collection-header__logo-wrapper-{{ ai_gen_id }}">
+            <a
+              href="{{ block.settings.logo_link | default: routes.root_url }}"
+              class="ai-collection-header__logo-{{ ai_gen_id }}"
+            >
+              {% if block.settings.logo_metafield != blank %}
+                {% assign metafield_logo = block.settings.collection.metafields[block.settings.logo_metafield] %}
+                {% if metafield_logo %}
+                  <img
+                    src="{{ metafield_logo | image_url: width: 600 }}"
+                    alt="{{ block.settings.collection.title | escape }}"
+                    width="{{ block.settings.logo_width }}"
+                    height="auto"
+                    loading="lazy"
+                  >
+                {% elsif block.settings.logo %}
+                  <img
+                    src="{{ block.settings.logo | image_url: width: 600 }}"
+                    alt="{{ shop.name | escape }}"
+                    width="{{ block.settings.logo_width }}"
+                    height="auto"
+                    loading="lazy"
+                  >
+                {% endif %}
+              {% elsif block.settings.logo %}
+                <img
+                  src="{{ block.settings.logo | image_url: width: 600 }}"
+                  alt="{{ shop.name | escape }}"
+                  width="{{ block.settings.logo_width }}"
+                  height="auto"
+                  loading="lazy"
+                >
+              {% endif %}
+            </a>
+          </div>
+        {% endif %}
+      {% endif %}
+
+      {% if block.settings.description != blank %}
+        <div class="ai-collection-header__description-{{ ai_gen_id }}">
+          {{ block.settings.description }}
+        </div>
+      {% endif %}
+
+      {% if block.settings.logo_position == 'center' %}
+        {% if block.settings.logo != blank or block.settings.logo_metafield != blank %}
+          <div class="ai-collection-header__logo-wrapper-{{ ai_gen_id }}">
+            <a
+              href="{{ block.settings.logo_link | default: routes.root_url }}"
+              class="ai-collection-header__logo-{{ ai_gen_id }}"
+            >
+              {% if block.settings.logo_metafield != blank %}
+                {% assign metafield_logo = block.settings.collection.metafields[block.settings.logo_metafield] %}
+                {% if metafield_logo %}
+                  <img
+                    src="{{ metafield_logo | image_url: width: 600 }}"
+                    alt="{{ block.settings.collection.title | escape }}"
+                    width="{{ block.settings.logo_width }}"
+                    height="auto"
+                    loading="lazy"
+                  >
+                {% elsif block.settings.logo %}
+                  <img
+                    src="{{ block.settings.logo | image_url: width: 600 }}"
+                    alt="{{ shop.name | escape }}"
+                    width="{{ block.settings.logo_width }}"
+                    height="auto"
+                    loading="lazy"
+                  >
+                {% endif %}
+              {% elsif block.settings.logo %}
+                <img
+                  src="{{ block.settings.logo | image_url: width: 600 }}"
+                  alt="{{ shop.name | escape }}"
+                  width="{{ block.settings.logo_width }}"
+                  height="auto"
+                  loading="lazy"
+                >
+              {% endif %}
+            </a>
+          </div>
+        {% endif %}
+      {% endif %}
+
+      <div class="ai-collection-header__utilities-{{ ai_gen_id }}">
+        <div class="ai-collection-header__localization-{{ ai_gen_id }}">
+          <button
+            class="ai-collection-header__localization-button-{{ ai_gen_id }}"
+            aria-expanded="false"
+            aria-label="Select currency"
+          >
+            <span class="ai-collection-header__localization-text-{{ ai_gen_id }}">
+              <span class="ai-collection-header__country-name-{{ ai_gen_id }}"></span>
+              <span class="ai-collection-header__currency-code-{{ ai_gen_id }}"></span>
+            </span>
+            <svg
+              class="ai-collection-header__localization-icon-{{ ai_gen_id }}"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          <div class="ai-collection-header__localization-dropdown-{{ ai_gen_id }}">
+            {% form 'localization', class: 'ai-collection-header__localization-form-{{ ai_gen_id }}' %}
+              {% for currency in localization.available_currencies %}
+                <button
+                  type="submit"
+                  name="currency_code"
+                  value="{{ currency.iso_code }}"
+                  class="ai-collection-header__localization-option-{{ ai_gen_id }} {% if currency.iso_code == localization.currency.iso_code %}selected{% endif %}"
+                  data-currency="{{ currency.iso_code }}"
+                  data-country="{{ currency.name }}"
+                >
+                  {{ currency.name }} | {{ currency.iso_code }} {{ currency.symbol }}
+                </button>
+              {% endfor %}
+            {% endform %}
+          </div>
+        </div>
+
+        <a
+          href="{{ routes.account_url }}"
+          class="ai-collection-header__icon-link-{{ ai_gen_id }}"
+          aria-label="Account"
+        >
+          <svg
+            class="ai-collection-header__icon-{{ ai_gen_id }}"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+            />
+          </svg>
+        </a>
+
+        <a
+          href="{{ routes.cart_url }}"
+          class="ai-collection-header__icon-link-{{ ai_gen_id }}"
+          aria-label="Cart"
+        >
+          <svg
+            class="ai-collection-header__icon-{{ ai_gen_id }}"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+            />
+          </svg>
+          {% if cart.item_count > 0 %}
+            <span class="ai-collection-header__cart-count-{{ ai_gen_id }}">
+              {{ cart.item_count }}
+            </span>
+          {% endif %}
+        </a>
+      </div>
+
+      {% if block.settings.logo_position == 'right' %}
+        {% if block.settings.logo != blank or block.settings.logo_metafield != blank %}
+          <div class="ai-collection-header__logo-wrapper-{{ ai_gen_id }}">
+            <a
+              href="{{ block.settings.logo_link | default: routes.root_url }}"
+              class="ai-collection-header__logo-{{ ai_gen_id }}"
+            >
+              {% if block.settings.logo_metafield != blank %}
+                {% assign metafield_logo = block.settings.collection.metafields[block.settings.logo_metafield] %}
+                {% if metafield_logo %}
+                  <img
+                    src="{{ metafield_logo | image_url: width: 600 }}"
+                    alt="{{ block.settings.collection.title | escape }}"
+                    width="{{ block.settings.logo_width }}"
+                    height="auto"
+                    loading="lazy"
+                  >
+                {% elsif block.settings.logo %}
+                  <img
+                    src="{{ block.settings.logo | image_url: width: 600 }}"
+                    alt="{{ shop.name | escape }}"
+                    width="{{ block.settings.logo_width }}"
+                    height="auto"
+                    loading="lazy"
+                  >
+                {% endif %}
+              {% elsif block.settings.logo %}
+                <img
+                  src="{{ block.settings.logo | image_url: width: 600 }}"
+                  alt="{{ shop.name | escape }}"
+                  width="{{ block.settings.logo_width }}"
+                  height="auto"
+                  loading="lazy"
+                >
+              {% endif %}
+            </a>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</collection-header-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class CollectionHeader{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.button = this.querySelector('.ai-collection-header__localization-button-{{ ai_gen_id }}');
+        this.dropdown = this.querySelector('.ai-collection-header__localization-dropdown-{{ ai_gen_id }}');
+        this.countryNameEl = this.querySelector('.ai-collection-header__country-name-{{ ai_gen_id }}');
+        this.currencyCodeEl = this.querySelector('.ai-collection-header__currency-code-{{ ai_gen_id }}');
+      }
+
+      connectedCallback() {
+        this.setupEventListeners();
+        this.setInitialCurrency();
+      }
+
+      setupEventListeners() {
+        this.button.addEventListener('click', () => {
+          const isExpanded = this.button.getAttribute('aria-expanded') === 'true';
+          this.button.setAttribute('aria-expanded', !isExpanded);
+          this.dropdown.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+          if (!this.contains(event.target)) {
+            this.button.setAttribute('aria-expanded', 'false');
+            this.dropdown.classList.remove('active');
+          }
+        });
+      }
+
+      setInitialCurrency() {
+        const selectedOption = this.dropdown.querySelector('.ai-collection-header__localization-option-{{ ai_gen_id }}.selected');
+        if (selectedOption) {
+          const countryName = selectedOption.getAttribute('data-country');
+          const currencyCode = selectedOption.getAttribute('data-currency');
+          const currencySymbol = selectedOption.textContent.split('|')[1].trim();
+          
+          if (this.countryNameEl && this.currencyCodeEl) {
+            this.countryNameEl.textContent = countryName + ' | ';
+            this.currencyCodeEl.textContent = currencySymbol;
+          }
+        }
+      }
+    }
+
+    customElements.define('collection-header-{{ ai_gen_id }}', CollectionHeader{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Collection header",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "header",
+      "content": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image"
+    },
+    {
+      "type": "text",
+      "id": "logo_metafield",
+      "label": "Logo metafield key",
+      "info": "Enter the metafield key (e.g., custom.logo) to use collection-specific logos"
+    },
+    {
+      "type": "url",
+      "id": "logo_link",
+      "label": "Logo link"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Logo width",
+      "default": 150
+    },
+    {
+      "type": "select",
+      "id": "logo_position",
+      "label": "Logo position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Description"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "range",
+      "id": "description_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "description_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection header"
+    }
+  ]
+}
 {% endschema %}
