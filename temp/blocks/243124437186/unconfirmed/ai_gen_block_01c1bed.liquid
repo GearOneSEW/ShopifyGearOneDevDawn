@@ -1,6 +1,584 @@
+{% doc %}
+  @prompt
+    I want to have a selected collection field. Then from that attribute I want a section that can act like a header with a selectable logo, description, and a currency selector. I want the logo to be selectable by upload, or tied to a metafield per template., I want to be able to select the logo position, I want to be able to select if the description appears in line with the logo or if it is below on a second row, and I woulld like the currency selector to be just like in the header and have the same account and cart links like i have on the dawn header, can you preselect the customers local currency based on location and the use the same styling as the header on our Dawn home page? , Can you also have the country name beside the Currency like United States | USD$ Also make the shopping bag icon the same size as the accounts icon. Finally, for the uploaded logo, I would like to choose where it links to instead of it taking me to the home page.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% liquid
+  if block.settings.logo_source == 'upload'
+    assign logo_image = block.settings.logo_upload
+  elsif block.settings.logo_source == 'metafield' and block.settings.selected_collection.metafields.custom.logo != blank
+    assign logo_image = block.settings.selected_collection.metafields.custom.logo
+  else
+    assign logo_image = null
+  endif
+%}
+
+{% style %}
+  .ai-custom-header-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    border-bottom: {{ block.settings.border_thickness }}px solid {{ block.settings.border_color }};
+    padding: {{ block.settings.padding_vertical }}px 0;
+  }
+
+  .ai-custom-header__container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    padding: 0 {{ block.settings.padding_horizontal }}px;
+  }
+
+  .ai-custom-header__wrapper-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .ai-custom-header__left-{{ ai_gen_id }} {
+    display: flex;
+    align-items: {% if block.settings.description_layout == 'inline' %}center{% else %}flex-start{% endif %};
+    flex-direction: {% if block.settings.description_layout == 'inline' %}row{% else %}column{% endif %};
+    gap: {% if block.settings.description_layout == 'inline' %}20px{% else %}10px{% endif %};
+    flex: 1;
+    {% if block.settings.logo_position == 'center' %}
+      justify-content: center;
+      text-align: center;
+    {% elsif block.settings.logo_position == 'right' %}
+      justify-content: flex-end;
+      text-align: right;
+    {% else %}
+      justify-content: flex-start;
+      text-align: left;
+    {% endif %}
+  }
+
+  .ai-custom-header__logo-{{ ai_gen_id }} {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .ai-custom-header__logo-{{ ai_gen_id }} img {
+    display: block;
+    max-width: {{ block.settings.logo_width }}px;
+    height: auto;
+  }
+
+  .ai-custom-header__logo-placeholder-{{ ai_gen_id }} {
+    width: {{ block.settings.logo_width }}px;
+    height: 60px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+
+  .ai-custom-header__logo-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 100px;
+    max-height: 50px;
+  }
+
+  .ai-custom-header__description-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.description_font_size }}px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .ai-custom-header__right-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+
+  .ai-custom-header__localization-{{ ai_gen_id }} {
+    position: relative;
+  }
+
+  .ai-custom-header__localization-button-{{ ai_gen_id }} {
+    background: none;
+    border: 1px solid {{ block.settings.text_color }};
+    color: {{ block.settings.text_color }};
+    padding: 8px 12px;
+    border-radius: {{ block.settings.button_radius }}px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .ai-custom-header__localization-button-{{ ai_gen_id }}:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .ai-custom-header__localization-icon-{{ ai_gen_id }} {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.2s ease;
+  }
+
+  .ai-custom-header__localization-button-{{ ai_gen_id }}[aria-expanded="true"] .ai-custom-header__localization-icon-{{ ai_gen_id }} {
+    transform: rotate(180deg);
+  }
+
+  .ai-custom-header__localization-dropdown-{{ ai_gen_id }} {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: {{ block.settings.button_radius }}px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  }
+
+  .ai-custom-header__localization-dropdown-{{ ai_gen_id }}.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .ai-custom-header__localization-form-{{ ai_gen_id }} {
+    padding: 8px 0;
+  }
+
+  .ai-custom-header__currency-option-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    color: #121212;
+  }
+
+  .ai-custom-header__currency-option-{{ ai_gen_id }}:hover {
+    background-color: #f3f3f3;
+  }
+
+  .ai-custom-header__currency-option-{{ ai_gen_id }}.selected {
+    background-color: #f3f3f3;
+    font-weight: 600;
+  }
+
+  .ai-custom-header__icons-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .ai-custom-header__icon-link-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .ai-custom-header__icon-link-{{ ai_gen_id }} svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .ai-custom-header__cart-count-{{ ai_gen_id }} {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: {{ block.settings.badge_color }};
+    color: {{ block.settings.badge_text_color }};
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-custom-header__wrapper-{{ ai_gen_id }} {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .ai-custom-header__left-{{ ai_gen_id }} {
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+
+    .ai-custom-header__right-{{ ai_gen_id }} {
+      justify-content: center;
+    }
+
+    .ai-custom-header__localization-dropdown-{{ ai_gen_id }} {
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%) translateY(-10px);
+    }
+
+    .ai-custom-header__localization-dropdown-{{ ai_gen_id }}.active {
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+{% endstyle %}
+
+<custom-header-{{ ai_gen_id }} class="ai-custom-header-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-custom-header__container-{{ ai_gen_id }}">
+    <div class="ai-custom-header__wrapper-{{ ai_gen_id }}">
+      <div class="ai-custom-header__left-{{ ai_gen_id }}">
+        {% if logo_image %}
+          <a href="{{ block.settings.logo_link }}" class="ai-custom-header__logo-{{ ai_gen_id }}">
+            <img
+              src="{{ logo_image | image_url: width: 600 }}"
+              alt="{{ block.settings.selected_collection.title | default: 'Logo' | escape }}"
+              width="{{ block.settings.logo_width }}"
+              height="auto"
+              loading="lazy"
+            >
+          </a>
+        {% else %}
+          <div class="ai-custom-header__logo-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+
+        {% if block.settings.description != blank %}
+          <div class="ai-custom-header__description-{{ ai_gen_id }}">
+            {{ block.settings.description }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="ai-custom-header__right-{{ ai_gen_id }}">
+        {% if block.settings.show_currency_selector %}
+          <div class="ai-custom-header__localization-{{ ai_gen_id }}">
+            <button
+              type="button"
+              class="ai-custom-header__localization-button-{{ ai_gen_id }}"
+              aria-expanded="false"
+              aria-controls="ai-currency-dropdown-{{ ai_gen_id }}"
+            >
+              <span class="ai-custom-header__current-currency-{{ ai_gen_id }}">
+                {% if localization.available_countries.size > 0 %}
+                  {{ localization.country.name }} | {{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }}
+                {% else %}
+                  United States | USD $
+                {% endif %}
+              </span>
+              <svg class="ai-custom-header__localization-icon-{{ ai_gen_id }}" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div
+              id="ai-currency-dropdown-{{ ai_gen_id }}"
+              class="ai-custom-header__localization-dropdown-{{ ai_gen_id }}"
+            >
+              {% form 'localization', class: 'ai-custom-header__localization-form-' | append: ai_gen_id %}
+                {% for country in localization.available_countries %}
+                  <button
+                    type="submit"
+                    name="country_code"
+                    value="{{ country.iso_code }}"
+                    class="ai-custom-header__currency-option-{{ ai_gen_id }} {% if country.iso_code == localization.country.iso_code %}selected{% endif %}"
+                  >
+                    {{ country.name }} | {{ country.currency.iso_code }} {{ country.currency.symbol }}
+                  </button>
+                {% endfor %}
+              {% endform %}
+            </div>
+          </div>
+        {% endif %}
+
+        <div class="ai-custom-header__icons-{{ ai_gen_id }}">
+          <a href="{{ routes.account_url }}" class="ai-custom-header__icon-link-{{ ai_gen_id }}" aria-label="Account">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+
+          <a href="{{ routes.cart_url }}" class="ai-custom-header__icon-link-{{ ai_gen_id }}" aria-label="Cart">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+            </svg>
+            {% if cart.item_count > 0 %}
+              <span class="ai-custom-header__cart-count-{{ ai_gen_id }}">{{ cart.item_count }}</span>
+            {% endif %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</custom-header-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class CustomHeader{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.localizationButton = this.querySelector('.ai-custom-header__localization-button-{{ ai_gen_id }}');
+        this.localizationDropdown = this.querySelector('.ai-custom-header__localization-dropdown-{{ ai_gen_id }}');
+      }
+
+      connectedCallback() {
+        if (this.localizationButton && this.localizationDropdown) {
+          this.setupLocalization();
+        }
+      }
+
+      setupLocalization() {
+        this.localizationButton.addEventListener('click', () => {
+          const isExpanded = this.localizationButton.getAttribute('aria-expanded') === 'true';
+          this.localizationButton.setAttribute('aria-expanded', !isExpanded);
+          this.localizationDropdown.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+          if (!event.target.closest('.ai-custom-header__localization-{{ ai_gen_id }}')) {
+            this.localizationButton.setAttribute('aria-expanded', 'false');
+            this.localizationDropdown.classList.remove('active');
+          }
+        });
+      }
+    }
+
+    customElements.define('custom-header-{{ ai_gen_id }}', CustomHeader{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Custom collection header",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collection"
+    },
+    {
+      "type": "collection",
+      "id": "selected_collection",
+      "label": "Collection"
+    },
+    {
+      "type": "header",
+      "content": "Logo"
+    },
+    {
+      "type": "select",
+      "id": "logo_source",
+      "label": "Logo source",
+      "options": [
+        {
+          "value": "upload",
+          "label": "Upload image"
+        },
+        {
+          "value": "metafield",
+          "label": "Collection metafield"
+        }
+      ],
+      "default": "upload",
+      "info": "For metafield option, create a 'custom.logo' file metafield on your collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_upload",
+      "label": "Upload logo"
+    },
+    {
+      "type": "url",
+      "id": "logo_link",
+      "label": "Logo link"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Logo width",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "default": 150
+    },
+    {
+      "type": "select",
+      "id": "logo_position",
+      "label": "Logo position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Description"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "select",
+      "id": "description_layout",
+      "label": "Description layout",
+      "options": [
+        {
+          "value": "inline",
+          "label": "Inline with logo"
+        },
+        {
+          "value": "stacked",
+          "label": "Below logo"
+        }
+      ],
+      "default": "inline"
+    },
+    {
+      "type": "range",
+      "id": "description_font_size",
+      "label": "Description font size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Currency selector"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_currency_selector",
+      "label": "Show currency selector",
+      "default": true,
+      "info": "Enable multiple currencies in your store settings"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "range",
+      "id": "border_thickness",
+      "label": "Border thickness",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "badge_color",
+      "label": "Cart badge color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Cart badge text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "button_radius",
+      "label": "Button radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Maximum width",
+      "min": 1000,
+      "max": 1600,
+      "step": 100,
+      "unit": "px",
+      "default": 1300
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "label": "Vertical padding",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "label": "Horizontal padding",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom collection header"
+    }
+  ]
+}
 {% endschema %}
