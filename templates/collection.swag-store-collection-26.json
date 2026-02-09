@@ -154,7 +154,7 @@
             "bubble_img": "shopify://shop_images/DM10_ClassicRed_Flat_Front_LC-Ledgerway-white_43939b8f-ace2-4655-961a-92f5284f0445.jpg",
             "bubble_text": "Clothing",
             "bubble_collection": "{{ collection }}",
-            "bubble_url_suffix": "&filter.p.t.category=aa-1",
+            "bubble_url_suffix": "?&filter.p.t.category=aa-1",
             "bubble_text_override": ""
           }
         },
@@ -165,7 +165,7 @@
             "bubble_img": "shopify://shop_images/CT89132109_black_flat_left_featured.jpg",
             "bubble_text": "BAGS",
             "bubble_collection": "{{ collection }}",
-            "bubble_url_suffix": "&filter.p.t.category=lb",
+            "bubble_url_suffix": "?&filter.p.t.category=lb",
             "bubble_text_override": ""
           }
         },
