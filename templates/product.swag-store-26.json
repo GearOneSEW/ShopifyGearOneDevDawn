@@ -12,16 +12,35 @@
     "1770661999e318e27e": {
       "type": "_blocks",
       "blocks": {
+        "ai_gen_block_abd90c2_pPtHNt": {
+          "type": "ai_gen_block_abd90c2",
+          "settings": {
+            "collection": "{{ closest.product.metafields.custom.swag_store_collection.value }}",
+            "fallback_logo": "{{ closest.collection.image }}",
+            "logo_link": "{{ closest.collection.url }}",
+            "logo_width": 300,
+            "logo_position": "left",
+            "layout": "inline",
+            "description": "{{ closest.collection.description }}",
+            "description_font_size": 16,
+            "background_color": "#ffffff",
+            "text_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}",
+            "vertical_padding": 20,
+            "horizontal_padding": 20
+          },
+          "blocks": {}
+        },
         "ai_gen_block_690d1e5_4THiM4": {
           "type": "ai_gen_block_690d1e5",
+          "disabled": true,
           "settings": {
             "collection": "{{ closest.product.metafields.custom.swag_store_collection.value }}",
             "logo": "{{ closest.collection.image }}",
             "logo_metafield": "",
             "logo_link": "{{ closest.collection.url }}",
-            "logo_width": 300,
+            "logo_width": 200,
             "logo_position": "left",
-            "description": "{{ closest.collection.description }}",
+            "description": "",
             "description_font_size": 18,
             "description_alignment": "left",
             "background_color": "#ffffff",
@@ -33,6 +52,7 @@
         }
       },
       "block_order": [
+        "ai_gen_block_abd90c2_pPtHNt",
         "ai_gen_block_690d1e5_4THiM4"
       ],
       "name": "Swag Header Product (v02092026)",
