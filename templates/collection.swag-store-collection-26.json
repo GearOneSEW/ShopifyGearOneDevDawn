@@ -129,8 +129,122 @@
       "block_order": [
         "ai_gen_block_730aa8d_8jzCqc"
       ],
+      "disabled": true,
       "name": "Video Columns (Sidekick 02062026))",
       "settings": {}
+    },
+    "circle_menu2_TrgVBA": {
+      "type": "CircleMenu2",
+      "blocks": {
+        "image_J6rYxa": {
+          "type": "Image",
+          "name": "Shop ALL Bubble",
+          "settings": {
+            "bubble_img": "shopify://shop_images/052319-dt-triblend_1.jpg",
+            "bubble_text": "Shop ALL",
+            "bubble_collection": "{{ collection }}",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        },
+        "image_p4HAbN": {
+          "type": "Image",
+          "name": "Clothing Bubble",
+          "settings": {
+            "bubble_img": "shopify://shop_images/DM10_ClassicRed_Flat_Front_LC-Ledgerway-white_43939b8f-ace2-4655-961a-92f5284f0445.jpg",
+            "bubble_text": "Clothing",
+            "bubble_collection": "{{ collection }}",
+            "bubble_url_suffix": "&filter.p.t.category=aa-1",
+            "bubble_text_override": ""
+          }
+        },
+        "image_477Qdd": {
+          "type": "Image",
+          "name": "Bag Bubble",
+          "settings": {
+            "bubble_img": "shopify://shop_images/CT89132109_black_flat_left_featured.jpg",
+            "bubble_text": "BAGS",
+            "bubble_collection": "{{ collection }}",
+            "bubble_url_suffix": "&filter.p.t.category=lb",
+            "bubble_text_override": ""
+          }
+        },
+        "image_w4kXKJ": {
+          "type": "Image",
+          "name": "Hat Bubble",
+          "settings": {
+            "bubble_img": "shopify://shop_images/113_Split_White--Navy--Red_Left.jpg",
+            "bubble_text": "Hats",
+            "bubble_collection": "{{ collection }}",
+            "bubble_url_suffix": "&filter.p.t.category=aa-2-17&filter.p.t.category=aa-2-18",
+            "bubble_text_override": ""
+          }
+        },
+        "image_LgbyqD": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "Collection",
+            "bubble_collection": "",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        },
+        "image_mqcL8k": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "Collection",
+            "bubble_collection": "",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_J6rYxa",
+        "image_p4HAbN",
+        "image_477Qdd",
+        "image_w4kXKJ",
+        "image_LgbyqD",
+        "image_mqcL8k"
+      ],
+      "name": "SS - Circle Menu (Collection + Suffix) v02092026",
+      "settings": {
+        "slider_width": 100,
+        "slider_gap": 16,
+        "slider_gap_mobile": 16,
+        "icon_size": 108,
+        "icon_size_mobile": 74,
+        "icon_space": 4,
+        "icon_space_mobile": 4,
+        "icon_border_thickness": 2,
+        "icon_square": false,
+        "use_hover": true,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 12,
+        "text_size_mobile": 10,
+        "text_height": 130,
+        "text_mt": 8,
+        "icon_border_color": "#121212",
+        "icon_border_gradient": "",
+        "text_color": "#121212",
+        "background_color": "#FFFFFF",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "border_gradient": "",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1500,
+        "border_thickness": 0,
+        "lazy": true,
+        "hide_mobile": false,
+        "hide_desktop": false
+      }
     },
     "rich_text_CcrGq4": {
       "type": "rich-text",
@@ -175,107 +289,6 @@
         "full_width": true,
         "padding_top": 20,
         "padding_bottom": 12
-      }
-    },
-    "circle_menu2_TrgVBA": {
-      "type": "CircleMenu2",
-      "blocks": {
-        "image_p4HAbN": {
-          "type": "Image",
-          "name": "Clothing Bubble",
-          "settings": {
-            "bubble_img": "shopify://shop_images/DM10_ClassicRed_Flat_Front_LC-Ledgerway-white_43939b8f-ace2-4655-961a-92f5284f0445.jpg",
-            "bubble_text": "Clothing",
-            "bubble_collection": "{{ collection }}",
-            "bubble_url_suffix": "&filter.p.t.category=aa-1",
-            "bubble_text_override": ""
-          }
-        },
-        "image_477Qdd": {
-          "type": "Image",
-          "name": "Bag Bubble",
-          "settings": {
-            "bubble_img": "shopify://shop_images/CT89132109_black_flat_left_featured.jpg",
-            "bubble_text": "BAGS",
-            "bubble_collection": "{{ collection }}",
-            "bubble_url_suffix": "&filter.p.t.category=lb",
-            "bubble_text_override": ""
-          }
-        },
-        "image_w4kXKJ": {
-          "type": "Image",
-          "name": "Hat Bubble",
-          "settings": {
-            "bubble_img": "shopify://shop_images/113_Split_White--Navy--Red_Left.jpg",
-            "bubble_text": "Hats",
-            "bubble_collection": "{{ collection }}",
-            "bubble_url_suffix": "&filter.p.t.category=aa-2-17",
-            "bubble_text_override": ""
-          }
-        },
-        "image_LgbyqD": {
-          "type": "Image",
-          "settings": {
-            "bubble_text": "Collection",
-            "bubble_collection": "",
-            "bubble_url_suffix": "",
-            "bubble_text_override": ""
-          }
-        },
-        "image_mqcL8k": {
-          "type": "Image",
-          "settings": {
-            "bubble_text": "Collection",
-            "bubble_collection": "",
-            "bubble_url_suffix": "",
-            "bubble_text_override": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_p4HAbN",
-        "image_477Qdd",
-        "image_w4kXKJ",
-        "image_LgbyqD",
-        "image_mqcL8k"
-      ],
-      "name": "SS - Circle Menu (Collection + Suffix) v02092026",
-      "settings": {
-        "slider_width": 100,
-        "slider_gap": 16,
-        "slider_gap_mobile": 16,
-        "icon_size": 108,
-        "icon_size_mobile": 74,
-        "icon_space": 4,
-        "icon_space_mobile": 4,
-        "icon_border_thickness": 2,
-        "icon_square": false,
-        "use_hover": true,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 12,
-        "text_size_mobile": 10,
-        "text_height": 130,
-        "text_mt": 8,
-        "icon_border_color": "#121212",
-        "icon_border_gradient": "",
-        "text_color": "#121212",
-        "background_color": "#FFFFFF",
-        "background_gradient": "",
-        "border_color": "#121212",
-        "border_gradient": "",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 1.5,
-        "full_width": true,
-        "content_width": 1500,
-        "border_thickness": 0,
-        "lazy": true,
-        "hide_mobile": false,
-        "hide_desktop": false
       }
     },
     "product-grid": {
@@ -413,8 +426,8 @@
     "blocks_9qUER9",
     "blocks_L4kFRx",
     "1770401529d438e379",
-    "rich_text_CcrGq4",
     "circle_menu2_TrgVBA",
+    "rich_text_CcrGq4",
     "product-grid",
     "collapsible_content_Df687Y",
     "blocks_JcqPeH"
