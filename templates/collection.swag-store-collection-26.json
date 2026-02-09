@@ -291,6 +291,7 @@
       "block_order": [
         "heading_8qFTrM"
       ],
+      "disabled": true,
       "name": "Shop Trends Text",
       "settings": {
         "desktop_content_position": "center",
@@ -362,6 +363,7 @@
         "image_GxQPER",
         "image_VjWfkA"
       ],
+      "disabled": true,
       "name": "SS - Circle Menu (Collection + Suffix) v02092026",
       "settings": {
         "slider_width": 100,
@@ -451,6 +453,7 @@
       "block_order": [
         "ai_gen_block_730aa8d_8jzCqc"
       ],
+      "disabled": true,
       "name": "Video Columns (Sidekick 02062026))",
       "settings": {}
     },
