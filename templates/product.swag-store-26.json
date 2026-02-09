@@ -31,16 +31,61 @@
             "border_color": "#e8e8e8",
             "badge_color": "{{ closest.collection.metafields.custom.swag_store_color.value }}",
             "badge_text_color": "#ffffff",
-            "vertical_padding": 20,
+            "vertical_padding": 10,
             "horizontal_padding": 20
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_381f7a2_CibHNr": {
+          "type": "ai_gen_block_381f7a2",
+          "settings": {
+            "collection": "{{ closest.product.metafields.custom.swag_store_collection.value }}",
+            "show_title": false,
+            "text_alignment": "center",
+            "title_size": 32,
+            "description_size": 16,
+            "padding": 20,
+            "border_radius": 4,
+            "desktop_width_percent": 100,
+            "background_color": "#f3f3f3",
+            "text_color": "#121212"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_ab10089_8hgQHB"
+        "ai_gen_block_ab10089_8hgQHB",
+        "ai_gen_block_381f7a2_CibHNr"
       ],
       "name": "Swag Header Product (v02092026)",
+      "settings": {}
+    },
+    "1770661999e318e27e": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_690d1e5_4THiM4": {
+          "type": "ai_gen_block_690d1e5",
+          "settings": {
+            "collection": "{{ closest.product.metafields.custom.swag_store_collection.value }}",
+            "logo": "{{ closest.collection.image }}",
+            "logo_metafield": "",
+            "logo_link": "{{ closest.collection.url }}",
+            "logo_width": 300,
+            "logo_position": "left",
+            "description": "{{ closest.collection.description }}",
+            "description_font_size": 18,
+            "description_alignment": "left",
+            "background_color": "#ffffff",
+            "text_color": "#121212",
+            "padding_top": 20,
+            "padding_bottom": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_690d1e5_4THiM4"
+      ],
       "settings": {}
     },
     "1770572806f805b7ee": {
@@ -764,6 +809,7 @@
   },
   "order": [
     "blocks_ET3nBa",
+    "1770661999e318e27e",
     "1770572806f805b7ee",
     "main",
     "1732217783ae414b1a",
