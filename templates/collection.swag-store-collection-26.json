@@ -154,11 +154,10 @@
         "image_cVrXPp": {
           "type": "Image",
           "name": "Drinkware",
-          "disabled": true,
           "settings": {
-            "bubble_text": "Collection",
-            "bubble_collection": "",
-            "bubble_url_suffix": "",
+            "bubble_text": "Drinkware",
+            "bubble_collection": "{{ collection }}",
+            "bubble_url_suffix": "?& hg-11-10-5",
             "bubble_text_override": ""
           }
         },
@@ -166,7 +165,7 @@
           "type": "Image",
           "name": "Kitchen & Dinking Bubble",
           "settings": {
-            "bubble_img": "shopify://shop_images/front-view-of-clear-stanley-20oz-cafe-to-go-trav-mug_2.jpg",
+            "bubble_img": "shopify://shop_images/wood-cheese-board-bites-gift-set-plain.jpg",
             "bubble_text": "Home & DIY",
             "bubble_collection": "{{ collection }}",
             "bubble_url_suffix": "?&filter.p.t.category=hg-11",
