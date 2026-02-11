@@ -156,9 +156,9 @@
           "name": "Drinkware",
           "settings": {
             "bubble_img": "shopify://shop_images/1603-14GN_B_FR_LIFESTYLE_2eb4be87-1866-4e96-acb4-b84bfda88d42.jpg",
-            "bubble_text": "Drinkware",
+            "bubble_text": "Drinkware & Accessories",
             "bubble_collection": "{{ collection }}",
-            "bubble_url_suffix": "&filter.p.t.category=hg-11-10&filter.p.t.category=hg-11-3-2&filter.p.t.category=hg-11-3-4&filter.p.t.category=hg-11-3-5&filter.p.t.category=hg-11-3-13&filter.p.t.category=hg-11-3-10&filter.p.t.category=hg-11-3-14&filter.p.t.category=hg-11-3-11",
+            "bubble_url_suffix": "?&filter.p.t.category=hg-11-10&filter.p.t.category=hg-11-3-2&filter.p.t.category=hg-11-3-4&filter.p.t.category=hg-11-3-5&filter.p.t.category=hg-11-3-13&filter.p.t.category=hg-11-3-10&filter.p.t.category=hg-11-3-14&filter.p.t.category=hg-11-3-11",
             "bubble_text_override": ""
           }
         },
