@@ -257,6 +257,103 @@
         "hide_desktop": false
       }
     },
+    "circle_menu_update_6CwajF": {
+      "type": "CircleMenuUpdate",
+      "blocks": {
+        "image_zcH34J": {
+          "type": "Image",
+          "name": "Red",
+          "settings": {
+            "bubble_img": "shopify://shop_images/50W-Gildan-18000-HeatherSportScarlet-swatch.gif",
+            "bubble_text": "Collection",
+            "bubble_collection": "{{ collection }}",
+            "bubble_url_suffix": "?filter.v.t.shopify.color-pattern=gid%3A%2F%2Fshopify%2FTaxonomyValue%2F13",
+            "bubble_text_override": ""
+          }
+        },
+        "image_QjdEHD": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "Collection",
+            "bubble_collection": "",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        },
+        "image_pAywme": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "Collection",
+            "bubble_collection": "",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        },
+        "image_Vyqnep": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "Collection",
+            "bubble_collection": "",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        },
+        "image_xayFdd": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "Collection",
+            "bubble_collection": "",
+            "bubble_url_suffix": "",
+            "bubble_text_override": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_zcH34J",
+        "image_QjdEHD",
+        "image_pAywme",
+        "image_Vyqnep",
+        "image_xayFdd"
+      ],
+      "name": "SS - Circle Menu (Collection + Suffix)",
+      "settings": {
+        "slider_width": 100,
+        "slider_gap": 16,
+        "slider_gap_mobile": 16,
+        "icon_size": 108,
+        "icon_size_mobile": 74,
+        "icon_space": 4,
+        "icon_space_mobile": 4,
+        "icon_border_thickness": 2,
+        "icon_square": false,
+        "use_hover": true,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 12,
+        "text_size_mobile": 10,
+        "text_height": 130,
+        "text_mt": 8,
+        "icon_border_color": "#121212",
+        "icon_border_gradient": "",
+        "text_color": "#121212",
+        "background_color": "#FFFFFF",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "border_gradient": "",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1500,
+        "border_thickness": 0,
+        "lazy": true,
+        "hide_mobile": false,
+        "hide_desktop": false
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -573,6 +670,7 @@
     "blocks_L4kFRx",
     "rich_text_FWDw3m",
     "circle_menu2_TrgVBA",
+    "circle_menu_update_6CwajF",
     "product-grid",
     "rich_text_Rf7nHB",
     "circle_menu2_H4nV8i",
