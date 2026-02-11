@@ -155,9 +155,10 @@
           "type": "Image",
           "name": "Drinkware",
           "settings": {
+            "bubble_img": "shopify://shop_images/1603-14GN_B_FR_LIFESTYLE_2eb4be87-1866-4e96-acb4-b84bfda88d42.jpg",
             "bubble_text": "Drinkware",
             "bubble_collection": "{{ collection }}",
-            "bubble_url_suffix": "?& hg-11-10-5",
+            "bubble_url_suffix": "?&filter.p.t.category=hg-11-10-5",
             "bubble_text_override": ""
           }
         },
