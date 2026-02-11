@@ -317,6 +317,7 @@
         "image_Vyqnep",
         "image_xayFdd"
       ],
+      "disabled": true,
       "name": "SS - Circle Menu (Collection + Suffix)",
       "settings": {
         "slider_width": 100,
