@@ -35,13 +35,10 @@
         },
         "custom_liquid_KtcVKq": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "{% if product.metafields.custom.key_features_list and product.metafields.custom.key_features_list.value != '' %}\n  <div class=\"features-list\">\n    {{ product.metafields.custom.key_features_list.value }}\n  </div>\n{% endif %}"
           }
-        },
-        "price": {
-          "type": "price",
-          "settings": {}
         },
         "custom_liquid_N9GbX9": {
           "type": "custom_liquid",
@@ -49,6 +46,10 @@
           "settings": {
             "custom_liquid": "{% if product.metafields.custom.key_features_list and product.metafields.custom.key_features_list.value != '' %}\n  <div class=\"features-list\">\n    {{ product.metafields.custom.key_features_list.value }}\n  </div>\n{% endif %}"
           }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -102,8 +103,8 @@
         "vendor",
         "title",
         "custom_liquid_KtcVKq",
-        "price",
         "custom_liquid_N9GbX9",
+        "price",
         "variant_picker",
         "order_limits_minmaxify_product_limits_display_xTJdcr",
         "quantity_selector",
