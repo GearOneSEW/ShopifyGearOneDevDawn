@@ -151,11 +151,6 @@
         "disabled": false,
         "settings": {}
       },
-      "10727672529976264282": {
-        "type": "shopify://apps/discount-ninja/blocks/la-dn-app-embed-core-v5-assetless-1124/b9a933ba-e276-459f-a4bf-3571d5a1e81c",
-        "disabled": true,
-        "settings": {}
-      },
       "13027630495364635475": {
         "type": "shopify://apps/discount-ninja/blocks/la-dn-app-embed-core-v5-assetless/b9a933ba-e276-459f-a4bf-3571d5a1e81c",
         "disabled": false,
@@ -198,6 +193,16 @@
           "button_horizontal_position": "bottom_left",
           "button_vertical_position": "lowest",
           "greeting_message": ""
+        }
+      },
+      "7998720338607617285": {
+        "type": "shopify://apps/promosync/blocks/promo-pricing-engine/019c48c8-9483-7db1-9e67-56f74d85d89d",
+        "disabled": false,
+        "settings": {
+          "enable_cart_pricing": true,
+          "show_strikethrough": true,
+          "show_tier_popover": false,
+          "enable_min_quantity": true
         }
       }
     },

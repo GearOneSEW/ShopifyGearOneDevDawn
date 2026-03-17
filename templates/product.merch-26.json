@@ -653,6 +653,59 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "1773754219c96dd58c": {
+      "type": "apps",
+      "blocks": {
+        "promosync_volume_pricing_note_ACxR8t": {
+          "type": "shopify://apps/promosync/blocks/volume-pricing-note/019c48c8-9483-7db1-9e67-56f74d85d89d",
+          "settings": {
+            "label": ""
+          }
+        },
+        "promosync_star_rating_aitRAV": {
+          "type": "shopify://apps/promosync/blocks/star_rating/019c48c8-9483-7db1-9e67-56f74d85d89d",
+          "settings": {
+            "product": "{{product}}",
+            "colour": "#ff0000"
+          }
+        },
+        "promosync_tier_pricing_A6Eg7D": {
+          "type": "shopify://apps/promosync/blocks/tier-pricing/019c48c8-9483-7db1-9e67-56f74d85d89d",
+          "settings": {
+            "layout": "table",
+            "show_header": true,
+            "show_unit": true,
+            "unit_label": "EA",
+            "table_style": "standard"
+          }
+        },
+        "promosync_location_decorations_cJGbxx": {
+          "type": "shopify://apps/promosync/blocks/location-decorations/019c48c8-9483-7db1-9e67-56f74d85d89d",
+          "settings": {
+            "mode": "display",
+            "title": "Decoration Locations",
+            "location_label": "Location",
+            "decoration_label": "Decoration",
+            "location_placeholder": "Select a location",
+            "decoration_placeholder": "Select a decoration"
+          }
+        },
+        "promosync_min_quantity_notice_yeTLbh": {
+          "type": "shopify://apps/promosync/blocks/min-quantity-notice/019c48c8-9483-7db1-9e67-56f74d85d89d",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "promosync_volume_pricing_note_ACxR8t",
+        "promosync_star_rating_aitRAV",
+        "promosync_tier_pricing_A6Eg7D",
+        "promosync_location_decorations_cJGbxx",
+        "promosync_min_quantity_notice_yeTLbh"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -660,6 +713,7 @@
     "main",
     "1732217783ae414b1a",
     "rich_text_WTRRy9",
+    "1773754219c96dd58c",
     "rich_text_GVJQBg",
     "multicolumn_aUFFgV",
     "multicolumn_cBpdGW",
