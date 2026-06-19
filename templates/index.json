@@ -219,7 +219,7 @@
         "description": "<p>{{ section.settings.collection.description }}</p>",
         "show_description": false,
         "description_style": "body",
-        "collection": "new-product-of-the-week",
+        "collection": "new-product-of-the-month",
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
