@@ -142,9 +142,7 @@
       "5149645339031002760": {
         "type": "shopify://apps/order-limits-minmaxify/blocks/app-embed-block/3acfba32-89f3-4377-ae20-cbb9abc48475",
         "disabled": false,
-        "settings": {
-          "async": false
-        }
+        "settings": {}
       },
       "316487575649303945": {
         "type": "shopify://apps/easify-options/blocks/app-embed-block/d2288b18-c1ba-42f5-b3b3-26c75c8820bf",
@@ -185,24 +183,24 @@
         "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": false,
         "settings": {
+          "greeting_message": "",
           "button_color": "#005cab",
           "secondary_color": "#ffffff",
           "ternary_color": "#6a6a6a",
           "button_icon": "chat_bubble",
           "button_text": "chat_with_us",
           "button_horizontal_position": "bottom_left",
-          "button_vertical_position": "lowest",
-          "greeting_message": ""
+          "button_vertical_position": "lowest"
         }
       },
       "7998720338607617285": {
         "type": "shopify://apps/promosync/blocks/promo-pricing-engine/019c48c8-9483-7db1-9e67-56f74d85d89d",
         "disabled": false,
         "settings": {
-          "enable_cart_pricing": true,
-          "show_strikethrough": true,
+          "enable_cart_pricing": false,
+          "show_strikethrough": false,
           "show_tier_popover": false,
-          "enable_min_quantity": true
+          "enable_min_quantity": false
         }
       }
     },
