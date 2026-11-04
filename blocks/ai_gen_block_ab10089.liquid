@@ -280,7 +280,7 @@
             id="ai-custom-header-localization-dropdown-{{ ai_gen_id }}"
             class="ai-custom-header__localization-dropdown-{{ ai_gen_id }}"
           >
-            {%- form 'localization', class: 'ai-custom-header__localization-form-' | append: ai_gen_id -%}
+            {%- form ai_gen_id -%}
               <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
               
               {% for country in localization.available_countries %}
@@ -537,3 +537,14 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- form 'localization', class: 'ai-custom-header__localization-form-' |
+    append: ai_gen_id -%}"
+  to: "{%- form ai_gen_id -%}"
+  position: 9278..9300
+{% endcomment %}
