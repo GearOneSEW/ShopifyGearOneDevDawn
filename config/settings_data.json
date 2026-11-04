@@ -169,9 +169,21 @@
         "disabled": false,
         "settings": {}
       },
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": false,
+        "settings": {
+          "greeting_message": "",
+          "button_color": "#005cab",
+          "button_icon": "chat_bubble",
+          "button_text": "chat_with_us",
+          "button_horizontal_position": "bottom_left",
+          "button_vertical_position": "lowest"
+        }
+      },
       "17920835415960095625": {
         "type": "shopify://apps/swatch-king/blocks/variant-swatch-king/0850b1e4-ba30-4a0d-a8f4-f9a939276d7d",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "alignment": "left",
           "swatch_location": "After image",
@@ -179,23 +191,9 @@
           "preselect_variant": true
         }
       },
-      "15683396631634586217": {
-        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
-        "disabled": false,
-        "settings": {
-          "greeting_message": "",
-          "button_color": "#005cab",
-          "secondary_color": "#ffffff",
-          "ternary_color": "#6a6a6a",
-          "button_icon": "chat_bubble",
-          "button_text": "chat_with_us",
-          "button_horizontal_position": "bottom_left",
-          "button_vertical_position": "lowest"
-        }
-      },
       "7998720338607617285": {
         "type": "shopify://apps/promosync/blocks/promo-pricing-engine/019c48c8-9483-7db1-9e67-56f74d85d89d",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "enable_cart_pricing": false,
           "show_strikethrough": false,
